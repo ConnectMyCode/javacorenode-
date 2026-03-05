@@ -1,0 +1,37 @@
+package com.object.oriented.programming.oop.elc;
+
+import java.util.*;
+
+import com.object.oriented.programming.oop.blc.HowObjectTravelsInNetworkStudentClass;
+import com.object.oriented.programming.oop.blc.HowObjectTravelsInNetworkStudentClassCalculateGrade;
+import com.object.oriented.programming.oop.blc.HowObjectTravelsInNetworkStudentClassStudentGrade;
+
+public class HowObjectTravelsInNetworkStudentClassMain {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);  
+		
+		String name = sc.next();
+		int marks  = sc.nextInt(); 
+		
+		
+		
+		HowObjectTravelsInNetworkStudentClass stud = new HowObjectTravelsInNetworkStudentClass(name , marks);   
+		
+		HowObjectTravelsInNetworkStudentClassStudentGrade network =  HowObjectTravelsInNetworkStudentClassCalculateGrade.calculateGrade(stud); //"" Returns type: HowObjectTravelsInNetworkStudentClassStudentGrade  
+		
+		
+		
+		System.out.println("The Student"+network.getStudent()+"has"+network.getStudentGrade());
+			
+			
+	}
+		
+}
+/*
+ * Aryan
+90
+B
+The Student Raj hasGrade
+The StudentHowObjectTravelsInNetworkStudentClass [name=Aryan, marks=90]hasB
+*/

@@ -1,0 +1,25 @@
+package com.object.oriented.programming.oop.elc;
+
+import com.object.oriented.programming.oop.blc.InstanceBlockOrNonStaticBlockORInstanceInitializerExample3;
+
+public class InstanceBlockOrNonStaticBlockORInstanceInitializerMainExample3
+{	
+	public static void main(String args[]) 
+	{
+		InstanceBlockOrNonStaticBlockORInstanceInitializerExample3 instanceBlock3 = new InstanceBlockOrNonStaticBlockORInstanceInitializerExample3();
+		System.out.println("OBJ1: "+instanceBlock3); 
+		System.out.println(instanceBlock3.x+100); 
+		
+		InstanceBlockOrNonStaticBlockORInstanceInitializerExample3 instanceBlock4 = new InstanceBlockOrNonStaticBlockORInstanceInitializerExample3();
+		System.out.println("OBJ2: "+instanceBlock4); 
+		System.out.println(instanceBlock4.x+100); 
+		
+		InstanceBlockOrNonStaticBlockORInstanceInitializerExample3 instanceBlock5 = new InstanceBlockOrNonStaticBlockORInstanceInitializerExample3();
+		System.out.println("OBJ3: "+instanceBlock5); 
+		System.out.println(instanceBlock5.x+100); 
+	}
+}
+
+
+
+

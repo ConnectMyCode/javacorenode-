@@ -1,0 +1,48 @@
+package com.object.oriented.programming.oop.blc;
+
+public class HowObjectTravelsInNetworkStudentClassCalculateGrade {
+	
+	//Purpose of Class :  HowObjectTravelsInNetworkStudentClassCalculateGrade : Calculate Grade 
+	//Requirements : No field (variable) , ONly METHODS 
+	/*
+	 * We are creating a user defined private no args constructor here because: We just need this class to performe calculations 
+	 * And for that only methods are required , 
+	 * What happens : Compiler automatically adds a constructor and that contructor has type public so it will be available to the developer to initialize values in the object when its created 
+	 * so we are already defining a constructor with private modifier so that the developer will not change any kind of data using cu=onstructor, 
+	 * we just need to use the methods of the class .
+	 * Example :-> Arrays Class //Look documentation
+	*/
+	
+	private HowObjectTravelsInNetworkStudentClassCalculateGrade(){
+		
+	}
+	
+	public static HowObjectTravelsInNetworkStudentClassStudentGrade  calculateGrade(HowObjectTravelsInNetworkStudentClass student){   
+		 
+		char studentGrade =' ';
+		if(student.getMarks()>90){
+			studentGrade='A';
+			System.out.println('A');
+		}
+		else if(student.getMarks()>=75){
+			studentGrade='B';
+			System.out.println('B');
+		}
+		else if(student.getMarks()>=60){
+			studentGrade='C';
+			System.out.println('C');
+		}
+		else if(student.getMarks()<60){
+			studentGrade='D';
+			System.out.println('D');
+		}
+		//Create
+		HowObjectTravelsInNetworkStudentClassStudentGrade studGrade = new HowObjectTravelsInNetworkStudentClassStudentGrade(student , studentGrade);  
+		//StudemtGrade class object created 
+	
+		//Return
+		return  studGrade;        
+	
+	}
+	
+}
