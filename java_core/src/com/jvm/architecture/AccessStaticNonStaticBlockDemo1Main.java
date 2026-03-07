@@ -1,0 +1,32 @@
+package com.jvm.architecture;
+
+import java.util.Scanner;
+
+public class AccessStaticNonStaticBlockDemo1Main 
+{ 
+	int x = 100; //NSF
+	static int y = 200; //SF
+	
+	//New java 25V main() method is a non static method 
+	void main() //non static method [Layer2] --> Because it is inside layer 2 we can access the Non-static without creating any Object0
+	{
+		Scanner sc= new Scanner(System.in);
+	
+		System.out.println("Non Static Field"+x);
+		System.out.println("Static Field"+y);
+	
+		m1();
+		m2();
+	}
+	
+	public static void m1() 
+	{
+		System.out.println("Static Method");
+	}
+	
+	public static void m2() 
+	{
+		System.out.println("Non Static Method");
+	}
+
+}
