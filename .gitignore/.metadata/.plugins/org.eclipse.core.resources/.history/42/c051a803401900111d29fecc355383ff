@@ -1,0 +1,9 @@
+package com.jvm.architecture;
+
+public class AccessStaticNonStaticBlockDemo2Main 
+{	
+	public  void main(String []args) 
+	{
+		System.out.println("hi");
+	}
+}	
