@@ -2,7 +2,7 @@ package com.jvm.architecture;
 
 public class StaticAndInstanceBlockJVMArchitectureDemo1Main {
 	
-	
+
 
 }
 
