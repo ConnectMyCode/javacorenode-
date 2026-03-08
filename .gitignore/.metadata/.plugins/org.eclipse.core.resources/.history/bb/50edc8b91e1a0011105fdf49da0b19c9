@@ -1,0 +1,67 @@
+package com.jvm.architecture;
+import java.util.*; 
+
+public class LibraryBook {
+	
+	public static void main(String []args) 
+	{
+		Scanner sc= new Scanner(System.in); 
+		System.out.println("Enter number of boks");
+		int noOfBooks = sc.nextInt();
+		
+		
+		int i = 0; 
+		while(i<noOfBooks)
+		{
+			String bookName = sc.next(); 
+			String authorName = sc.next();
+			Books book = new Books(bookName , authorName);
+			
+			Books bookAdded = new Books(book); 			
+		}
+		
+		
+		
+		
+		
+	}
+	}
+	
+class Books{
+		
+		private String bookName; 
+		private String authorName; 
+		
+		static{ 
+			System.out.println("Library System Initialized");
+		}
+		
+		{
+			System.out.println("New Book Object Created");
+		}
+		
+		public Books(String bookName , String authorName) 
+		{
+			this.authorName = authorName; 
+			this.bookName = bookName; 
+		}
+		
+		public String getBookName(){
+			return bookName;
+		}
+		
+		public String getAuthorName() 
+		{
+			return authorName;  
+		}
+		
+		public Books(Books book){
+			System.out.println("Book Added"+getBookName() + "by"+"author: "+getAuthorName());
+		}
+		
+		
+		
+	}
+	
+	
+}

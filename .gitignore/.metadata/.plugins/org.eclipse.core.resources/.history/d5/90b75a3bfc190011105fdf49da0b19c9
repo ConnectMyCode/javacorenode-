@@ -1,0 +1,25 @@
+package com.jvm.architecture;
+
+import java.lang.Class; 
+
+class Sample
+{
+	static
+	{
+		System.out.println("I am in Method Area!");
+	}
+	
+}
+
+
+public class ReflectionApiJavaLangClassDemo1Main {
+
+	public static void main(String[] args)throws Exception 
+	{
+		//System.out.println(Class.forName("Sample"));	//It will give classNotFoundException :-> it requires a fully qualified class name that is 
+		
+	System.out.println(Class.forName("com.jvm.architecture.Sample")); 
+	}
+
+}
+

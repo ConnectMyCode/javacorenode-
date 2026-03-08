@@ -1,0 +1,74 @@
+package com.jvm.architecture;
+
+import java.lang.Class; 
+
+class Sample
+{
+	static
+	{
+		System.out.println("I am in Method Area!");
+	}
+	
+}
+
+class Joyfull
+{
+	static int variablePrimitiveOne = 10; 
+	static int variablePrimitiveTwo = 20; 
+	static int variablePrimitiveThree = 30;
+	
+	int variableInstance1 = 10;
+	int variableInstance2 = 20;
+	int variableInstance3 = 30;
+	
+	public Joyfull() 
+	{
+		System.out.println("Inside Constructor Body");
+	}
+	
+	public static void print() 
+	{
+		System.out.println("Inside Static Block"); 
+	} 
+	
+	public void printText() 
+	{
+		System.out.println("Inside Instance Block");
+	}
+}
+
+
+public class ReflectionApiJavaLangClassDemo1Main {
+
+	public static void main(String[] args)throws Exception 
+	{
+	
+		//System.out.println(Class.forName("Sample"));	//It will give classNotFoundException :-> it requires a fully qualified class name that is 
+	
+		/*Name of the class*/ 
+	System.out.println(Class.forName("com.jvm.architecture.Sample")); //Fully qualified name (package Name + Class Name) 
+	
+	
+	/*Here className.method Name is used to call the forName() so it is a Static Method ; 
+	 * So no need to create a object to access this method 
+	 * Here a Object is created of "Class" type and is saved inside the type "Class" ->" cls " refernce variable 
+	 * Now the Obj1 -> has the information about the .Class file like 
+	 * 1. Package Name
+	 *2. Class Name 
+	 *3. Field Declared 
+	 *
+	 * */
+	
+	Class cls =  Class.forName("com.jvm.architecture.Joyfull");
+	
+	System.out.println("Class Name: "+cls.getName()); 
+	
+	System.out.println("Package Name: "+cls.toString()); 
+	
+	
+	}
+
+}
+
+
+

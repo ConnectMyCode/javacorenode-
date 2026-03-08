@@ -1,0 +1,126 @@
+package com.jvm.architecture;
+
+
+	public class Bank
+	{
+	    public static void main(String []args)
+	    {
+	        IO.println("Enter Account Holder Name: ");
+	        String name = IO.readln();
+
+	        IO.println("Enter Account Number: ");
+	        int accountNumber = Integer.parseInt(IO.readln());
+
+	        IO.println("Enter Initial Balance: ");
+	        double balance = Double.parseDouble(IO.readln());
+
+
+	        /*Object Creation*/
+	        BankAccount cust = new BankAccount(name ,accountNumber ,balance); 
+
+
+
+	        IO.println("Enter your choice: ");
+	        int choice = Integer.parseInt(IO.readln());
+
+	        IO.println("---------BAnk Menu-------------");
+	        IO.println("1.Withdraw Amount");
+	        IO.println("2.Deposit Amount");
+	        IO.println("3.Check Balance");
+	        IO.println("4.Display Account Details");
+	        IO.println("5.Exit");
+	        
+
+	        while(choice!=5){
+
+
+	            switch(choice){
+	                case 1->{
+	                    IO.println("Enter amount to withdraw: ");
+	                    double withdrawamount = Double.parseDouble(IO.readln());
+	                    cust.withdraw(withdrawamount);
+	                    IO.println("Amount wothdrawn successfully : "+"Current amount: "+ cust.getBalance()  );
+
+	                }
+	                case 2-> {
+	                    IO.println("Enter amount to deposit");
+	                    double amount = Double.parseDouble(IO.readln());
+	                    cust.deposit(amount); 
+	                    IO.println("Amount deposited succesfully"+ "Current amount "+cust.getBalance());
+	                }
+	                case 3-> {
+	                    IO.println( "Current balance is:"+ cust.getBalance());
+	                }
+	                case 4-> {
+	                    IO.println("Account Details: \n"+cust);
+
+	                }
+	                case 5-> {
+	                    break;  
+	                }
+	                 default-> 
+	                {
+	                        IO.println("Enterd invalid  choice");
+	                }
+	        }
+	        IO.println("---------BAnk Menu-------------");
+	        IO.println("1.Withdraw Amount");
+	        IO.println("2.Deposit Amount");
+	        IO.println("3.Check Balance");
+	        IO.println("4.Display Account Details");
+	        IO.println("5.Exit");
+	        
+	        IO.println("Enter your choice: ");
+	        choice = Integer.parseInt(IO.readln());
+	        } 
+
+	    }
+	}
+
+
+	class BankAccount
+	{
+	    private String holderName; 
+	    private int accountNumber;
+	    private double balance; 
+
+
+	    public BankAccount(String holderName , int accountNumber , double balance)
+	    {
+	        this.holderName = holderName; 
+	        this.accountNumber = accountNumber;
+	        this.balance = balance; 
+	    }
+
+
+	    public void withdraw(double amount){
+	        balance -= amount;
+	    }
+
+	    public void deposit(double amount)
+	    {
+	        this.balance += amount; 
+	    }
+
+
+	    public double getBalance(){
+	        return balance; 
+	    }
+	    
+	    public String getName(){
+	        return holderName; 
+	    }
+
+	    public int getAccountNumber()
+	    {
+	        return accountNumber;
+	    }
+
+	    public String toString()
+	    {
+	        return "Account Holder Name: "+getName()+"\nAccount Number: "+getAccountNumber()+"\nBalance: "+getBalance();
+	    }
+
+	}
+
+}
