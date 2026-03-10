@@ -1,0 +1,21 @@
+package com.arrays.programs;
+
+public class ArraysDupicateElementsInFindAndPrint {
+	
+	
+	public static void main(String []args) 
+	{
+		int array3[] = {90,80,70,60,50,40}; 
+		/*Finding duplicate element in array :-> */
+		
+		int[] array = new int[]{} //inilne initilaiozation 
+		
+		int []array2 = new int[4];
+		
+		
+		
+		
+		
+	}
+
+}

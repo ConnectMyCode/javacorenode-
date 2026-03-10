@@ -1,0 +1,68 @@
+package com.arrays.programs;
+
+import java.util.Scanner;
+
+public class ArraysDeclarationAndInitialization {
+
+	public static void main(String []args) 
+	{
+		Scanner sc= new Scanner(System.in);
+		
+		
+		/* Primitive Type */
+		byte[] bite = new byte[4]; 
+		short [] shore = new short[6];
+
+		char fuff[] = new char[5];
+		int i =0; 
+		for(char element: fuff)
+		{
+			element = sc.next().charAt(0);
+			fuff[i] = element; 
+			i++; 
+		}
+		
+		for(char element: fuff) 
+		{
+			System.out.println(element);
+		}
+		
+		
+		int []arr = new int[6];
+
+		long [] large = new long[9];
+		
+		float fool[] = new float[6];
+		for(float value: fool)
+		{
+			System.out.println(value); //By default value 0.0
+			
+		}
+		/*Adding values inside the array: */
+		int position = 0; 
+		for(float value : fool) 
+		{
+			value= sc.nextFloat();
+			fool[position]  = value; /*Assigned the value in the array*/
+			System.out.println(value); /*Printing the assigned value*/ 
+		}
+		 
+
+		double[] dobs = new double[5];
+		
+		
+		boolean buff[] =new boolean[6];
+		
+		/* Reference Type */		
+		String[] str = new String[5];
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

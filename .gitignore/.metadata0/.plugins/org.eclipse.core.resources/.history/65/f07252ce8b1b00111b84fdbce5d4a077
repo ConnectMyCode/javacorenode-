@@ -1,0 +1,21 @@
+package com.arrays.programs;
+
+import java.util.*;
+
+
+public class ArraysTestingDemos {
+
+	public static void main(String []args)  
+	{
+		Scanner sc= new Scanner(System.in);
+		
+		int []z = new  int[] {1000,2000,3000,4000,5000};
+		
+		for(int val : z)
+		{
+			System.out.println(val);
+		}
+	
+	}
+	
+}

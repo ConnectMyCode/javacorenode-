@@ -1,0 +1,30 @@
+package com.arrays.programs;
+
+import java.util.*;
+
+
+public class ArraysTestingDemos {
+
+	public static void main(String []args)  
+	{
+		Scanner sc= new Scanner(System.in);
+		 String []str = new String[5];
+		System.out.println("String value by default is null because it is  referencing an object.");
+
+		for(String data : str) 
+		{
+			System.out.println(data);
+		}		
+
+		/*Assigning value*/
+		int pos = 0;
+		for(String input : str) 
+		{
+			input = sc.next();
+			str[pos] = input;
+			pos++;
+		}
+		System.out.println(Arrays.toString(str)); 
+	}
+	
+}

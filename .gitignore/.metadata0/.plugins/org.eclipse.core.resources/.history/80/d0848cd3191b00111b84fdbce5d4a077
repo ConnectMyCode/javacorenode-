@@ -1,0 +1,22 @@
+package com.jvm.architecture;
+import java.lang.*;
+
+public class ReflectionApiJavaLangClassDemo2Main {
+
+	
+	public static void main(String []args) throws Exception
+	{
+		System.out.println(Class.forName("Demos"));
+		
+	}
+	
+}
+
+class Demos{
+	
+	static
+	{
+		System.out.println("Static Block of Sample Class");
+	}
+	
+}

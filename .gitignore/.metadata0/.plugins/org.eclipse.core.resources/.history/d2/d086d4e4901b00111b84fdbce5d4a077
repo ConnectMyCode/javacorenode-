@@ -1,0 +1,30 @@
+package com.arrays.programs;
+
+import java.util.*;
+
+
+public class ArraysTestingDemos {
+
+	public static void main(String []args)  
+	{
+		Scanner sc= new Scanner(System.in);
+		
+	/*Anonymous array*/ 
+		int[] arr={10,20,90,80,70,60,50,40}; //middle = 3
+		System.out.println("Before Reversing"+Arrays.toString(arr)); 
+		
+		int j = arr.length-1; 
+		
+		for(int i = 0;i<=arr.length-1;i++)
+		{
+			int temp = arr[j]; 
+			arr[j] = arr[i]; 
+			arr[i] = temp;
+			
+			j--; 
+		}
+
+		
+	}
+	
+}

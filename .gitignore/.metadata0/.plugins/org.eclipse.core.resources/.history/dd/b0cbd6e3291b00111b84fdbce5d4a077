@@ -1,0 +1,5 @@
+package com.jvm.architecture;
+
+public class CompileTimeConstantDemo1Main {
+
+}

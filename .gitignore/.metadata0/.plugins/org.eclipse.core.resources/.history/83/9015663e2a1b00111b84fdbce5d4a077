@@ -1,0 +1,8 @@
+package com.jvm.architecture;
+
+public class CompileTimeConstantDemo1Test {
+
+	public static final int x= 100;
+	
+	
+}

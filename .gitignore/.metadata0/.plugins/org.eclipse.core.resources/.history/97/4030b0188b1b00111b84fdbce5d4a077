@@ -1,0 +1,104 @@
+package com.arrays.programs;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+
+public class ArraysDeclarationAndInitialization {
+
+	public static void main(String []args) 
+	{
+		Scanner sc= new Scanner(System.in);
+		
+		
+		/* Primitive Type */
+		byte[] bite = new byte[4]; 
+		short [] shore = new short[6];
+
+		char fuff[] = new char[5];
+		int i =0; 
+		for(char element: fuff)
+		{
+			element = sc.next().charAt(0);
+			fuff[i] = element; 
+			i++; 
+		}
+		
+		for(char element: fuff) 
+		{
+			System.out.println(element);
+		}
+		
+		
+		int []arr = new int[6];
+
+		long [] large = new long[9];
+		
+		
+		//------------------------float----------------
+		float fool[] = new float[6];
+		for(float value: fool)
+		{
+			System.out.println(value); //By default value 0.0
+			
+		}
+		/*Adding values inside the array: */
+		int position = 0; 
+		for(float value : fool) 
+		{
+			value= sc.nextFloat();
+			fool[position]  = value; /*Assigned the value in the array*/
+			System.out.println(value); /*Printing the assigned value*/ 
+			position++; 
+		}
+		System.out.println(Arrays.toString(fool)); //ClassName.MethodNAme -> Static method inside the Arrays class that is a utility class because it contains only static methods and a pprivate constructor so that no object creation happens 
+		 
+//---------------------------------------------
+		
+		
+		double[] dobs = new double[5];
+		
+		//----------------------------------------
+		
+		int posbuf = 0; 
+		boolean buff[] =new boolean[6];
+		System.out.println("Enter Boolean Values");
+		for(boolean buf1 : buff)
+		{
+			buf1 = sc.nextBoolean();
+			buff[posbuf]= buf1; 
+			posbuf++;
+		}
+		
+		System.out.println(Arrays.toString(buff));
+		
+		
+		/* Reference Type */		
+		 String []str = new String[5];
+			System.out.println("String value by default is null because it is  referencing an object.");
+			
+			for(String data : str) 
+			{
+				System.out.println(data);
+			}		
+			
+			/*Assigning value*/
+			int pos = 0;
+			for(String input : str) 
+			{
+				input = sc.next();
+				str[pos] = input;
+				pos++;
+			}
+			System.out.println(Arrays.toString(str)); 
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

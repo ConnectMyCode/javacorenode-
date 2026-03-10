@@ -1,0 +1,19 @@
+package com.arrays.programs;
+
+import java.util.*;
+
+
+public class ArraysTestingDemos {
+
+	public static void main(String []args)  
+	{
+		Scanner sc= new Scanner(System.in);
+		
+	/*Anonymous array*/ 
+		int[] z={10,20,90,80,70,60,50,40}; 
+		System.out.println(Arrays.toString(z));
+		
+		
+	}
+	
+}

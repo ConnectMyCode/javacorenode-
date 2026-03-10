@@ -1,0 +1,19 @@
+package com.arryas.programmes;
+
+public class ArraysLogicUtils {
+	
+	
+	public static Object findMinimum(Object[] array1)  
+	{
+		
+		for(Object element : array1)
+		{
+			System.out.println(element);
+		}
+		
+		
+		return 5; 
+	}
+	
+
+}
