@@ -1,0 +1,41 @@
+package com.employee.management.connect.my.code;
+
+public class EmployeeDatabase {
+	/*Fixed size of array is limitation so for now I am taking size=3 
+	 * 
+	 * 
+	 * */
+	private static EmployeeObject []employeeData = new EmployeeObject[3]; 
+	private static int i =0 ; 
+	
+	
+	private EmployeeDatabase()
+	{} 
+	
+	
+	public static EmployeeObject[] ToSearchCopyDatabaseReturn() 
+	{
+		/*Returning the Array that has the data it will be a shallow copy of the data after reaching in file where it is called from a copy of this database with help of passing it inside Methods arguments will create a shallow copy*/
+		return employeeData;
+	} 
+	
+	
+	public static EmployeeObject[] viewData() 
+	{
+		return employeeData;    
+	}
+	
+	
+	public static void addEmployeeData(EmployeeObject employee) 
+	{ 
+		employeeData[i] = employee; 
+		i++; 
+		System.out.println("Employee Added Successfully"); 
+	} 
+		
+	
+	
+	
+		
+} 
+

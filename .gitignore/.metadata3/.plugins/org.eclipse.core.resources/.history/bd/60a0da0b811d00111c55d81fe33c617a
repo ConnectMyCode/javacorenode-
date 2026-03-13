@@ -1,0 +1,34 @@
+package com.employee.management.connect.my.code;
+
+public class EmployeeDatabase {
+	/*Fixed size of array is limitation so for now I am taking size=3 
+	 * 
+	 * 
+	 * */
+	private static EmployeeObject []employeeData = new EmployeeObject[3]; 
+	private static int i =0 ; 
+	
+	
+	private EmployeeDatabase()
+	{} 
+	
+	
+	public static EmployeeObject[] viewData() 
+	{
+		return employeeData;    
+	}
+	
+	
+	public static void addEmployeeData(EmployeeObject employee) 
+	{ 
+		employeeData[i] = employee; 
+		i++; 
+		System.out.println("Employee Added Successfully"); 
+	} 
+		
+	
+	
+	
+		
+} 
+

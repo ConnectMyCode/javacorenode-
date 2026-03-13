@@ -1,0 +1,19 @@
+package com.employee.management.connect.my.code;
+
+public class EmployeManagementUtils 
+{
+	static Scanner sc= new Scanner(System.in);
+	
+	private EmployeManagementUtils() 
+	{}
+	
+	public static EmployeeObject addEmployee() 
+	{   //String String    Double   String
+		// name, contact , salary , position
+		
+		String name = s;
+		
+		return  
+	}
+
+}

@@ -1,0 +1,59 @@
+package com.employee.management.connect.my.code;
+
+import java.util.Scanner;
+
+public class EmployeManagementUtils 
+{
+	static Scanner sc= new Scanner(System.in);
+	
+	private EmployeManagementUtils() 
+	{}
+	
+	
+	//To view the data
+	public static EmployeeObject[] ViewData() 
+	{
+		//returnin the array just after calling the array; 
+		return EmployeeDatabase.viewData();  
+	}
+	
+	
+	
+	//To create Employee object
+	public static EmployeeObject addEmployee() 
+	{   //String String    Double   String
+		// name, contact , salary , position
+		
+		System.out.println("Enter  Employee Name: ");
+		String name = sc.nextLine();
+		
+		System.out.println("Enter  Employee Contact: ");
+		String contact = sc.next(); 
+		
+		System.out.println("Enter  Employee Salary: ");
+		double numbers = sc.nextDouble();
+		
+		System.out.println("Enter  Employee Name: ");
+		String position = sc.next(); 
+		
+		/* Creating Employee Object */
+		EmployeeObject employee = EmployeeObject.getEmployeeObject(name, contact , numbers , position);
+		
+		/* Storing the Employee Object Generated in the database using "StoreEmployee" method*/
+		EmployeManagementUtils.StoreEmployee(employee);  
+		
+		 
+		
+		return  employee;
+	}
+	
+	
+	//To Store the employee Data into Database 
+	public static EmployeeObject StoreEmployee(EmployeeObject employee) 
+	{
+		/*Here actual Employee data is store inside the Databse using the static method --> "addEmployeeData" in EmployeeDatabase Class */
+		 EmployeeDatabase.addEmployeeData(employee); 
+		  
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.employee.management.connect.my.code;
+
+public class FrontendEmployeeManagement {
+	/*
+	 * Here employee object is created/Employee registered by the manager of the company when a new employee joins*/
+	
+	
+	
+}

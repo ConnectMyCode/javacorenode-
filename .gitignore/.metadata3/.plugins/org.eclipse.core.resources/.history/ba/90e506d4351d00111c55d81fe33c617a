@@ -1,0 +1,14 @@
+package com.employee.management.connect.my.code;
+
+public class EmployeeDatabase {
+	/*Fixed size of array is limitation so for now I am taking size=3 
+	 * 
+	 * 
+	 * */
+	static EmployeeObject []employeeData = new EmployeeObject[3]; 
+	
+	public EmployeeDatabase(EmployeeObject employee )
+	{
+		
+	}
+} 

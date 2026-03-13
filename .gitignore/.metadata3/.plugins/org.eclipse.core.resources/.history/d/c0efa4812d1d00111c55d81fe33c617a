@@ -1,0 +1,34 @@
+package com.employee.management.connect.my.code;
+
+public class EmployeeManagement {
+	
+	private String name;
+	private String contact; 
+	private double salary ;
+	private String position;  //{SE-1 , SE-2, SE-3 ,SE-4}
+	
+	
+	private EmployeeManagement(String name , String contact , double salary , String positon) 
+	{
+		
+		this.name= name; 
+		this.contact =contact; 
+		this.salary =salary; 
+		this.position = position;
+		
+	} 
+	
+	public static EmployeeManagement getEmployeeObject(String name ,String contact , double salary , String position) 
+	{
+		return new EmployeeManagement(name, contact , salary ,position); 
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}
