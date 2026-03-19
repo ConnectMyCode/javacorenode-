@@ -1,0 +1,136 @@
+package com.employee.management.connect.my.code;
+
+import java.util.Scanner;
+
+public class EmployeManagementUtils 
+{
+	
+	
+	static Scanner sc= new Scanner(System.in);
+	static int i=0;   //Store the data in array index wise so when we store 1st object then we should increment the index value by 1 so next time second iobject created is store in thew 2nd positon so that is why the "i" value should not be reset so declared it as a static variable 
+	
+	private EmployeManagementUtils() 
+	{} 
+	
+	
+	
+	//updateEmployeeData 
+	public static int UpdateData() //int: just to break out of the loops used int return type  
+	{
+		
+		
+		System.out.println("Enter the Employee id to select the data you want to update. \n");
+		int id= sc.nextInt();
+		EmployeeObject employeeFound =EmployeManagementUtils.SearchEmployee(id); //Storing the object of type "EmployeeObject";
+
+		//--------------------Data Verification-------------------------------------
+		
+		if(employeeFound!=null) 
+		{
+			//Calling updateData(); 
+			//-------------------------Main Employee Logic part for updating  data After verification----------------------- 
+			
+			EmployeeDatabase.UpdateData(employeeFound); //This method will display a menu through which we can update data.   
+			
+		}
+		else {
+			System.out.println("No such Empoyee Id exists . ");
+		}
+		
+		
+			
+		return 0; 
+			
+		
+		
+	}
+	
+	
+	
+	
+	
+	//Search the Employee Data 
+	public static EmployeeObject SearchEmployee(int id) 
+	{     
+		
+		EmployeeObject employeeDataFound = null;
+		
+		System.out.println("Id entered is : "+id);      
+		int idSearch = id; 
+		
+		//DEEP copy or SHALLOW Copy 
+		EmployeeObject[] employeeDatabase = EmployeeDatabase.ToSearchCopyDatabaseReturn();
+		
+		
+		for(EmployeeObject empData : employeeDatabase)  //empData here is storing the reference value of the current object 0->1->2
+		{
+			if(empData.getId() == idSearch) 
+			{
+				System.out.println("Employee Data Found: "+ empData); //Employee Objcet has the toString method so all the data will be printed. 
+				
+				employeeDataFound = empData;  //Storing the object Address to pass it to the UpdateData Method for accessing to modify data.      
+				return employeeDataFound;  //Returns the data no need to loop through database .  
+			}
+			
+		}
+		
+		return null;
+		
+	}
+	
+	
+	//To view the data
+	public static EmployeeObject[] ViewData() 
+	{			
+		//returning the array just after calling the array; 
+		return EmployeeDatabase.viewData();  
+	}
+	
+	
+	
+	//To create Employee object
+	public static EmployeeObject addEmployee() 
+	{   //String String    Double   String
+		// name, contact , salary , position
+		
+		System.out.println("Enter  Employee ID: ");
+		int id = sc.nextInt(); 
+		
+		System.out.println("Enter  Employee Name: ");
+		String name = sc.nextLine();
+		
+		System.out.println("Enter  Employee Contact: ");
+		String contact = sc.next(); 
+		
+		System.out.println("Enter  Employee Salary: ");
+		double numbers = sc.nextDouble();
+		
+		System.out.println("Enter  Employee Position: SE-1 \t SE-2 \t SE-3 \t SE-4 \t SE-5 \t Team Lead");
+		String position = sc.next(); 
+		
+		/* Creating Employee Object */
+		EmployeeObject employee = EmployeeObject.getEmployeeObject( id ,name, contact , numbers , position);
+		
+		/* Storing the Employee Object Generated in the database using "StoreEmployee" method*/
+		EmployeManagementUtils.StoreEmployee(employee);  
+		
+		 
+		
+		return  employee;
+	}
+	
+	
+	//To Store the employee Data into Database 
+	public static void StoreEmployee(EmployeeObject employee) 
+	{
+		/*Here actual Employee data is store inside the Databse using the static method --> "addEmployeeData" in EmployeeDatabase Class */
+		 EmployeeDatabase.addEmployeeData(employee ,i);
+		 i++;  
+		  
+	}
+	
+	
+	
+	
+
+}

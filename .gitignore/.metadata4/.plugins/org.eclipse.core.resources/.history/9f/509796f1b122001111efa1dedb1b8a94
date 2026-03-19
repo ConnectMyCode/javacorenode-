@@ -1,0 +1,12 @@
+package com.inheritance.learn;
+
+public class VariableHidingDemo4 {
+
+	public static void main(String []args) 
+	{
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,30 @@
+package com.inheritance.learn;
+
+public class InheritanceWithEncapsulationDemo2 {
+	
+	class SuperClass
+	{
+		
+		public SuperClass(int x) 
+		{
+			
+		}
+	}
+	
+	class SubClass extends SuperClass
+	{
+		public SubClass() 
+		{
+			super(10);
+		}
+	}
+	
+	
+	
+	public  static void main(String []args) 
+	{
+		
+	}
+	
+
+}

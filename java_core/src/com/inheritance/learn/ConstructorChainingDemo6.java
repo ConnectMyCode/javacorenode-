@@ -1,0 +1,13 @@
+package com.inheritance.learn;
+
+public class ConstructorChainingDemo6 {
+	
+	public static void main(String []args) 
+	{
+		ConstructorChainingBetaDemo6 chain = new ConstructorChainingBetaDemo6(); 
+		
+	}
+	
+	
+	
+}

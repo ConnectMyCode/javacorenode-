@@ -1,9 +1,12 @@
 package com.arryas.programmes;
 
+import java.util.Scanner;
+
 public class ArraysApplication {
 	
 	public static void main(String []args) 
 	{
+		Scanner sc= new Scanner(System.in);
 			
 		
 		//Find Minimum in the array ; 
@@ -19,8 +22,48 @@ public class ArraysApplication {
  		System.out.println(ArraysLogicUtils.reverseArray(array3));
  		
  		//Modifying the Array
+ 		System.out.println("Modifying the array");
 		long[] array4 = {1234L , 5678L , 9101112L ,12131415L , 161718192021L};
  		
+		
+// ----------------------------------------------------------//2-D array-----------------------------------------  
+		int [][]twoDimArrayA = new int[5][5]; //Array A:   
+		int [][]twoDimArrayB = new int[5][5]; //Array B:
+		
+		System.out.println("Enter elementds on A array: 5*5");
+		for(int i=0 ;i<=4;i++)  
+		{
+			for(int j=0;j<=4;j++) 
+			{
+				twoDimArrayA[i][j] = sc.nextInt();   
+			}
+		}
+		
+		
+		System.out.println("Enter elementds on B array: 5*5");
+		for(int i=0;i<=4;i++)  
+		{
+			for(int j=0;j<=4;j++) 
+			{
+				twoDimArrayB[i][j] = sc.nextInt();   
+			}
+		}
+
+		System.out.println(ArraysLogicUtils.TwoDimArrayAdd(twoDimArrayA, twoDimArrayB));
+		
+		int [][] array5 = new int[3][5];  
+		ArraysLogicUtils.twoDimArrayss(array5); 
+ //--------------------------------------Jagged Array----------------------------------------------------------
+		
+		int [][] array6 = new int[3][]; 
+		
+		ArraysLogicUtils.JaggedArray(array6);
+		
+		
+		
+		
+		//Jagged Array :No. of columns is not mentioned : That means we can add unique no of columns for each row.
+		
 		
 		
 	}	

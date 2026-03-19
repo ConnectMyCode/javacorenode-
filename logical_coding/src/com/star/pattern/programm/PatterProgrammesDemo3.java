@@ -22,6 +22,9 @@ public class PatterProgrammesDemo3 {
 		
 		printConeReverse();
 		
+		
+		
+		
 	}
 	
 	

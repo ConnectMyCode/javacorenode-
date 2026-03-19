@@ -1,0 +1,10 @@
+package com.inheritance.learn;
+
+public class MethodOverridingFatherDemo5 extends MethodOverridingGrandFatherDemo5 {
+		
+	public void home() 
+	{
+		System.out.println("Father Home");
+		super.home(); 
+	}
+}

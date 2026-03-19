@@ -1,0 +1,16 @@
+package com.inheritance.learn;
+
+public class MethodOverridingGrandFatherDemo5 {
+	
+	public void home() 
+	{
+		System.out.println("Grand-Father home");
+	}
+	
+	public String toString() 
+	{
+		return "ToString of Grandfather";
+	}
+	
+
+}

@@ -1,0 +1,18 @@
+package com.inheritance.learn;
+
+public class InheritanceWithEncapsulationDemo2 {
+	
+	class SuperClass
+	{
+		private int 
+	}
+	
+	
+	
+	public class static void main(String []args) 
+	{
+		
+	}
+	
+
+}

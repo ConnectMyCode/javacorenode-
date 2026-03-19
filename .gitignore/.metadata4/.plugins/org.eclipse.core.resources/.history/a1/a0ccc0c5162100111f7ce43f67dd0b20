@@ -1,0 +1,46 @@
+package com.inheritance.learn;
+
+public class InheritanceWithEncapsulationDemo2 {
+	
+	class SuperClass
+	{
+		private int x, y; 
+		
+		public void setData(int x, int y)
+		{
+			this.x=x; 
+			this.y=y;
+		}
+		
+		public int getX() 
+		{
+			return this.x; 
+		}
+		
+		public int getY() 
+		{
+			return this.y; 
+		}
+		
+	}
+	
+	
+	class SubClass extends SuperClass
+	{
+	
+		public void showData() 
+		{
+			System.out.println("x value is :"+getX());
+			System.out.println("y value is :"+getY()); 
+		}
+	}
+	
+	
+	
+	public  static void main(String []args) 
+	{
+		
+	}
+	
+
+}

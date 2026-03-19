@@ -18,8 +18,300 @@ public class StartPatternProgrammeDemo4 {
 		
 		printRightHalfCrystalHollow();
 		
+		printRightHalfNumbersCrystal(); 
+		
+		printLeftHalfCrystal(); 
+		
+		printKajukatli(); 
+		
+		printLeftHalfCrystalHollow();
+		System.out.println("\n\n");
+		
+		printButterfly(); 
+		
+		System.out.println("\n\n");
+		
+		
 	} 
 	
+	public static void 	printButterfly()
+	{
+		int n=9; 
+		int x=1; 
+		int y=n;
+
+		for(int i=1; i<=n; i++) 
+		{
+			for(int j=1; j<=n ; j++)
+			{
+				if(i<5) {
+					if(j<=x || j==1 || j>=y || j==n)
+					{
+						System.out.print(" *");
+					}
+					else
+					{
+						System.out.print("  ");
+					}					
+				}
+				else {
+					if(j<=x || j==1 || j>=y || j==n)
+					{
+						System.out.print(" *");
+					}
+					else
+					{
+						System.out.print("  ");
+					}
+				}
+			}
+			System.out.println();
+			if(i<5) 
+			{
+				x++;
+				y--;
+			}
+			else {
+				x--;
+				y++;
+			}
+		}
+	}
+	
+	public static void printLeftHalfCrystalHollow() 
+	{			  
+		// 9*5	  	
+		int n = 5; 	
+		int y =n ;	
+		
+		for(int  i= 1; i<=n*2-1 ; i++){
+			
+			for(int j =1;j<=5;j++) {
+				if(i<5) 
+				{
+					if(j==y || j==n) {
+						System.out.print(" *");
+					}
+					else {
+						System.out.print("  ");
+					}					
+				}
+				else 
+				{
+					if(j==y || j==n) {
+						System.out.print(" *");
+					}
+					else {
+						System.out.print("  ");
+					}
+				}
+			}
+			System.out.println();
+			if(i<5) {
+				y--;
+			}
+			else {
+				y++;
+			}
+		}
+		
+	}
+	/*
+	     *
+       * *
+     *   *
+   *     *
+ *       *
+   *     *
+     *   *
+       * *
+         *
+
+		
+	 
+	 */
+	
+	
+	public static void printKajukatli() 
+	{
+		
+		int n=5; 
+		int y=n; 
+		
+		for(int i = 1; i<=9 ; i++) 
+		{
+			for(int j= 1; j<=5 ;j++) 
+			{
+				
+				if(i<=5) {
+					if(j>=y|| j==n) 
+					{
+						if(j>y && j<n)
+						{
+							System.out.print(" *");
+						}
+						else{
+							System.out.print("  ");
+						}
+					}
+				}	
+				else if(i>5) {
+					if(j>=y || j==n) 
+					{
+						if(j>y && j<n)
+						{
+							System.out.print(" *");
+						}
+						else{
+							System.out.print("  ");
+						}
+						
+					}
+					else {
+						System.out.print("  ");
+					}
+				}
+				
+			}
+			System.out.println();
+			if(i<5) 
+			{	
+				y--; 
+			}
+			else{
+				y++; 
+			}
+			
+		}
+
+		
+		
+	}
+	/*
+	 
+	  *  
+	  * *  
+	  * * *  
+	  	* *  
+	  	  *  
+	 */
+	
+	
+	public static void printLeftHalfCrystal() 
+	{
+		int n=5; 
+		int y=n; 
+		
+		for(int i = 1; i<=9 ; i++) 
+		{
+			for(int j= 1; j<=5 ;j++) 
+			{
+				
+				if(i<=5) {
+					if(j>=y|| j==n) 
+					{
+						System.out.print(" *");
+					}
+					else {
+						System.out.print("  ");
+					}
+				}	
+				else if(i>5) {
+					if(j>=y || j==n) 
+					{
+						System.out.print(" *");
+					}
+					else {
+						System.out.print("  ");
+					}
+				}
+				
+			}
+			System.out.println();
+			if(i<5) 
+			{	
+				y--; 
+			}
+			else{
+				y++; 
+			}
+			
+		}
+		
+	}
+	
+	/*
+	     *
+       * *
+     * * *
+   * * * *
+ * * * * *
+   * * * *
+     * * *
+       * *
+         * 
+	  
+	 
+	 * */
+	
+	
+	
+	public static void 	printRightHalfNumbersCrystal() 
+	{
+		// 9*5 rows * columns 
+				int n=5;  
+				int x=1;  
+				
+				for(int i= 1; i<=n*2-1 ;i++) 
+				{
+					for(int j=1; j<=n ; j++) 
+					{
+						if(i<=5) 
+						{
+							if(j==1 || j<=x) 
+							{
+								System.out.print(" "+j);
+							}
+							else		 	
+							{
+								System.out.print("  ");
+							}
+							
+						}
+						else if(i>5) 
+						{
+							if(j==1||j<=x) 
+							{
+								System.out.print(" "+j);
+							}
+							else {
+								break;
+							}
+						}
+					}
+					System.out.println();
+					if(i<5){
+						x++; 
+					}
+					else 
+					{
+						x--;
+					}
+				}
+		
+	}
+	
+	/*
+ 1        
+ 1 2      
+ 1 2 3    
+ 1 2 3 4  
+ 1 2 3 4 5
+ 1 2 3 4
+ 1 2 3
+ 1 2
+ 1 
+	 * */
 	
 	public static void printRightHalfCrystalHollow() 
 	{

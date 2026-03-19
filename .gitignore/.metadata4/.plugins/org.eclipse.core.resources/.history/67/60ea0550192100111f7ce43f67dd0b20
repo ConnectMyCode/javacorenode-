@@ -1,0 +1,23 @@
+package com.inheritance.learn;
+
+public class InheritanceUseProtectectedFornheritingPArentClassPropertiesByCHildClassDemo3 {
+	public static void main(String []args) 
+	{
+		new Beta(); 
+	}
+}
+
+
+class Alpha 
+{
+	
+
+}
+
+
+
+class Beta
+{
+	}
+
+

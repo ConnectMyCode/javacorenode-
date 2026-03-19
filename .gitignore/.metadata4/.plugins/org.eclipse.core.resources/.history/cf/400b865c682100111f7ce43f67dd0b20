@@ -1,0 +1,117 @@
+package com.arrays.programs;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArraysAssignDay_01 {
+	
+	static Scanner sc = new Scanner(System.in); 
+	
+	public static void main(String []args) 
+	{
+		
+		/*
+		 * Que 4 :
+		=======
+		Write a java program to print all even elements and odd elements 
+		separately from an array.
+
+		Input as  : 1 2 3 4 5 6 7
+		Even elements are : 2 4 6
+		Odd elements are : 1 3 5 7
+*/	
+		
+		System.out.println("Enter Element inside the array");
+		
+		int size = sc.nextInt();
+		int []array1 = new int[size]; //5                     //  0 1 2 3  4  5
+		for(int i= 0; i<array1.length ;i++) 
+		{
+			array1[i] = sc.nextInt();
+
+		}
+		
+		PrintOddAndEven(array1 ,size);  
+
+	/*	
+		Que 5:
+			=======
+			Write a java program to find the middle elements of a given array. 
+			If array is odd then print only the middle element, if array is even
+			then print both the middle elements.
+		
+			Input as : 1 2 3 4 5     
+			Output is : 3
+		
+			Input is :1 2 3 4 5 6    
+			Output is :3 4
+*/		
+		
+		
+		int lengthOfArr= sc.nextInt(); 
+		int[] array2 = new int[lengthOfArr];
+		
+		
+		
+		for(int i=0; i<lengthOfArr ;i++) 
+		{
+			array2[i] = sc.nextInt();  
+		}
+		findMiddleElement(array2);
+	
+		
+		
+		
+	
+	
+	}
+	
+	
+	
+
+	
+	public static void findMiddleElement(int []array2) 
+	{	
+		int lengthOfArray = array2.length; 
+		System.out.println(lengthOfArray); 
+		
+		if(lengthOfArray %2 == 0 )
+		{
+			System.out.println(lengthOfArray/2); 
+		}
+		else
+		{
+			System.out.println(lengthOfArray/2 +" \n\n");       
+		}
+	}
+		
+		
+	public static void PrintOddAndEven(int []array1 ,int size) 
+	{
+		int []even =new int[6];
+		int []odd = new int[6];
+		
+		int i =0; 
+		int j=0; 
+
+		for(int element: array1) 
+		{
+			if(element%2==0) 
+			{
+				even[i] = element;
+				i++;
+				System.out.println(even[i]);   
+			}
+			else {
+				odd[j] = element;
+				j++; 
+				System.out.println(odd[j]);
+			}
+		}
+		System.out.println(Arrays.toString(even)); 
+		System.out.println(Arrays.toString(odd)); 
+	}
+	
+	
+	
+}

@@ -6,11 +6,96 @@ public class ArraysLogicUtils {
 	static Scanner sc = new Scanner(System.in);
 	
 	
+	public static int[][] JaggedArray(int [] [] array6)
+	{	
+		
+	 //Giving unique no of columns to each row.  
+		for(int i=0;i<3;i++) 
+		{
+		    System.out.print("Enter size of column tha belongs to Row" + i);
+			int size= sc.nextInt();
+			array6[i] = new int[size];      
+		}
+		
+		
+		//Taking Input
+		for(int i = 0; i<3 ;i++)
+		{
+			for(int j =0 ; j<array6[i].length ;j++)  
+			{
+				array6[i][j] = sc.nextInt(); 
+			}
+			System.out.println();
+		}
+		
+		//Printing jagged array
+		for(int i=0; i<3 ;i++) 
+		{
+			for(int j=0; j<array6[i].length; j++) 
+			{
+				System.out.print(" "+array6[i][j]); 
+			}
+			System.out.println();
+		}
+		
+			return array6;
+	} 	
 	
 	
 	
 	
+	public static int[][] twoDimArrayss(int[][] array5 )  
+	{	
+
+		
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<5;j++) 
+			{
+				array5[i][j]  = sc.nextInt();        
+			}
+			System.out.println();
+		}
+
+		
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<5;j++) 
+			{
+				System.out.print(array5[i][j]);        
+			}
+			System.out.println();
+		}
+		
+			return array5;
+	} 	
 	
+	
+	
+	
+	public static int[][] TwoDimArrayAdd(int [][] x, int[][] y)     //2 Jagged arrays additions
+	{
+		int [][] z = new int[5][5]; //Jagged Array is an object so we can give the object reference value for now a default value. 
+						//int [5][5] 
+		
+		for(int i=0; i<x.length ;i++) 
+		{
+			for(int j=0; j<y.length ;j++) {
+				
+				z[i][j] = x[i][j] + y[i][j]; 
+			}
+		
+			
+		}
+		
+		for(int i=0; i<5 ;i++) 
+		{
+			for(int j=0; j<5;j++) 
+			{
+				System.out.print(z[i][j]+ " ");
+			}
+			System.out.println();
+		}
+		return z;
+	}
 	
 	
 	

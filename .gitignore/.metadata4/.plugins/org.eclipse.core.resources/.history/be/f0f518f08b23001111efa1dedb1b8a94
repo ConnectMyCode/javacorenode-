@@ -1,0 +1,169 @@
+package com.employee.management.connect.my.code;
+
+import java.util.Scanner;
+
+public class EmployeeDatabase {
+	
+	/*Fixed size of array is limitation so for now I am taking size=3 
+	 
+	 
+	*/
+	private static EmployeeObject []employeeData = new EmployeeObject[3]; 
+	private static int i =0 ;  
+	
+								
+	static Scanner sc = new Scanner(System.in);
+	
+	
+	private EmployeeDatabase() //Private Constructor of class EmployeeDataabse ;  Declared private: reason?->purpose of this class is to ddo operations on the database 
+	{} 
+	
+	
+	
+	public static void UpdateData(EmployeeObject employeeObject)   //"employeeObject" -> object from the array as there are 3 present  so passing the object inside the method to make updates to the object properties. 
+	{
+		/*
+		 * 1. Change id 
+		 * 2. change name 
+		 * 3. change contact 
+		 * 4. change salary 
+		 * 5. change position 
+		 *  */ 
+		System.out.println("------------Update Employee Database--------------");     
+		System.out.print("Enter 1.Change Id \n 2.Change Name \n3.Change Contact \n4.Change Salary \n5.Change Position \n");   
+		int choice = sc.nextInt();
+		
+		while() //loop to continue asking the user wants to continue or not 
+		{	switch (choice) {
+			case 1-> {
+				
+				
+				System.out.println("Enter the new Id to update");
+				int id = sc.nextInt();      
+				//--------//Data Validation----------------- ? Am i using these words correctly here . What is difference betwenn Data validation and Verification
+				if(id<=0){    
+					
+					System.err.println("ID value cannot be below 0 reneter a proper id ");
+					System.exit(0);  
+				}
+				else 
+				{
+					/*change id*/		
+					System.out.println("Previous Id : "+employeeObject);
+					
+					employeeObject.setId(id);			//Used to update the ID inside the object; 
+					System.out.println("Updated Id : "+employeeObject);
+				}		
+			}
+			case 2-> {
+				
+				
+				System.out.println("Enter new Name to update: ");
+				String newName = sc.next(); 
+				
+				System.out.println("Previous Name:"+employeeObject);
+				employeeObject.setName(newName);  //Name has been updated
+				System.out.println("Updated Name:"+employeeObject);
+				/*However, an object's property in Java is a variable that holds a reference to a string object. A setter method changes that 
+				 * reference to point to a different, newly created string object, effectively "updating" the property's value from the perspective 
+				 * of the object's user. 
+				 * */
+				
+			}
+			case 3->{
+				System.out.println("Enter New Contact to update: ");
+				String contact = sc.next(); 
+				
+				if(contact.length()>10) 
+				{
+					System.out.println("Invalid Conntact please check number");
+					System.exit(0);
+				}
+				else 
+				{
+					System.out.println("Previous contact is"+employeeObject);
+					
+					employeeObject.setContact(contact);  //Updated the contact number
+					System.out.println("Previous contact is"+employeeObject);
+					
+				}
+			}
+			case 4->{
+				
+				System.out.println("Enter updated Salary: ");
+				
+				double salary = sc.nextDouble(); 
+				
+				if(salary<0) 
+				{
+					System.out.println("Invalid salary amount entered cannot be less than or euqals to zero ");
+					System.exit(0);
+				}
+				else {
+					System.out.println("Previous salary:"+ employeeObject);
+					
+					employeeObject.setSalary(salary); //Updated Salary 
+					System.out.println("Previous salary:"+ employeeObject);				
+				}
+				
+				
+			}
+			case 5->{
+				System.out.println("Enter the position to update : \n SE-1 \n SE-2 \n SE-3 \n SE-4 \n SE-5 \n Team Lead");
+				String position = sc.next();
+				
+				if(position == "SE-1" || position == "SE-2" || position == "SE-3" ||position =="SE-4" ||position =="SE-5" ||position =="Team Lead") 
+				{
+					System.out.println("Previous employee Data: "+employeeObject);
+					employeeObject.setPosition(position); //updated the position 
+					System.out.println("After updating Employee Data: "+employeeObject);
+				}
+				else 
+				{
+					System.out.println("Invlaid input for position");
+					System.exit(0);
+				}
+				
+			}
+			default->{
+				System.out.println("Entered Wrong Choice ");
+			}
+		}
+		
+		choice = sc.nextInt();    
+		
+		}
+		
+		
+		
+	}
+	
+	
+	
+	public static EmployeeObject[] ToSearchCopyDatabaseReturn() 
+	{
+		/*Returning the Array that has the data it will be a shallow copy of the data after reaching in file where it is called from a copy of this database with help of passing it inside Methods arguments will create a shallow copy*/
+		return employeeData;
+	} 
+	
+	
+	public static EmployeeObject[] viewData() 
+	{
+		return employeeData;    
+	}
+	
+	
+	
+	public static void addEmployeeData(EmployeeObject employee) 
+	{ 
+		employeeData[i] = employee; 
+		i++; 
+		System.out.println("Employee Added Successfully"); 
+	} 
+		
+	
+	
+	
+		
+} 
+

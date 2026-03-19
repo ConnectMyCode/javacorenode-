@@ -1,0 +1,10 @@
+package com.inheritance.learn;
+
+public class MethodOverriding {
+
+	void main() 
+	{
+		
+	}
+	
+}

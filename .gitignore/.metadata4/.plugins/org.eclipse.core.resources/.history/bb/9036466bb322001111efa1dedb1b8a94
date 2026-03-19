@@ -1,0 +1,7 @@
+package com.inheritance.learn;
+
+public class VaraibleHidingDeveloperParentDemo4 extends VaraibleHidingEmployeeChildDemo4 {
+
+	protected double salary = 500000; 
+	
+}

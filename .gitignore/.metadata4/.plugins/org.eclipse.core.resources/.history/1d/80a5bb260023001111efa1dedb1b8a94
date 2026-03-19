@@ -1,0 +1,10 @@
+package com.inheritance.learn;
+
+public class MethodOverridingDemo5 {
+
+	void main() 
+	{
+		MethodOverridingSonDemo5 son = new MethodOverridingSonDemo5();
+	}
+	
+}

@@ -1,0 +1,30 @@
+package com.inheritance.learn;
+
+public class SingleLeveLInheritanceDemo1 {
+	
+	public static void main(String []args) 
+	{
+		Dog dog = new Dog();
+		dog.roam(); 
+		
+	}
+
+}
+
+class Animal
+{
+	public void roam() 
+	{
+		System.out.println("Inside the Roam Method of Super class "); 
+ 	}
+}
+
+
+
+class Dog extends Animal 
+{
+	public void bark() 
+	{
+		System.out.println("Dog is barking inside theod of  sub class : dog");
+	}
+}

@@ -1,0 +1,14 @@
+package com.inheritance.learn;
+
+public class VaraibleHidingDeveloperParentDemo4 extends VaraibleHidingEmployeeChildDemo4 {
+
+	protected double salary = 500000;  //Variable Hiding
+	
+	public void showBalance() 
+	{
+System.out.println("Data Hiding Concept: "+salary); //As per searching algorithm the search will start from the bottom  to up  so it finds the salary Instance field here only so it does not go up so the value printed is 500000; 
+		System.out.println("Developer Salary is: "+ this.salary); // Current class  
+ 		System.out.println("Employee Salary is : " + super.salary); // Parent class
+	}
+	
+}

@@ -1,0 +1,103 @@
+package com.employee.management.connect.my.code;
+
+import java.util.Scanner;
+
+public class EmployeeDatabase {
+	
+	/*Fixed size of array is limitation so for now I am taking size=3 
+	 
+	 
+	*/
+	private static EmployeeObject []employeeData = new EmployeeObject[3]; 
+	private static int i =0 ;  
+	
+								
+	static Scanner sc = new Scanner(System.in);
+	
+	
+	private EmployeeDatabase()
+	{} 
+	
+	
+	
+	public static void UpdateData(EmployeeObject employeeObject)   //Changing data of which object from the array as there are 3 present  so passing the object whcih is getting updated. 
+	{
+		/*
+		 * 1. Change id 
+		 * 2. change name 
+		 * 2. change contact 
+		 * 2. change salary 
+		 * 2. change position 
+		 *  */ 
+		System.out.println("------------Update Employee Database--------------");     
+		System.out.print("Enter 1.Changing Id \n 2.Changing Name \n3.Changing Contact \n4.Changing Salary \n5.Changing Position \n");   
+		int choice = sc.nextInt();
+		
+		switch (choice) {
+		case 1-> {
+			
+			//Searching if employee is in database or not [Verification] 
+			System.out.println("Enter Employee id to verify employee ID");
+			int id = sc.nextInt(); 
+			
+			
+			//--------//Data Validation----------------- ? Am i using these words correctly here . What is difference betwenn Data validation and Verification
+			if(id<=0){    
+				
+				System.err.println("ID value cannot be below 0 reneter a proper id ");
+				System.exit(0);
+			}
+			else {
+				
+				employeeObject.setId(id);
+			}
+			
+			
+					/*change id*/
+				
+					
+		}
+		case 2-> {
+			
+		}
+		case 3->{
+			
+		}
+		case 4->{}
+		case 5->{}  
+		default->{}
+		}
+		
+		
+		
+	}
+	
+	
+	
+	public static EmployeeObject[] ToSearchCopyDatabaseReturn() 
+	{
+		/*Returning the Array that has the data it will be a shallow copy of the data after reaching in file where it is called from a copy of this database with help of passing it inside Methods arguments will create a shallow copy*/
+		return employeeData;
+	} 
+	
+	
+	public static EmployeeObject[] viewData() 
+	{
+		return employeeData;    
+	}
+	
+	
+	
+	public static void addEmployeeData(EmployeeObject employee) 
+	{ 
+		employeeData[i] = employee; 
+		i++; 
+		System.out.println("Employee Added Successfully"); 
+	} 
+		
+	
+	
+	
+		
+} 
+
