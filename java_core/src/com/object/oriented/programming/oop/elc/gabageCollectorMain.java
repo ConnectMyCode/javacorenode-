@@ -14,7 +14,7 @@ public class gabageCollectorMain {
 		gabageCollector gab2 = gab1;   //shallowCopy 
 		
 		
-		System.out.println("pass By value: created a areferemce variable gb3 of type 'gabageCollector' storing the value returned by 'modify(gab2)'  ");
+		System.out.println("pass By value: created a reference variable gb3 of type 'gabageCollector' storing the value returned by 'modify(gab2)'  ");
 		gabageCollector	gb3 = modify(gab2); 
 							 /*null*/
 		
@@ -34,15 +34,15 @@ public class gabageCollectorMain {
 	
 	public static  gabageCollector modify(gabageCollector gab){
 		
-		System.out.print("gab pointing yo --> 2000x , obj2 in heap is present ");                                 
+		System.out.print("gab pointing yo --> 1000x , obj2 in heap is present ");                                 
 	    System.out.print("getHameoglobin(): "+gab.getHameoglobin());
 	    System.out.println(" getBloodPressure:"+gab.getBloodPressure());
 	    
-	    System.out.println("New Object created at location 3000x pointed by 'gab'  DEEIP COpY  ");
+	    System.out.println("New Object created at location 2000x pointed by 'gab'  DEEIP COpY  ");
 	    gab= new gabageCollector(5.90f,80.90);
 	    System.out.println(gab); 
 	    
-	    System.out.println("assigning null to nthe reference variable 'gab' ; then it stops referencing the object at 3000x . ");
+	    System.out.println("assigning null to nthe reference variable 'gab' ; then it stops referencing the object at 2000x . ");
 	    gab=null;
 	    
 	    System.out.println("returning the null value");

@@ -1,0 +1,31 @@
+package com.inheritance.learn;
+
+import java.util.Scanner;
+
+public class HasARelationAgggregationDemo12 {
+
+	static Scanner cs = new Scanner(System.in);
+	
+	public static void main(String []args) 
+	{
+		String clgName ; 
+		String location; 
+		
+		System.out.println("enter college Name: ");  
+		clgName = cs.nextLine();  
+		
+		System.out.println("enter college location: ");  
+		location = cs.nextLine();  
+		
+		
+		//College Object Created 
+		HasARelationAgggregationCollegeDemo12 clgs = new HasARelationAgggregationCollegeDemo12(clgName,location);
+	
+	
+		//Student Object created 
+		HasARelationAgggregationStudentDemo12 stud1 = new HasARelationAgggregationStudentDemo12(); 
+	
+	}
+	
+	
+}

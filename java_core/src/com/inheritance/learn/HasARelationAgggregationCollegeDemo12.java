@@ -1,0 +1,25 @@
+package com.inheritance.learn;
+
+public class HasARelationAgggregationCollegeDemo12 {
+	
+	private String name; 
+	private String location; 
+	
+	public HasARelationAgggregationCollegeDemo12(String name , String location) 
+	{
+		
+		super(); 
+		this.name = name; 
+		this.location = location; 
+		
+	}
+
+	@Override
+	public String toString() {
+		return "HasARelationAgggregationCollegeDemo12 [name=" + name + ", location=" + location + "]";
+	}
+	
+	
+	
+	
+}	

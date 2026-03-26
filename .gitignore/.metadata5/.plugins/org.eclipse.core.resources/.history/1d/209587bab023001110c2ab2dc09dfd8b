@@ -1,0 +1,12 @@
+package com.inheritance.learn;
+
+public class CallingNoArgumentConstructorSubClassDemo8 extends CallingNoArgumentConstructorSuperClassDemo8{
+	
+	public CallingNoArgumentConstructorSubClassDemo8(int y) 
+	{
+		super(/*y*/); 
+		
+		System.out.println("Inside the Parameterized Constructor of Sub Class"); 
+	}
+	
+}

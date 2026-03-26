@@ -1,0 +1,24 @@
+package com.inheritance.learn;
+
+public class MultilevelInheritanceGrandFatherDemo9 {
+						
+	protected double money= 10000;       //This filed can be accessed inside the same package and in the itss subclasses. 
+	
+	public MultilevelInheritanceGrandFatherDemo9() 
+	{   
+		super(); 
+	    
+	}
+	
+	protected void Land() 
+	{
+		System.out.println("10Acres OF land near a river. ");
+	}
+	
+	protected void Money(){   //This method is only accessible in the same package and to its subclasses. 
+		System.out.println("Grnadfather Earned Money: "+ money);
+	}
+	
+	
+
+}

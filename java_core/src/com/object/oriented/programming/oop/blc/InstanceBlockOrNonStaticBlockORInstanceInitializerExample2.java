@@ -28,7 +28,7 @@ public class InstanceBlockOrNonStaticBlockORInstanceInitializerExample2 {
 	int x;  //non static field  
 	
 	{ //purpose of the block :-> Initialize the non static fields ; 
-		x= 9000; 
+		x= 9000;  
 		System.out.println("x value is :"+x ); 
 		System.out.println("Object creation is in progress"); 
 	}

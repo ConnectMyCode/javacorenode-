@@ -1,0 +1,10 @@
+package com.inheritance.learn;
+
+public class MultilevelInheritanceChildDemo9 extends MultilevelInheritanceFatherDemo9{
+	
+	
+	public MultilevelInheritanceChildDemo9()  
+	{
+		
+	}
+}

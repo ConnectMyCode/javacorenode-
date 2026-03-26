@@ -1,0 +1,37 @@
+package com.inheritance.learn;
+
+public class MultilevelInheritanceChildDemo9 extends MultilevelInheritanceFatherDemo9{
+	
+	
+	
+	protected final float sonLand = 40;
+	protected final double sonMoney =40000; 
+	
+	protected float totalLand;
+	protected double totalMoney;
+	
+	public MultilevelInheritanceChildDemo9()  
+	{
+		super();
+		System.out.println("Inside a Child Constructor");
+	}
+	
+	@Override
+	protected void Land() 
+	{
+		System.out.println("Son acculmeulted land total:"+totalLand);
+	}
+	
+	@Override
+	protected void Money() 
+	{
+		System.out.println(" son has money: "+totalMoney);   
+	}
+
+	@Override
+	public String toString() {
+		return "MultilevelInheritanceChildDemo9 [sonLand=" + sonLand + ", sonMoney=" + sonMoney + ", totalLand="
+				+ totalLand + ", totalMoney=" + totalMoney + "]";
+	}
+	
+}

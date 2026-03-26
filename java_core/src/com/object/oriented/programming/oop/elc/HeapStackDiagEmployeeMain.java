@@ -5,9 +5,12 @@ public class HeapStackDiagEmployeeMain {
 	int id = 100;    
 	
 	/*
-	 * Whenever we are creating an object of the HeapStackDiagEmployeeMain class then a compiler
-	 * will add a default no args constructor() which will intitialize the non-static field to 0
+	 * 
+	 * Whenever we are creating an object  new() keyword assign a dybnamic memory space in heap memory and assigns memory to 
+	 * Non static methods , and initializes the Non static fields with zero . 
+	 * will add a default no args constructor() which will intitialize the non-static field to actual value . 
 	 * If it has an value assigned then Employee() constructor will initialize it to the value i.e, 100
+	 * 
 	 * */
 	
 	/*  */
@@ -44,7 +47,7 @@ public class HeapStackDiagEmployeeMain {
 	}
 	
 								//Shallow copy 
-	public static void update(HeapStackDiagEmployeeMain e){
+	public static void update(HeapStackDiagEmployeeMain e){     
 		e.id =200 ; 
 		
 		e = new HeapStackDiagEmployeeMain();

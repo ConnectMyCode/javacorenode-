@@ -1,0 +1,17 @@
+package com.inheritance.learn;
+
+public class HasARelationAgggregationDemo12 {
+
+	public static void main(String []args) 
+	{
+		
+		
+		String clgName ; 
+		String location; 
+		
+		//College Object Created 
+		HasARelationAgggregationCollegeDemo12 clgs = new HasARelationAgggregationCollegeDemo12();
+	}
+	
+	
+}

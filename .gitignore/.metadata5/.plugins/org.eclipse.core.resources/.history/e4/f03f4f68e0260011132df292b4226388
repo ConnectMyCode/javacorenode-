@@ -1,0 +1,17 @@
+package com.inheritance.learn;
+
+public class MultilevelInheritanceGrandFatherDemo9 {
+						
+	
+	public MultilevelInheritanceGrandFatherDemo9() 
+	{
+		super(); 
+	}
+	
+	protected void Land() 
+	{
+		System.out.println("10Acres OF land near a river. ");
+	}
+	
+	
+}

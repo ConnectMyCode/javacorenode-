@@ -1,0 +1,16 @@
+package com.inheritance.learn;
+
+public class HasARelationAgggregationStudentDemo12 {
+	
+	private int id ;
+	private String name;
+	private String address; 
+	private College clg; 
+	
+	
+	public HasARelationAgggregationStudentDemo12() 
+	{
+		
+	}
+	
+}

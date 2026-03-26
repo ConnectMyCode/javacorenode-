@@ -1,0 +1,34 @@
+package com.inheritance.learn;
+
+public class HasARelationCompositionCarDemo11 {
+	
+	
+	private String name;
+	private String version;
+	private final HasARelationCompositionEngineDemo11 engine;  // Final Field [HAS -A Relation] : Compulsory initialize the the field either in constructor or a Instance block , if not initilaized then it gives error run time. 
+															   //So , whenever a Car Object is created the engine object creation is compulsory so have to pass the value for that as well . 
+	
+	
+	public HasARelationCompositionCarDemo11(String name, String version ,String engineType,double mileage) 
+	{
+		//Composition Relation: 
+		engine = new HasARelationCompositionEngineDemo11(engineType , mileage);   //Has a relation : reason: A  complete object of another class is  used as a propertie  inside another object :HAS-A rleation : Type:Compostion elation     
+		//Object of class Engine is created inside another class Car    [contaIner: Car]  [contained: engine]  : Strong bond : Composition : Strong relationship in between the container and the contained if container is destroyed then the  contained is also destroyed. 
+		this.name = name; 
+		this.version = version; 
+		
+	}
+		
+		
+
+	
+
+	@Override
+	public String toString() {
+		return "HasARelationCompositionCarDemo11 [name=" + name + ", version=" + version + super.toString()+"]";
+	}
+	
+	
+	
+	
+}

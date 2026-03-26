@@ -17,7 +17,7 @@ public class MethodReturnTypeAsAClassandPassingObjectReferenceCardCardType
 		
 	String creditPoints = MethodReturnTypeAsAClassandPassingObjectReferenceCardCalculateCreditPoints.calcualteCreditPoints(customer1);
 	
-	float creditPointsAssigned = Float.valueOf(creditPoints);
+	float creditPointsAssigned = Float.valueOf(creditPoints); //String to float Narrowing using valueOf() ; 
 	
 	String cardType = ""; 
 

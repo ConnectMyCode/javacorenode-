@@ -1,0 +1,27 @@
+package com.inheritance.learn;
+
+import java.util.Scanner;
+
+public class HierarchichalInheritanceDemo9 {
+	
+	static Scanner sc= new Scanner(System.in);
+	
+	
+	public static void main(String []args) 
+	{
+		System.out.println("Enter the Exam Fees: ");
+		double examFees= sc.nextDouble();
+		
+		System.out.println("Enter the Transport Fees: ");
+		double transportFees = sc.nextDouble();
+		
+		
+		
+		HierarchichalInheritanceDaySchollarExtendsStudentDemo9 std = new HierarchichalInheritanceDaySchollarExtendsStudentDemo9(examFees , transportFees);
+				
+		
+		
+		
+	}
+	
+}													

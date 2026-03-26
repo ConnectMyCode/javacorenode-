@@ -19,7 +19,7 @@ public class CopyConstructorPassingAnObjectReferenceToConstructorEmployeManagerM
 		System.out.println(starEmployee); 
 		starEmployee = null;
 		
-		/*So i gave 'null' literal value to the reference variable so the object: lets say at 1000x was created referenced by 'staremployee' no is assignred null so that object is now eligible for Gatage collection */
+		/*So i gave 'null' literal value to the reference variable so the object: lets say at 1000x was created referenced by 'staremployee' now it is assigned null so that object is now eligible for Garbage collection */
 		
 		System.gc();
 		

@@ -1,0 +1,6 @@
+package com.inheritance.learn;
+
+public class HierarchichalInheritanceHostellerExtendsStudentDemo9 {
+
+	private double hostelFees ; 
+}

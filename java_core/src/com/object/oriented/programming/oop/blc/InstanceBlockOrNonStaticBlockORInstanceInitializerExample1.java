@@ -2,7 +2,9 @@ package com.object.oriented.programming.oop.blc;
 
 public class InstanceBlockOrNonStaticBlockORInstanceInitializerExample1 {
 	
-	{
+	
+	
+	{//Instance Blocks
 		System.out.println("Its a Instance Initializer block 0 ");
 	}
 	

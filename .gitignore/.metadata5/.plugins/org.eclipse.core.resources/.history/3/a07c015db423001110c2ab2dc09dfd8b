@@ -1,0 +1,8 @@
+package com.inheritance.learn;
+
+public class CallingParameterizedConstructorExplicitlyDemo8 {
+	
+	 CallingParameterizedConstructorExplicitlyParentDemo8 child = new CallingParameterizedConstructorExplicitlyChildDemo8();  
+	 
+	 
+}

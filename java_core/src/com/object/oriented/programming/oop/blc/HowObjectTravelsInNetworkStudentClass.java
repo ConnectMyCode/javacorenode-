@@ -4,7 +4,7 @@ public class HowObjectTravelsInNetworkStudentClass {
 	
  private String name; 
  private int marks; 
- 
+
  public HowObjectTravelsInNetworkStudentClass(String name , int marks){
 	 this.name = name;   
 	 this.marks= marks;     

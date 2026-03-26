@@ -1,0 +1,19 @@
+package com.inheritance.learn;
+
+public class SingleLeevelnheritanceEmpMainDemo2 {
+
+	
+	public static void main(String []args)
+	{
+		
+		
+		
+		SingleLeevelnheritancePempEmpDemo2 emp = new SingleLeevelnheritancePempEmpDemo2(101 , "Sanu" ,90000, "Cricket", "Batter"); 
+		System.out.println(emp);
+		
+		
+		 
+		
+		
+	}
+}

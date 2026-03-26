@@ -1,0 +1,11 @@
+package com.inheritance.learn;
+
+public class CallingNoArgumentConstructorDemo8 {
+	
+	public static void main(String []args){
+		
+		new CallingNoArgumentConstructorSubClassDemo8(15);		
+	
+	}
+	
+}

@@ -1,0 +1,16 @@
+package com.inheritance.learn;
+	
+public class HasARelationCompositionDemo11 {
+	
+	Scanner 
+	
+	
+	public static void main(String []args) 
+	{
+		
+		String name = 
+		
+		HasARelationCompositionCarDemo11 car = new HasARelationCompositionCarDemo11(); 
+	}
+	
+}	

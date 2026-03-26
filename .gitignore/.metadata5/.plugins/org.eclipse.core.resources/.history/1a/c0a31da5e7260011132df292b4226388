@@ -1,0 +1,39 @@
+package com.inheritance.learn;
+
+public class MultilevelInheritanceFatherDemo9 extends MultilevelInheritanceGrandFatherDemo9{
+	
+	/*If we are not explicitly creating a Constructor with argument then: 
+	 * Error: Implicit super constructor MultilevelInheritanceGrandFatherDemo9() 
+	 * is undefined for default constructor. Must define an explicit constructor
+	 * That means as I know using super() means I am calling a constructor of super class that has no args
+	 * But here I have not written such constructor inside super class
+	 * So when I am  extending the super class to this child class it is expecting some value for the parameterized Constructor, 
+	 * As compiler can also add "super()" keyword but after adding it this super will search for the default no args Constructor 
+	 * and there is no such constructor in super class 
+	 * So either I have to declare default No args constructor explicitly in super class Or I have to 
+	 * Use super(double) inside the sub class Constructor to call the super Class parameterized Constructor 
+	 * Note: because we start the object creation from the child class and inevitably the compiler will add super() keyword inside the Constructor of child class 
+	 * If only we have not written super() explicitly because of that we have to ciompulsory write the super(double) so the parent constructor is executed . */
+	
+	
+	protected final double fatherMoney = 2000; 
+	
+	public MultilevelInheritanceFatherDemo9() {
+		super();
+		
+		System.out.println("In Father Constructor");
+		
+	}
+	
+	/*As the generation passes their wealth is accumulated so is the money */
+	
+	protected void Money() 
+	{
+		double totalMoney = super.money+fatherMoney; 
+		System.out.println("Father adds on to the wealth of Grandfather: "+ totalMoney);
+		
+	}
+			 
+	
+	
+}

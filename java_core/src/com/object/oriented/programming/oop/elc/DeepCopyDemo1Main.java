@@ -7,7 +7,7 @@ import com.object.oriented.programming.oop.blc.DeepCopyDemo1;
 public class DeepCopyDemo1Main {
 	public static void main(String args[])
 	{
-		Scanner sc= new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
 		
 		
@@ -36,9 +36,6 @@ public class DeepCopyDemo1Main {
 	System.out.println( "deep1 --> OBJECT1 : "+deep1.getPrice()); 
 	System.out.println("deep2 --> OBJECT2 : "+ deep2.getPrice());
 		/*Deep Copy*/
-		
-		
-		
 		
 		
 	}

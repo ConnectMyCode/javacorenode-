@@ -1,0 +1,28 @@
+package com.inheritance.learn;
+
+public class HasARelationCompositionCarDemo11 {
+	
+	
+	private String name;
+	private String version;
+	private final HasARelationCompositionEngineDemo11 engine; 
+	
+	
+	public HasARelationCompositionCarDemo11(String name, String version ,String engineType,double mileage) 
+	{
+		engine = new HasARelationCompositionEngineDemo11(engineType , mileage); 
+		
+		this.name = name; 
+		this.version = version; 
+		
+	}
+
+	@Override
+	public String toString() {
+		return "HasARelationCompositionCarDemo11 [name=" + name + ", version=" + version + super.toString()+"]";
+	}
+	
+	
+	
+	
+}

@@ -1,6 +1,6 @@
 package com.object.oriented.programming.oop.elc;
 
-import java.util.*;
+import java.util.*; 
 
 import com.object.oriented.programming.oop.blc.HowObjectTravelsInNetworkStudentClass;
 import com.object.oriented.programming.oop.blc.HowObjectTravelsInNetworkStudentClassCalculateGrade;
@@ -20,10 +20,11 @@ public class HowObjectTravelsInNetworkStudentClassMain {
 		
 		HowObjectTravelsInNetworkStudentClassStudentGrade network =  HowObjectTravelsInNetworkStudentClassCalculateGrade.calculateGrade(stud); //"" Returns type: HowObjectTravelsInNetworkStudentClassStudentGrade  
 		
-		
+		 
 		
 		System.out.println("The Student"+network.getStudent()+"has"+network.getStudentGrade());
-			
+																	/* network-- HowObjectTravelsInNetworkStudentClassCalculateGrade.calculateGrade(stud) --- 		HowObjectTravelsInNetworkStudentClassStudentGrade studGrade = new HowObjectTravelsInNetworkStudentClassStudentGrade(student , studentGrade)   -- Access to the get ,set method;  
+   */
 			
 	}
 		

@@ -21,7 +21,7 @@ public class ConstructorGetterSetterRectangleEmployeeMain {
 		/*Employee Getter and setter*/
 		
 		long number  = sc.nextLong(); 
-		String name = sc.nextLine();
+		String name = sc.next();
 		double salary = sc.nextDouble();
 		
 		ConstructorGetterSetterEmployee emps = new ConstructorGetterSetterEmployee(number , name , salary); 

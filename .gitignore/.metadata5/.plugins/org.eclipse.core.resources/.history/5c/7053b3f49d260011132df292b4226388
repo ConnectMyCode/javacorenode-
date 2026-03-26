@@ -1,0 +1,18 @@
+package com.inheritance.learn;
+
+public class SingleLeevelnheritanceTempEmpDemo2 {
+		
+	private String tempEmp;
+	private double salary; 
+	
+	
+	public SingleLeevelnheritanceTempEmpDemo2(String tempEmp , double salary)
+	{    
+		 this.tempEmp = tempEmp; 
+		 this.salary = salary;  
+	}
+	
+	
+	
+	
+}

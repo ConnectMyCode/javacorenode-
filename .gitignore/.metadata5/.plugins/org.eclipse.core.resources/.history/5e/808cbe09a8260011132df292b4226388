@@ -1,0 +1,17 @@
+package com.inheritance.learn;
+
+public class HierarchichalInheritanceDaySchollarExtendsStudentDemo9 {
+
+	
+	protected double transportFee; 
+	
+	
+	public HierarchichalInheritanceDaySchollarExtendsStudentDemo9(double examFees , double transportFee) 
+	{
+		super(examFees);
+		this.transportFee = transportFee; 
+		
+		
+	}
+	
+}

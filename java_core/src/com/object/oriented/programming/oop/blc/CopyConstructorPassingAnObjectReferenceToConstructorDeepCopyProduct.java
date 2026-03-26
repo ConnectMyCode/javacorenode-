@@ -11,11 +11,11 @@ public CopyConstructorPassingAnObjectReferenceToConstructorDeepCopyProduct(Strin
 		this.productPrice = productPrice;  
 	}
 	
-	/* Constructor Overloading */
+	/* Constructor Overloading */ 
 public CopyConstructorPassingAnObjectReferenceToConstructorDeepCopyProduct( CopyConstructorPassingAnObjectReferenceToConstructorDeepCopyProduct product)
 	{
-		this.productName = product.getProductName();
-		this.productPrice = product.getProductPrice(); 
+		this.productName = product.getProductName();  
+		this.productPrice = product.getProductPrice();  
 	}
 
 	@Override

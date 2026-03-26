@@ -1,0 +1,14 @@
+package com.inheritance.learn;
+
+public class HierarchichalInheritanceStudentParentClassDemo9 {
+
+	protected double examFees; 
+	
+	public HierarchichalInheritanceStudentParentClassDemo9(double examFees) 
+	{
+		super(); 
+		this.examFees = examFees; 
+	}
+	
+	
+}

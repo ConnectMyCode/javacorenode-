@@ -1,0 +1,11 @@
+package com.inheritance.learn;
+
+public class ParameterizedConstructorAlphaDemo7 {
+	
+	String str ; 
+	
+	public  ParameterizedConstructorAlphaDemo7 (String str)
+	{
+		this.str = str;     
+	}
+}

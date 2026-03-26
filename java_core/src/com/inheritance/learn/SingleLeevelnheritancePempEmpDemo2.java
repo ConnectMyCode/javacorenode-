@@ -1,0 +1,28 @@
+package com.inheritance.learn;
+
+public class SingleLeevelnheritancePempEmpDemo2 extends SingleLeevelnheritanceTempEmpDemo2{	
+	
+	protected String department; 
+	protected String designation ; 
+	
+
+	public SingleLeevelnheritancePempEmpDemo2(int id, String name, double salary , String department , String designation)  
+	{
+		
+		super(id ,name ,salary); 
+		this.department = department;
+		this.designation = designation; 
+		
+	}
+
+
+	@Override
+	public String toString() {
+		return "SingleLeevelnheritancePempEmpDemo2 [department=" + department + ", designation=" + designation + "id , name , salary: "+super.toString() +"]";
+	}
+	
+	
+	
+
+
+}

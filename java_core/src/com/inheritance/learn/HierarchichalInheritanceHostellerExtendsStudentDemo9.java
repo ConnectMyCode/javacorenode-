@@ -1,0 +1,22 @@
+package com.inheritance.learn;
+
+public class HierarchichalInheritanceHostellerExtendsStudentDemo9  extends HierarchichalInheritanceStudentParentClassDemo9{
+
+	private double hostelFees ;
+	private double total;
+	public HierarchichalInheritanceHostellerExtendsStudentDemo9(double examFees , double hostelFees)
+	{
+		super(examFees);
+		this.hostelFees = hostelFees;
+		total = this.hostelFees + examFees;
+	}
+
+	@Override
+	public String toString() {
+		return "HierarchichalInheritanceHostellerExtendsStudentDemo9 [hostelFees=" + hostelFees + ", total=" + total
+				+ "]";
+	}
+	
+	
+	
+}

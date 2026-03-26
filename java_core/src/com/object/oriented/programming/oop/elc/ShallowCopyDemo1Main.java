@@ -9,7 +9,7 @@ public class ShallowCopyDemo1Main {
 		double price = sc.nextDouble();
 		
 		ShallowCopyDemo1 dem1 = new ShallowCopyDemo1(price); //3000; 
-		ShallowCopyDemo1 dem2 = dem1;     //SHALLOPW COPY   : multiple reference variable pointing to Single object;  dem2 store adrres of object and dem1 already had the addreess of the object so it just got ssinged to dem2 ;     
+		ShallowCopyDemo1 dem2 = dem1;     //SHALLOPW COPY   : multiple reference variable pointing to Single object;  dem2 store addrres of object and dem1 already had the addreess of the object so it just got assinged to dem2 ;     
 		
 		System.out.println(dem1.getPrice()); //3000 	 
 		System.out.println(dem2.getPrice()); //3000 

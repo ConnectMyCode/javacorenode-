@@ -1,0 +1,10 @@
+package com.inheritance.learn;
+
+public class HierarchichalInheritanceDaySchollarExtendsStudentDemo9 {
+
+	public HierarchichalInheritanceDaySchollarExtendsStudentDemo9() 
+	{
+		
+	}
+	
+}

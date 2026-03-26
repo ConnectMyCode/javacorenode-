@@ -1,0 +1,7 @@
+package com.inheritance.learn;
+
+public class SingleLeevelnheritancePempEmpDemo2 extends SingleLeevelnheritanceTempEmpDemo2{	
+	
+	
+
+}

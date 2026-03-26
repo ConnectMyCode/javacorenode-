@@ -1,0 +1,29 @@
+package com.inheritance.learn;
+
+import java.util.Scanner;
+
+public class HasARelationCompositionDemo11 {
+	
+    static  Scanner sc = new Scanner(System.in);
+	
+	
+	public static void main(String []args) 
+	{
+		System.out.println("Enter the name of car: ");
+		String name = sc.nextLine(); 
+
+		System.out.println("Enter the version of car: ");
+		String version = sc.nextLine();  
+		
+		System.out.println("Enter the type of engine");
+		String engineType = sc.nextLine(); 
+		
+		System.out.println("Enter the mileage of the car");
+		double mileage = sc.nextDouble(); 
+		
+		HasARelationCompositionCarDemo11 car = new HasARelationCompositionCarDemo11(name, version, engineType,mileage); 
+		
+		System.out.println(car);
+	}
+	
+}	

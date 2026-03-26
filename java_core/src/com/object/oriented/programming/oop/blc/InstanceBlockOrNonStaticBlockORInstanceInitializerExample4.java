@@ -20,7 +20,7 @@ public class InstanceBlockOrNonStaticBlockORInstanceInitializerExample4 {
 	}
 	public InstanceBlockOrNonStaticBlockORInstanceInitializerExample4(double bus) 
 	{
-		
+		/*super()  -> Written Implicitly by the compiler if not written by developer. */
 		System.out.println("int value is: "+ bus);		
 	}
 	

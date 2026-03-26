@@ -1,0 +1,57 @@
+package com.object.oriented.programming.oop.elc;
+
+import com.object.oriented.programming.oop.blc.gabageCollector;
+
+public class gabageCollectorMain {
+	
+	public static void main(String args[])
+	{	
+		System.out.print("gab1 pointing to --> 1000x , obj1 in heap is present ");
+		gabageCollector gab1 = new gabageCollector(12.34f,69.9);
+		System.out.println(gab1); 
+		
+		System.out.print("gab2 copies address from gab1: 1000x gab2 is pointing to same--> 1000x as gab1, obj1 in heap is present and pointed by 2 reference varaible.: gab1 , gab2");
+		gabageCollector gab2 = gab1;   //shallowCopy 
+		
+		
+		System.out.println("pass By value: created a reference variable gb3 of type 'gabageCollector' storing the value returned by 'modify(gab2)'  ");
+		gabageCollector	gb3 = modify(gab2); 
+							 /*null*/
+		
+		
+		System.out.println(gab2);  
+		
+		gab1 = null; 
+		gab2 = null; 
+		
+		System.gc(); 
+		
+		System.out.println(gab1); 
+		System.out.println(gab2);   
+		
+	}
+
+	
+	public static  gabageCollector modify(gabageCollector gab){
+		
+		System.out.print("gab pointing yo --> 2000x , obj2 in heap is present ");                                 
+	    System.out.print("getHameoglobin(): "+gab.getHameoglobin());
+	    System.out.println(" getBloodPressure:"+gab.getBloodPressure());
+	    
+	    System.out.println("New Object created at location 3000x pointed by 'gab'  DEEIP COpY  ");
+	    gab= new gabageCollector(5.90f,80.90);
+	    System.out.println(gab); 
+	    
+	    System.out.println("assigning null to nthe reference variable 'gab' ; then it stops referencing the object at 3000x . ");
+	    gab=null;
+	    
+	    System.out.println("returning the null value");
+		return gab;  
+	}
+	
+	
+	
+
+	
+	
+}

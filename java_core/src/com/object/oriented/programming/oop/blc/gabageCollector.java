@@ -14,7 +14,7 @@ public class gabageCollector {
 	public float getHameoglobin() {
 		return hameoglobin;
 	}
-
+    
 	public void setHameoglobin(float hameoglobin) {
 		this.hameoglobin = hameoglobin;
 	}

@@ -10,7 +10,7 @@ public class HowObjectTravelsInNetworkStudentClassCalculateGrade {
 	 * What happens : Compiler automatically adds a constructor and that contructor has type public so it will be available to the developer to initialize values in the object when its created 
 	 * so we are already defining a constructor with private modifier so that the developer will not change any kind of data using cu=onstructor, 
 	 * we just need to use the methods of the class .
-	 * Example :-> Arrays Class //Look documentation
+	 * Example :-> Arrays Class //Look documentation .
 	*/
 	
 	private HowObjectTravelsInNetworkStudentClassCalculateGrade(){
@@ -36,7 +36,7 @@ public class HowObjectTravelsInNetworkStudentClassCalculateGrade {
 			studentGrade='D';
 			System.out.println('D');
 		}
-		//Create
+		//Create  //purpose : To learn how object travells we have createdd this new Object . 
 		HowObjectTravelsInNetworkStudentClassStudentGrade studGrade = new HowObjectTravelsInNetworkStudentClassStudentGrade(student , studentGrade);  
 		//StudemtGrade class object created 
 	

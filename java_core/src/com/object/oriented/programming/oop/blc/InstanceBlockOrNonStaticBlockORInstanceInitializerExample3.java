@@ -6,7 +6,7 @@ public class InstanceBlockOrNonStaticBlockORInstanceInitializerExample3
 	/*It is accessible across any package*/ 
 	public int x;
 	
-	{
+	{//NS blocks
 		x= 100; 
 		System.out.println("1st Block: "+x);
 	}

@@ -1,0 +1,14 @@
+package com.inheritance.learn;
+
+public class HasARelationCompositionCarDemo11 {
+	
+	
+	private String name;
+	private String version;
+	
+	public HasARelationCompositionCarDemo11() 
+	{
+		super(); 
+		
+	}
+}

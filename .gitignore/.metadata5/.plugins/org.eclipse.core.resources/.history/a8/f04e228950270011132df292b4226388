@@ -1,0 +1,46 @@
+package com.inheritance.learn;
+
+import java.util.Scanner;
+
+public class MultilevelInheritanceMainDemo9 {
+	
+	static Scanner sc= new Scanner(System.in);
+	
+	public static void main(String []args)
+	{
+		
+		String message = sc.next(); 
+		
+
+		//Observe totalLand and totalMoney accumulated it hs been decalared and initialized in only Grnadfather class but  us being inherited throughout the sub classes that is parent and chil its accessible inside those subclasses. .
+		MultilevelInheritanceChildDemo9 child = new MultilevelInheritanceChildDemo9(message); 
+		System.out.println(child);
+
+		MultilevelInheritanceFatherDemo9 parent = new MultilevelInheritanceFatherDemo9(message); //Crating the parent class object. 
+		System.out.println(parent);
+		
+		MultilevelInheritanceGrandFatherDemo9 grandFather = new MultilevelInheritanceGrandFatherDemo9(message);  //Crating the GrandFather class object. 
+		System.out.println(grandFather);
+		
+		
+		
+		child.Land();      //Protected Mehtod land in the superClass what is inherited by the father and son. 	
+		
+		parent.Land();   
+		
+		grandFather.Land();
+		
+		child.Money();
+		
+		parent.Money(); 
+		
+		grandFather.Money();
+		
+		
+		
+	}
+	
+	
+	
+
+}

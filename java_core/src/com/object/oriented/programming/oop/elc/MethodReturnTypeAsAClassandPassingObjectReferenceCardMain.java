@@ -19,7 +19,8 @@ public class MethodReturnTypeAsAClassandPassingObjectReferenceCardMain
 		
 		System.out.println(cust1);
 		System.out.println(cardType);
+		
 		 
-		 
-	}
-}
+		
+	}	
+}		

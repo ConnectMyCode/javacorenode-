@@ -1,0 +1,10 @@
+package com.inheritance.learn;
+
+public class CallingNoArgumentConstructorSubClassDemo8 extends CallingNoArgumentConstructorSuperClassDemo8{
+	
+	public CallingNoArgumentConstructorSubClassDemo8() 
+	{
+		
+	}
+	
+}
