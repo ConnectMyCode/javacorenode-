@@ -1,0 +1,32 @@
+package com.polymorphism.learn;
+
+public class DynamicPolymorphismDemo1 {
+	
+	public static void main(String[] args)
+	{
+		
+		DyamicPolymorphismAnimalDemo1 a1= new DyamicPolymorphismAnimalDemo1();
+		a1.eat(); 
+		a1.shit();  //static method;
+	 //	NSM:Compiler will search Animal Class ; JVM will execute based on current object "Animal" executes "eat()" from "Animal" class.
+    //	 SM:Compiler will search Animal Class based on Reference Type ; JVM will execute based on current object "Animal" executes "shit()" from "Animal" class. 
+		
+		
+		
+		DynamicPolymorphismDogDemo1 a2 = new DynamicPolymorphismDogDemo1(); 
+		a2.eat();
+		a2.shit();
+        //NSM:  Compiler searches "eat()" method in Dog Class based on Reference type; JVM executes the current Object  class "Dog"  "eat()" method.  
+	    //SM:  Compiler searches "eat()" method in Dog Class based on Reference type; JVM executes the current Object  class "Dog"  "shit()" method -->If not available the Search in the Parent Class -> "Animal" if present: Executes "shit()" from Animal class idAbsent : ERROR: RUNTIME ERROR. 
+		
+		
+		DyamicPolymorphismAnimalDemo1 a3 = new DynamicPolymorphismDogDemo1();     //Upcasting 
+		a3.eat();
+	 //	NSM:Compiler searches in Animal class based on  Reference Variable "a3" Type "Animal" class. JVM will execute from Dog class
+    //	 SM:Compiler Searches In Animal class , Jvm executes from Animal Class. 
+		
+		
+		
+	}
+
+}

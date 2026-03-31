@@ -1,0 +1,38 @@
+package com.polymorphism.learn;
+
+import java.lang.reflect.Method;
+
+public class MethodOverloadingInSuperSubClassDemo8 {
+	
+	
+	public static void main(String []args) 
+	{
+		//	Koyal = new Koyal();  
+		MethodOverloadingInSuperSubClassKoyalDemo8 koyal = new MethodOverloadingInSuperSubClassKoyalDemo8();
+		
+		koyal.roam();
+		
+		
+		koyal.fly();
+	//Compiler based on Reference Type searches in Koyal class finds it; 
+	//JVM executes based on Current Object i.e, Koyal object executes that class Method fly(); 
+	//-->Cannot find fly() Method .class --> JVM searches from Bottom to top i.e, It goes  to the Bird Class and finds it:-> Executes that Fly() method ,If not found Gives Error
+		
+		koyal.fly(1234);  //STATIC POLYMORPHISM : Compiler searches based on Reference Type + Method Parameters.  
+		//Note: NOT A DYNAMIC POLYMORPHISM      
+		/*//Compiler based on Reference Type and Method paramteres searches fly(int) method in Koyal class if it founds the exact match then that Compiler binds it to call; 
+		 *JVM simply executes as this method has already been resolved by compiler; 
+		 *
+		 *🔥 IMPORTANT RULE
+
+			In method overloading, compiler uses:
+
+	Reference type → to find methods
+	Parameters → to choose best match
+
+		 * 
+		 * */
+		
+	}
+	
+}

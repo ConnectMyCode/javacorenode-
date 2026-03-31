@@ -1,0 +1,12 @@
+package com.polymorphism.learn;
+
+public class PrivateMethodsCannotBeOVerridenSubDemo2 extends PrivateMethodsCannotBeOVerridenSuperDemo2{ 
+	
+	
+	private void m1()
+	{
+		System.out.println(""); 
+	}
+	
+
+}

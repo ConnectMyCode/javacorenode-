@@ -1,0 +1,15 @@
+package com.polymorphism.learn;
+
+public class PrivateMethodsCannotBeOVerridenDemo2 {
+			
+	public static void main()
+	{
+		 p1 = new PrivateMethodsCannotBeOVerridenSubDemo2().m1();
+		// Compiler Does not play any role here 
+		//JVM will Execute m1() method from Sub class as per the current object .
+		
+	}
+		
+		
+		
+}

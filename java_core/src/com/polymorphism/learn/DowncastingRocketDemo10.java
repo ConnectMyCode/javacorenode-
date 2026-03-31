@@ -1,0 +1,16 @@
+package com.polymorphism.learn;
+
+public class DowncastingRocketDemo10 extends DowncastingDemoFlyMachine12{
+	
+	@Override
+	public void fly() 
+	{
+		System.out.println("Machine  is Flying");
+	}
+	     
+	public void space()
+	{
+		System.out.println("Rocket dives into space!");  
+	}
+	
+}	

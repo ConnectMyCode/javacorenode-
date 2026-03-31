@@ -1,0 +1,16 @@
+package com.polymorphism.learn;
+
+public class VariableHidingSubDemo4 extends VariableHidingSuperDemo4 {
+	
+	int x =200;      //VARIABLE HIDING   (instance variable)
+
+	
+	@Override
+	public void m1()       //METHOD OVERIDING (instance methods)    
+	{
+		System.out.println("Making  a call from child");
+		
+	}
+
+
+}

@@ -1,0 +1,11 @@
+package com.polymorphism.learn;
+
+public class DowncastingDemo12 {
+	
+	public static void main(String []args) 
+	{
+		
+	}
+	
+
+}

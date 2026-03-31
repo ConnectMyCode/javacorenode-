@@ -1,0 +1,10 @@
+package com.polymorphism.learn;
+
+public class VariableHidingDemo4 {
+
+//	instance method -->Executed based on Current Object 
+//	instance Field --> Executed based on Reference Type 
+	
+	VariableHidingSuperDemo4 p1 = new VariableHidingSubDemo4(); 
+	
+}

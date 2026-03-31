@@ -1,0 +1,13 @@
+package com.polymorphism.learn;
+
+public class MethodOverridingVaraibleHidingInstanceFieldMethodDemo5 {
+	
+	
+	public static void main(String []args) 
+	{
+		
+		MethodOverridingVaraibleHidingInstanceFieldMethodRBIDemo5 bank = new MethodOverridingVaraibleHidingInstanceFieldMethodSBIDemo5();
+		
+		
+	}
+}

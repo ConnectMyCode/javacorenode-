@@ -1,0 +1,23 @@
+package com.polymorphism.learn;
+
+public class DynnamicPolymorphismAllConceptsDemo6 {
+	
+	public static void main(String []args) 
+	{
+	  //Bird b1 = null; 
+		DynnamicPolymorphismAllConceptsBirdDemo6 b1= null;  	
+	 //	b1 = sparrow;
+		  b1 = new DynnamicPolymorphismAllConceptsSparrowDemo6(); //UPcasting
+		  animalFly(b1);
+		  
+	//  b1= parrot; 
+		  b1 = new DynnamicPolymorphismAllConceptsParrotDemo6();
+		  animalFly(b1);
+	}	
+	
+					   //animalfly(Bird b1);	
+	public static void animalFly(DynnamicPolymorphismAllConceptsBirdDemo6 bird)
+	{
+		bird.roam();
+	}
+}

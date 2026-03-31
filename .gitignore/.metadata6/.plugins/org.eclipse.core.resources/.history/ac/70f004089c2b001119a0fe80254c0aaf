@@ -1,0 +1,11 @@
+package com.polymorphism.learn;
+
+public class DynnamicPolymorphismAllConceptsSparrowDemo6 extends DynnamicPolymorphismAllConceptsBirdDemo6{
+	
+
+	@Override
+	public void roam() 
+	{
+		System.out.println("Sparrow Bird is  Roaming");
+	}
+}

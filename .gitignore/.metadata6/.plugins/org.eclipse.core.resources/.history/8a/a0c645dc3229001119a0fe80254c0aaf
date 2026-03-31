@@ -1,0 +1,20 @@
+package com.inheritance.learn;
+
+import com.polymorphism.learn.UpcastingAndMethodOverridingDogDemo13;
+
+//	puppy extends Dog
+public class UpcastingAndMethodOverridingPuppyDemo13 extends UpcastingAndMethodOverridingDogDemo13 {
+	
+	
+	
+	@Override
+	public void eat()
+	{
+		System.out.println("Puppy Dog Animal is Eating");
+	}  
+	
+	
+	
+	
+	
+}

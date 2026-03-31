@@ -1,0 +1,11 @@
+package com.polymorphism.learn;
+
+public class InterviewQuestionVehicleDemo7 {
+
+	public void fuelCapacity() 
+	{
+		return 300; 
+	}
+	
+	
+}

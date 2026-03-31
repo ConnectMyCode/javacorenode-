@@ -1,6 +1,6 @@
-package com.inheritance.learn;
+	package com.inheritance.learn;
 
-public class MultilevelInheritanceGrandFatherDemo9 {
+public class MultilevelInheritanceGrandFatherDemo9 {	
 						
 	protected double money= 10000;       //This filed can be accessed inside the same package and in the itss subclasses. 
 	protected float land = 10; 

@@ -1,0 +1,14 @@
+package com.polymorphism.learn;
+
+public class MethodOverridingVaraibleHidingInstanceFieldMethodDemo5 {
+	
+	
+	public static void main(String []args) 
+	{
+	    // RBI bank = new SBI(); 
+		MethodOverridingVaraibleHidingInstanceFieldMethodRBIDemo5 rbi = new MethodOverridingVaraibleHidingInstanceFieldMethodSBIDemo5();
+		
+		System.out.println(rbi.ifscCode+" "+rbi);
+		
+	}
+}

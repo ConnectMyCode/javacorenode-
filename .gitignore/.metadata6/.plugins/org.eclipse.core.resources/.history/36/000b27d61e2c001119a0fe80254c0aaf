@@ -1,0 +1,17 @@
+package com.polymorphism.learn;
+
+public class MethodOverloadingInSuperSubClassKoyalDemo8 extends MethodOverloadingInSuperSubClassBirdDemo8
+{
+	@Override
+	public void roam() 
+	{
+		System.out.println("Koyal bid is Flyiing");
+	}
+	
+	public int fly(int height)   //Method Overloading : BASED on method signature and parameters type,no.order a method is overloaded --> Compiler Decides which method to execute  
+	{
+		System.out.println("Koyal Bird is  flying at "+height+"height");
+		return height;
+	}
+	
+}

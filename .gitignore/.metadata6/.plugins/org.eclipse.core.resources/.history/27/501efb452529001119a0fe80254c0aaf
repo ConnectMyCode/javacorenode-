@@ -1,0 +1,12 @@
+package com.inheritance.learn;
+
+public class UpcastingAndMethodOverridingPuppyDemo13 {
+	
+	public UpcastingAndMethodOverridingPuppyDemo13()
+	{}  
+	
+	
+	
+	
+	
+}

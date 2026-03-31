@@ -1,0 +1,16 @@
+package com.polymorphism.learn;
+
+public class DynamicPolymorphismDemo1 {
+	
+	public static void main(String[] args)
+	{
+		
+		DyamicPolymorphismAnimalDemo1 a1= new DyamicPolymorphismAnimalDemo1();
+		a1.eat(); 
+		
+		
+		DyamicPolymorphismDogDemo1 a2 = new DyamicPolymorphismDogDemo1(); 
+		
+	}
+
+}

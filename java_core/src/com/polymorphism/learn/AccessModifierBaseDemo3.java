@@ -1,0 +1,12 @@
+package com.polymorphism.learn;
+
+public class AccessModifierBaseDemo3 {
+	
+	
+	public void m1() 
+	{
+		
+	}
+	
+	
+}

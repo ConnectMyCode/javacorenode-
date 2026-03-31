@@ -1,0 +1,17 @@
+package com.polymorphism.learn;
+
+public class DynnamicPolymorphismAllConceptsDemo6 {
+	
+	public static void main(String []args) 
+	{
+		//Bird b1 = null; 
+		DynnamicPolymorphismAllConceptsBirdDemo6 b1= null; 
+		
+	}	
+	
+	
+	public static void animalFly()
+	{
+		
+	}
+}

@@ -1,0 +1,24 @@
+package com.polymorphism.learn;
+
+public class DynamicPolymorphismDemo1 {
+	
+	public static void main(String[] args)
+	{
+		
+		DyamicPolymorphismAnimalDemo1 a1= new DyamicPolymorphismAnimalDemo1();
+		a1.eat(); 
+	 //	NSM:Compiler will search Animal Class ; JVM will execute based on current object "Animal" executes "eat()" from "Animal" class.
+    //	 SM:Compiler will search Animal Class ; JVM will execute based on current object "Animal" executes "eat()" from "Animal" class. 
+		
+		
+		
+		DynamicPolymorphismDogDemo1 a2 = new DynamicPolymorphismDogDemo1(); 
+		a2.eat();
+       //NSM:  Compiler searches "eat()" method in Dog Class;  
+	    //SM: 
+				
+		
+		
+	}
+
+}

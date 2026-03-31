@@ -1,0 +1,17 @@
+package com.polymorphism.learn;
+
+public class InterviewQuestionVehicleDemo7 {
+
+	public int fuelCapacity() 
+	{
+		return 300; 
+	}
+	
+	
+	public void printFuelCapacity() 
+	{
+		System.out.println(fuelCapacity);
+	}
+	
+	
+}

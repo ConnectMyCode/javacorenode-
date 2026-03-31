@@ -1,0 +1,13 @@
+package com.inheritance.learn;
+
+public class UpcastingAndMethodOverridingAnimalDemo13 {
+
+	
+	@Override
+	public void eat() 
+	{
+		System.out.println("Animal is Eating"); 
+	}
+	
+	
+}		

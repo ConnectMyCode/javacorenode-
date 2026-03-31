@@ -1,0 +1,14 @@
+package com.inheritance.learn;
+
+import com.polymorphism.learn.UpcastingAndMethodOverridingAnimalDemo13;
+
+public class UpcastingAndMethodOverridingDogDemo13 extends UpcastingAndMethodOverridingAnimalDemo13 {
+		
+		//int -> return type :Error : Incompatible type with the superclass method eat(); 
+	@Override
+	public void eat()
+	{
+		System.out.println("Dog Animal is eating");
+	}
+	
+}

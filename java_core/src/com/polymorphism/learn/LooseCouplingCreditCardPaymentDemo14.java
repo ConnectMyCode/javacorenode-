@@ -1,0 +1,14 @@
+package com.polymorphism.learn;
+
+public class LooseCouplingCreditCardPaymentDemo14 extends LooseCouplingPaymentGatewayDemo14{
+
+	protected String discount() 
+	{
+		return "10% discount on any fast food Product purchase from Swiggy T&C applied";
+	}
+
+	public String message() 
+	{
+		return "Credit Card Payment Activated!";
+	}
+}

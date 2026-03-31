@@ -1,0 +1,16 @@
+package com.polymorphism.learn;
+
+public class VariableHidingSubDemo4 extends VariableHidingSuperDemo4 {
+	
+	int x =200;      //VARIABLE HIDING   (instance variable) Dynamic Polymorphism  On basis of Current Reference Type 
+
+	
+	@Override
+	public void m1()       //METHOD OVERIDING (instance methods)   Dynamic Polymorphism    -->On basis of Current Object JVM executes    
+	{
+		System.out.println("Making  a call from child");
+		
+	}
+
+
+}

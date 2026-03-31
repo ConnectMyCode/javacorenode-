@@ -1,0 +1,10 @@
+package com.polymorphism.learn;
+
+public class DownCastingDemo9 {
+
+	public static void main(String []args) 
+	{
+		// Animal a1= new Dog();
+		DownCastingAnimalDemo9 anmal = new DownCastingDogDemo9();
+	}
+}

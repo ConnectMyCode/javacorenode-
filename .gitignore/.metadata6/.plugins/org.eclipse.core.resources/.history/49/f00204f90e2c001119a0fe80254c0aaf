@@ -1,0 +1,10 @@
+package com.polymorphism.learn;
+
+public class InterviewQuestionDemo7 {
+		
+	
+	public static void main(String []args) 
+	{
+		InterviewQuestionVehicleDemo7 veh1 = new InterviewQuestionVehicleDemo7();
+	}
+}

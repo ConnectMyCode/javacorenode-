@@ -1,0 +1,28 @@
+package com.polymorphism.learn;
+
+public class InterviewQuestionVehicleDemo7 {
+
+	public int fuelCapacity() 
+	{
+		return 300; 
+	}
+	
+	
+	public void printFuelCapacity() 
+	{
+		System.out.println(fuelCapacity());    //Will this point to the current class method (Vehicle)  
+											  //TO the current object method (Car Object)
+		
+		
+		
+		System.out.println(this.fuelCapacity());
+		/*Ans:-> Point out Current Object method that is Car Object : 
+			Reason: The object of the class "Vehicle has not been created then how will the fuelCpacity() Method of class Vehicle work" 
+			The Object  created is of "Car class" so its methods are accessible . Naturally the current class method will be pointed by "this." keyword
+			
+		*/
+	
+	}
+	
+	
+}

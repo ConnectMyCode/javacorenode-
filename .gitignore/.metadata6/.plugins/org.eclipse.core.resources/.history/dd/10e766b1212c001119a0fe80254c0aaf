@@ -1,0 +1,17 @@
+package com.polymorphism.learn;
+
+public class DownCastingDogDemo9 extends DownCastingAnimalDemo9{
+
+	@Override
+	public void sleep() 
+	{
+		System.out.println("Generic Animal is Sleeping");
+	}
+	
+	public void bark() 
+	{
+		System.out.println("Dog is barking!");
+	}
+	
+	
+}

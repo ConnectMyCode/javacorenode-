@@ -1,0 +1,15 @@
+package com.polymorphism.learn;
+
+public class DynnamicPolymorphismAllConceptsDemo6 {
+	
+	public static void main(String []args) 
+	{
+		
+	}	
+	
+	
+	public static void animalFly()
+	{
+		
+	}
+}

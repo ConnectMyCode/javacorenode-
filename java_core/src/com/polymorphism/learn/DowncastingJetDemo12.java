@@ -1,0 +1,18 @@
+package com.polymorphism.learn;
+
+public class DowncastingJetDemo12 extends DowncastingDemoFlyMachine12{
+	
+	@Override
+	public void fly() 
+	{
+		System.out.println("Machine  is Flying");
+	}
+	
+	public void earth()
+	{
+		System.out.println("For jets Sky is the limit!"); 
+	}
+
+	
+	
+}

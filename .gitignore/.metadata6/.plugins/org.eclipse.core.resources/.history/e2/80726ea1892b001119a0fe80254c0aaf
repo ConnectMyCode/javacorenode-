@@ -1,0 +1,20 @@
+package com.polymorphism.learn;
+
+public class AccessModifierDemo3 {
+	
+	public static void main(String []args){
+		
+		
+		/*
+		 * 
+		 *         same class     same Package       SubClass(Other package using Inheritance)
+		 * 
+		 * 
+		 * */
+		
+	}
+	
+	
+	
+	
+}

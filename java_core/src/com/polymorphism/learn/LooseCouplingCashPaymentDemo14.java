@@ -1,0 +1,16 @@
+package com.polymorphism.learn;
+
+public class LooseCouplingCashPaymentDemo14 extends LooseCouplingPaymentGatewayDemo14{
+			
+	@Override
+	public String message() 
+	{
+		return "Cash Payment Route activated";
+	}
+	
+	protected String bonus() 
+	{
+		return "You have eraned 100Rs cashback for chooosing Cash payment method";
+	}
+}
+

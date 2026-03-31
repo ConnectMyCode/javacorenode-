@@ -1,0 +1,11 @@
+package com.polymorphism.learn;
+
+public class LooseCouplingCashPaymentDemo14 {
+			
+	
+	public String limit() 
+	{
+		return "Cash Payment Route activated"; 
+	}
+}
+

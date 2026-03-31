@@ -1,0 +1,12 @@
+package com.polymorphism.learn;
+
+public class AccessModifierDerivedDemo3 extends AccessModifierBaseDemo3 {
+	
+	@Override	
+	public void m1() 
+	{
+		
+	}
+	
+	
+}

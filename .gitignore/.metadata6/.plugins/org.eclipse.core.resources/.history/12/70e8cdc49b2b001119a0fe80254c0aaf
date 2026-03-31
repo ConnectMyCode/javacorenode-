@@ -1,0 +1,5 @@
+package com.polymorphism.learn;
+
+public class DynnamicPolymorphismAllConceptsParrotDemo6 extends DynnamicPolymorphismAllConceptsBirdDemo6{
+
+}

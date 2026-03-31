@@ -1,0 +1,16 @@
+package com.polymorphism.learn;
+
+public class LooseCouplingDebitCardPaymentDemo14 extends LooseCouplingPaymentGatewayDemo14{
+
+	public String offer() 
+	{
+		return "";
+	}
+
+	public String message() 
+	{
+		return "Debit card payment method activated!";
+	}
+	
+	
+}

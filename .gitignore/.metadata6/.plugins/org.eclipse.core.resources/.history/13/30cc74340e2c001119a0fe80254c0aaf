@@ -1,0 +1,11 @@
+package com.polymorphism.learn;
+
+public class InterviewQuestionCarDemo7  extends InterviewQuestionVehicleDemo7{
+
+	
+	@Override
+	public int fuelCapacity() 
+	{
+		return 280;
+	}
+}

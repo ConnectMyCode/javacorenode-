@@ -1,0 +1,15 @@
+package com.polymorphism.learn;
+
+public class DowncastingDemo12 {
+	
+	public static void main(String []args) 
+	{
+	    //FlyMachine machine - new Rocket(); 
+		DowncastingDemoFlyMachine10 machine =new DowncastingRocketDemo10();  
+		
+		
+		
+	}
+	
+
+}
