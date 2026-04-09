@@ -1,0 +1,6 @@
+package com.anonymous.inner.classs.learn;
+
+abstract public class AICAbstractClassVehicleDemo2 {
+
+	abstract public void run();    //Abstract Method 
+}

@@ -1,0 +1,13 @@
+package com.abstraction.learn;
+
+abstract public class AbstractMethodAsABuisnessRuleAnimalDemo3 {
+
+	protected String name ;  
+	
+	public AbstractMethodAsABuisnessRuleAnimalDemo3(String name) 
+	{
+		this.name = name; 
+	}
+	
+	abstract public void regularHealthCheckup(); //Abstract method
+}

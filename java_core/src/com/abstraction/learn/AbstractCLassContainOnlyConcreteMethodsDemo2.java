@@ -1,0 +1,12 @@
+package com.abstraction.learn;
+
+public class AbstractCLassContainOnlyConcreteMethodsDemo2 {
+
+	
+	public static void main(String []args)
+	{
+		
+	}
+	
+	
+}

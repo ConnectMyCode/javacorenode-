@@ -1,0 +1,31 @@
+package com.abstraction.learn;
+
+public class AbstractMethodUsingArrayFruitShopKitchenDemo4 {
+	
+	private String fruitChoice ;
+	
+	
+	public AbstractMethodUsingArrayFruitShopKitchenDemo4(String fruitChoice) 
+	{
+		this.fruitChoice = fruitChoice;     
+	}
+	
+	
+	 public AbstractMethodUsingArrayFruitDemo4 orderProcessing() 
+	 {
+		 
+		String  fruitSelected = fruitChoice.toLowerCase();
+		 
+		if() 
+		{
+			
+		}
+		else if() 
+		{
+			
+		}
+		 return null;
+	 }
+	
+	
+}

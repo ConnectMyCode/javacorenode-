@@ -1,0 +1,9 @@
+package com.abstraction.learn;
+
+abstract public class AbstractMethodsMustBeOverridenAlphaDemo2 {
+
+	
+	public void show();
+	public void demo(); 
+	
+}

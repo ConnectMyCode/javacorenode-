@@ -1,0 +1,17 @@
+package com.record.keyword.learn;
+
+public class NormalEmployeeClassDemo2 
+{
+	
+	private int id; 
+	private String name; 
+	
+	public NormalEmployeeClassDemo2(int id , String name) 
+	{
+		
+	}
+	
+	
+	
+	
+}

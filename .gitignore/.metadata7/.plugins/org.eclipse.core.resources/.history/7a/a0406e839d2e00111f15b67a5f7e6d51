@@ -1,0 +1,60 @@
+package com.objectclass.methods.learn;
+
+public class EqualsMethodEmployeeDemo2 {
+	
+	private int id; 
+	private String name; 
+	
+	public EqualsMethodEmployeeDemo2(int id , String name) 
+	{
+		super(); 
+		this.id= id; 
+		this.name = name;
+	}
+	
+	
+	public int hashcode() 
+	{
+		return this.id;
+	}
+	
+	//Content Comparison
+		
+	public boolean equals(Object obj) 
+	{
+		
+		//First Object content
+		int id1 = this.id; 
+		String name1= this.name; 
+		
+		//2nd object content 
+		int id2=  obj.id; 
+		String name2 = obj.name;
+		
+		if(id1 == id2 & name1.equals(name2)) 
+		{
+			return true ; 
+		}
+		else 
+		{
+			return false;
+		}
+				
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	
+	
+	
+
+}

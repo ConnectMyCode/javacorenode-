@@ -1,0 +1,27 @@
+package com.abstraction.learn;
+
+import java.util.Scanner;
+
+public class AbstractMethodUsingArrayFruitShopDemo4 {
+
+	
+	public static void main(String []args) 
+	{
+		Scanner sc= new Scanner(System.in);
+		
+		
+		System.out.println("Welcome to fruit SHOP!! Give your Choice-->  1.Apple \n 2.Orange ");
+		
+		
+		String choice = sc.nextLine();
+		
+		AbstractMethodUsingArrayFruitShopTicketCounterDemo4 ticket = new AbstractMethodUsingArrayFruitShopTicketCounterDemo4(choice);
+		
+		AbstractMethodUsingArrayFruitDemo4 coupon  = ticket.generateCoupon();    //Holds the Object of Apple/Orange class whcih is return by the Method>>>>>"generateCoupon()" of Class (FruitTciketCounter) 		
+	
+		
+	}
+	
+	
+	
+}

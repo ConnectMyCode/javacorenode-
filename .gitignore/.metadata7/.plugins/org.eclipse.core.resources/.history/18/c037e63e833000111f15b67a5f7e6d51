@@ -1,0 +1,14 @@
+package com.objectclass.methods.learn;
+
+public class IntToHexadecimalFormatDemo4 {
+
+	
+	
+	public static void main(String []args) 
+	{
+		int x = 0xadd;
+		System.out.println(x);
+		
+		int val = 2781;
+	}
+}

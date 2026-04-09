@@ -1,0 +1,23 @@
+package com.abstraction.learn;
+
+public class AbstractMethodUsingArrayOrangeDemo4 extends  AbstractMethodUsingArrayFruitDemo4{ 
+
+	
+	public void cut() 
+	{
+		System.out.println("Orange Fruit is cut");
+	}
+
+	
+	//  ()->IO.println();   //Lambda Only works with Interface ;
+	
+	public void clean() 
+	{
+		System.out.println("Orange Fruit is Clean"); 
+	}
+	
+	public String grind() 
+	{
+		return "Orange Juice is ready";      
+	}
+}

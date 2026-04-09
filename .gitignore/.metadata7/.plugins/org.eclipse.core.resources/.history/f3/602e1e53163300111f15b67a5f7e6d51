@@ -1,0 +1,12 @@
+package com.abstraction.learn;
+
+public class AbstractMethodUsingArrayFruitShopKitchenDemo4 {
+	
+	
+	 public AbstractMethodUsingArrayFruitDemo4 orderProcessing(AbstractMethodUsingArrayFruitDemo4 fruitChoice) 
+	 {
+		 
+	 }
+	
+	
+}

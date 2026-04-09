@@ -1,0 +1,16 @@
+package com.record.keyword.learn;
+
+
+public record RecordDemo1() {
+
+//public final record RecorDemo1 extends java.lang.Record    --> Record class already extends Record Class So it cannot extend any  other class that means it cannot become a child of any other class.  
+														   //-->It is Final so it cannot be inherited by other classes. 
+	
+	static {
+		System.out.println("Non static blocks are not allowed in Record WHY? this blocks ARE Executed every time an object is created this block will be excuted  no need of block getting executed \n Records is used for Transfering the data in Netwrok \n We want it to be secured ,immutable,and cannot be edited from outside so for making it \n 1.immutable->private and final Fields are automatically generated. \n2.Secured-->Final class Hello ; Class cannot be inherited because of final keyword so the data inside cannot be changed ,\t fields are private and final so it hides the data and final makes the fields immutable. \tNo setter methods are possible because of final NSF/SF they cannot be reinitialized again, \t From Outside we cannot declare a Instance Variable because it breaks the immutability and data consistency   \n");
+	}
+	
+	
+	
+	
+}

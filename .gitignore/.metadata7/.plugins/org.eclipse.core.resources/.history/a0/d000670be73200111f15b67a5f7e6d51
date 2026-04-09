@@ -1,0 +1,329 @@
+package com.abstraction.learn;
+
+public class ClassAbstractDemo1 
+{
+	
+	public static void main(String []args)
+	{
+		//Shape = new Square
+		ClassAbstractShapeDemo1 square = new ClassAbstractSquareDemo1();
+		
+		//is Square Object is created also . IS there Object Creation of the Abstract CLass SHAPE as it also a class  when constructor of Square executes super() changes flwo to PArent Shape CLass and THen to OBject class   
+		//If yes ? --> Then how ? 
+		//If No ? --> Then How are is INstance Block and Instance Fields getting insitialized and Executed and also  can be called
+		
+		//ANS: 
+			
+/*		Good — this is a **fundamental concept**, and you’re asking the right question.
+
+---
+
+# 🔥 What is the EXACT job of a constructor?
+
+> **Constructor does NOT create the object** ❌
+> **Constructor INITIALIZES the object** ✅
+
+---
+
+# 🔥 Step-by-step Reality (VERY IMPORTANT)
+
+When you write:
+
+```java
+new ClassAbstractSquareDemo1();
+```
+
+---
+
+## 🔹 Step 1: Object Creation (by JVM)
+
+👉 JVM allocates memory in heap
+
+```
+[ Object class part ]
+[ Shape (abstract) part ]
+[ Square part ]
+```
+
+👉 At this point:
+
+* All values = **default values**
+
+  * int → 0
+  * boolean → false
+  * object → null
+
+---
+
+## 🔹 Step 2: Constructor Execution
+
+👉 Now constructor runs to:
+
+### ✔ Initialize variables
+
+### ✔ Execute logic
+
+### ✔ Make object ready to use
+
+---
+
+# 🔥 So what exactly constructor does?
+
+## ✅ 1. Initializes instance variables
+
+```java
+this.x = 10;
+```
+
+---
+
+## ✅ 2. Executes instance blocks
+
+```java
+{
+   System.out.println("Instance block");
+}
+```
+
+---
+
+## ✅ 3. Runs constructor body
+
+```java
+Square() {
+   System.out.println("Constructor");
+}
+```
+
+---
+
+## ✅ 4. Ensures proper object state
+
+👉 Example:
+
+```java
+if (id <= 0) throw error;
+```
+
+---
+
+# 🔥 In your case (IMPORTANT)
+
+When only constructor is executed:
+
+👉 It is doing:
+
+1. Calling `super()`
+2. Initializing parent part
+3. Initializing child part
+4. Executing constructor logic
+
+---
+
+# 🔥 Key Concept
+
+> Constructor = **Object setup mechanism**
+
+---
+
+# 🔥 Common Misconception
+
+| Statement                      | Correct? |
+| ------------------------------ | -------- |
+| Constructor creates object     | ❌ No     |
+| Constructor initializes object | ✅ Yes    |
+
+---
+
+# 🔥 Simple Analogy
+
+* JVM = builds empty house 🏠
+* Constructor = arranges furniture 🪑
+
+---
+
+# 🔴 Final One-line Answer
+
+> Constructor’s job is to **initialize the already created object and make it usable**
+
+---
+
+If you want next:
+
+👉 I can explain **difference between initialization block vs constructor (VERY IMPORTANT)** or
+👉 Give **output-based questions on constructor flow**
+
+
+Excellent — this is the **exact point where most people get confused**, and you’re thinking correctly.
+
+---
+
+# 🔥 Your Core Question
+
+> Before initialization happens, an object must exist.
+> So what is that object?
+> **Shape or Square?**
+
+---
+
+# ✅ Direct Answer
+
+> The object is of **Square (child class)** — NOT Shape
+
+---
+
+# 🔥 Step-by-step Reality (VERY IMPORTANT)
+
+When you write:
+
+```java
+new ClassAbstractSquareDemo1();
+```
+
+---
+
+## 🔹 Step 1: Object is CREATED (before constructor)
+
+👉 JVM creates **ONE object**:
+
+```
+Object type = ClassAbstractSquareDemo1
+```
+
+---
+
+## 🔹 Step 2: Memory Layout of that object
+
+```
+[ Object class part ]
+[ Shape (abstract class part) ]
+[ Square (child class part) ]
+```
+
+👉 This is **ONE object**, not multiple objects
+
+---
+
+# 🔥 Now your question:
+
+> Before initialization, what object exists?
+
+### ✔ Answer:
+
+👉 **Fully allocated Square object exists (with default values)**
+
+---
+
+# 🔥 Important Detail
+
+At creation time:
+
+```
+x = 0
+ch = '\u0000'
+isjoy = false
+...
+```
+
+👉 Everything is **default initialized**
+
+---
+
+# 🔥 Then constructor chain starts
+
+### Flow:
+
+1. Object is already created (Square type)
+2. `super()` → goes to Shape
+3. Parent part initialized
+4. Child part initialized
+
+---
+
+# 🔥 VERY IMPORTANT UNDERSTANDING
+
+> Even when Shape constructor runs →
+> it is working on **the SAME Square object**
+
+---
+
+# ❌ What is NOT happening?
+
+* No separate Shape object ❌
+* No temporary object ❌
+
+---
+
+# 🔥 Visualization
+
+Think like this:
+
+```
+Square object (single entity)
+│
+├── Object part
+├── Shape part
+└── Square part
+```
+
+👉 Constructors just **initialize different sections**
+
+---
+
+# 🔴 Final Answer
+
+> ✔ Object exists BEFORE constructor runs
+> ✔ That object is ALWAYS of **child class (Square)**
+> ✔ Parent constructor works on **its portion of the same object**
+
+---
+
+# 🔥 One-line Memory
+
+> Object type = **child class**, initialization = **top → down (parent to child)**
+
+---
+
+If you want next level:
+
+👉 I can give a **very tricky output question combining constructor + polymorphism + initialization order** (interview level)
+
+
+
+*/	
+		System.out.println(square.ch);
+		
+		System.out.println(square.x);
+
+		System.out.println(square.isjoy);
+		
+		System.out.println(square.j);
+		
+		System.out.println(square.fool());
+		
+		square.foo1();
+		
+	
+	//	ClassAbstractShapeDemo1 shape = new ClassAbstractShapeDemo1();   //Cant create Object of Abstract class ; 
+		
+		
+		ClassAbstractRectangleDemo1 shape = new ClassAbstractRectangleDemo1();  
+		
+		System.out.println(shape.fool());
+		
+		shape.foo1();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+}

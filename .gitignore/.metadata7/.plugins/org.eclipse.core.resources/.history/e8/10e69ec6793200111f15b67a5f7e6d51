@@ -1,0 +1,23 @@
+package com.interFace.learn;
+
+public class UPIPaymentDemo1 implements PaymentDemo1{
+	
+	@Override
+	public void applyDiscount() 
+	{
+		
+	}
+
+	@Override
+	public void processPayment() 
+	{
+		
+	}
+
+	@Override
+	public void freeCoupon() 
+	{
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.abstraction.learn;
+
+public class ClassAbstractDemo1 
+{
+	
+	public static void main(String []args) {}
+	//Shape = new Square
+	ClassAbstractShapeDemo1 square = new ClassAbstractSquareDemo1();
+	
+	
+	
+	
+}

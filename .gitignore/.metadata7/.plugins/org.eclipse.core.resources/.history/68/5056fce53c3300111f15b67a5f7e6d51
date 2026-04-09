@@ -1,0 +1,23 @@
+package com.anonymous.inner.classs.learn;
+
+public class AICAbstractClassDemo2 {
+
+	
+	public static void main(String []args)
+	{
+		
+		AICAbstractClassVehicleDemo2 car = new AICAbstractClassVehicleDemo2()
+		{
+			public void run()
+			{
+				System.out.println("Car is Running onthe Anonymous INner Class HIGHWAY");
+			}
+
+		};
+		
+		car.run();
+		
+		
+	}
+	
+}

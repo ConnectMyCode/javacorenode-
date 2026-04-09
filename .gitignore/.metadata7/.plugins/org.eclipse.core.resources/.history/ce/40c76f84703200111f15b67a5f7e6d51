@@ -1,0 +1,10 @@
+package com.interFace.learn;
+
+public class CreditCardPaymentDemo1 {
+	
+	public static void main(String [] args) 
+	{
+		
+		
+	}
+}

@@ -1,0 +1,56 @@
+package com.abstraction.learn;
+
+public class AbstractClassAndAbstractMethodUsingArrayDemo5 {
+
+	public static void main(String []args)
+	{
+		
+		int []arr = new int[5];   //[I
+		                          //  class java.lang.Object
+		System.out.println(arr.getClass().getName());
+		System.out.println(arr.getClass().getSuperclass()); 
+		
+		
+		boolean []array = new boolean[2];
+		System.out.println(array.getClass().getName());
+		System.out.println(array.getClass().getSuperclass()); 
+		
+		long []longArray = new long[4]; 
+		System.out.println(longrray.getClass().getName());
+		
+		String []stringArray = new String[5]; 
+		System.out.println(array.getClass().getName());
+		
+		float[] floatArray = new float[2];
+		System.out.println(array.getClass().getName());
+		
+		
+	}
+	
+	
+	
+	//Why this internal represeantaion of array is requred is because of these following 6 reasons :-> 
+/*	
+	🔥 6. Purpose of these JVM array classes
+	✔ Uniform behavior
+
+	All arrays behave like objects:
+
+	arr.getClass()
+	arr.hashCode()
+	arr.toString()
+
+	✔ Reflection support
+	arr.getClass().getName()
+
+	✔ JNI (Java Native Interface)
+
+	C/C++ code needs compact representation:
+
+	[I instead of int[]
+
+	✔ Performance
+	No wrapper objects (like Integer)
+	Direct memory access
+	*/
+}

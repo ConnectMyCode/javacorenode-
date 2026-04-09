@@ -1,0 +1,26 @@
+package com.interFace.learn;
+
+import java.util.Scanner;
+
+public class PaymentGatewayDemo1 {
+	
+	
+	final private String paymentMethod;
+	
+	public PaymentGatewayDemo1(final String paymentMethod) 
+	{
+		this.paymentMethod = paymentMethod;
+	}
+	
+	
+	public static void initiatePayment(String paymentChoice) 
+	{
+		switch(paymentChoice = paymentChoice.toLowerCase()) 
+		{
+		  case "upi"->{   }   
+		  case "credit"->{}  
+		}
+	}	
+	
+
+}

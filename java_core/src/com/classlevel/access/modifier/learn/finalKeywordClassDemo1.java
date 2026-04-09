@@ -1,0 +1,32 @@
+package com.classlevel.access.modifier.learn;
+
+public class finalKeywordClassDemo1 {   
+	
+	/*?wHY SHOULd I declare a class Final : This class data and logic  to be secured becuase it is very valuable and non  negotiable to the project
+			
+			what it does? -> this class cannot be inherited by any other class.  */ 
+	
+	
+	//IT gives error if inherited
+	
+	//We can create an object of A class 
+	
+	
+	public static void main(String []args) 
+	{
+		finalKeywordClassADemo1 a = new finalKeywordClassADemo1();
+		a.dishWasher();
+		
+		
+		//Inheritance is not possible so there is no upcasting no Method overriding and no Variable hiding. 
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+}

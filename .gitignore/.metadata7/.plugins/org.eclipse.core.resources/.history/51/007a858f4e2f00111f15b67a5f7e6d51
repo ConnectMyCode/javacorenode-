@@ -1,0 +1,23 @@
+package com.record.keyword.learn;
+
+public record RecordEmployeeClassDemo2(int id , String name) //Components are private and final 
+{
+	
+	
+	//Compact Constructor : To Validate Outer world Data before Saving it inside the Record class oR INitializing the fields 
+	
+	public  RecordEmployeeClassDemo2
+	{
+		if(id<=0) 
+		{
+			System.err.println("Invlaid Id entered");
+			System.exit(0);
+		}
+	}
+	
+	
+	
+	
+	
+	
+}

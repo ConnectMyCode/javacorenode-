@@ -1,0 +1,11 @@
+package com.objectclass.methods.learn;
+
+public class GetClassNativeMethod {
+	
+	//Return type of this method is "Class" it belongs to --> Java.lang.Class; 
+
+	//Its used to get the runtime Class information. 
+	
+	//it gives output as: "class (Keyword)" + "Fully Qualified Name(FQN)"
+	
+}

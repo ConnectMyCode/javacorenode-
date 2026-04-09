@@ -1,0 +1,16 @@
+package com.abstraction.learn;
+
+abstract public class ClassAbstractShapeDemo1 {
+
+
+	public abstract void foo1(); //Abstract method
+	
+	public String fool() 
+	{
+		return "A Fool is full of shit";
+	}
+	
+	
+	
+	
+}

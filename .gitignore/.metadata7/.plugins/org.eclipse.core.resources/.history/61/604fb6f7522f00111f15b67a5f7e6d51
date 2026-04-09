@@ -1,0 +1,48 @@
+package com.record.keyword.learn;
+
+public record RecordEmployeeClassDemo2(int id , String name) //Components are private and final 
+{
+	
+	//Layer-1 data cannot access  the Layer-2 data -->It cannot change the Object only the class So that is why static fields,blocks,methods are allowed inside the Record class
+	static int a = 10;
+	static final int b= 20;
+	
+	static {
+		System.out.println("Static Blocks inside Record Employee class!\n");
+	}
+	
+	public static void allowed() 
+	{
+	     System.out.println("Static method inside Record Class Emloyee");
+	}
+	
+	
+	//Instance Fields And Instance Blocks Are not allowed 
+	
+	
+	//Compact Constructor : To Validate Outer world Data before Saving it inside the Record class oR INitializing the fields inside Record Class. 
+	
+	public  RecordEmployeeClassDemo2
+	{
+		if(id<=0) 
+		{
+			System.err.println("Invlaid Id entered");
+			System.exit(0);
+		}
+	}
+	
+	
+	//Automatically this Boiler Plate will be written : 
+	/* variables    --> private final int id;   private final String name;			
+		*(Auto generated constructor) Canonical constructor --> private Employee(this Employee,int id ,String name){ }  -> this Employee is not a parameter it is a reference variable  added implicitly by the compiler .Not visible 
+		* getters/setters --> only Getters are allowed Not Setters. 
+		* toString()  --> Overridden 
+		* equals() --> yes
+		* hashCode() -->yes
+
+		👉 Too much **boilerplate code**
+*/
+	
+	
+	
+}

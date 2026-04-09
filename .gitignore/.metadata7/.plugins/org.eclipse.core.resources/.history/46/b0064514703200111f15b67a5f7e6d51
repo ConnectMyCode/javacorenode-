@@ -1,0 +1,11 @@
+package com.interFace.learn;
+
+public interface PaymentDemo1 { 
+	
+	public void  processPayment();  
+	
+	//By default it will convert the above Method into --> abstract public void processPayment() [abstract method]
+	
+	public void applyDiscount(); 
+
+}

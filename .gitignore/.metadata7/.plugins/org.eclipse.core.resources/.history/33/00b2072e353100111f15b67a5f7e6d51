@@ -1,0 +1,20 @@
+package com.abstraction.learn;
+
+public class AbstractMethodAsABuisnessRuleLionDemo3 extends AbstractMethodAsABuisnessRuleAnimalDemo3 {
+
+	public AbstractMethodAsABuisnessRuleLionDemo3 (String name) 
+	{
+		super(name);
+	}
+
+	@Override
+	public void regularHealthCheckup() {
+		;System.out.println(this.name+"Lion is going for a egular health checkup");		
+	}
+	
+	
+	
+	
+	
+	
+}

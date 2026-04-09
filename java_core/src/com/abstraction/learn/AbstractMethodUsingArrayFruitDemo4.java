@@ -1,0 +1,10 @@
+package com.abstraction.learn;
+
+abstract public class AbstractMethodUsingArrayFruitDemo4 {
+	
+	abstract public  void clean();    //If a method is not declared as abstract in abstract class then we cannot ignore the body ,by not writting it .
+	public abstract  void cut();
+	public abstract String grind();
+	
+		
+}

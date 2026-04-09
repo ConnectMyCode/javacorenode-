@@ -1,0 +1,11 @@
+package com.abstraction.learn;
+
+public class AbstractClassAndAbstractMethodUsingArrayRectangleDemo6 extends AbstractClassAndAbstractMethodUsingArrayShapeDemo6{
+	
+	
+	public void draw() 
+	{
+		System.out.println("Drawing a Rectangle");
+	}
+	
+}

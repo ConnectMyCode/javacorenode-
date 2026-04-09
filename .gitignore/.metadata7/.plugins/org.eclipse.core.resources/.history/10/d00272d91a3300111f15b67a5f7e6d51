@@ -1,0 +1,29 @@
+package com.abstraction.learn;
+
+import java.util.Scanner;
+
+public class AbstractMethodUsingArrayCustomerDemo4 {
+	
+	
+	private String fruit;
+	
+	public AbstractMethodUsingArrayCustomerDemo4(String fruitChoice)  
+	{
+		this.fruit = fruitChoice;
+	}
+	
+	public String choiceMade() 
+	{
+		Scanner sc = new Scanner(System.in);
+		return 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

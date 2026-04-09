@@ -1,0 +1,21 @@
+package com.interFace.learn;
+
+public class CreditCardPaymentDemo1 implements PaymentDemo1 {
+	
+	public void processPayment() 
+	{
+		System.out.println("Credit Payment Has been processed");
+	}
+	
+	
+	public void applyDiscount() 
+	{
+		
+	}
+	
+	public void freeCoupon() 
+	{
+		
+	}
+	
+}

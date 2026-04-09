@@ -1,0 +1,17 @@
+package com.classlevel.access.modifier.learn;
+
+
+
+/*
+ * The class SealedClassTigerDeno4 cannot extend the class SealedClassBirdDemo4 as it is not a permitted subtype of SealedClassBirdDemo4
+ *
+ * Tiger class ccannot exxtend or become child of Parent class Bird because it has not been permited by the Parent to  become its child 
+ * 
+ * This is possible because of the     Sealed,Permits         keyword.   
+ *
+ * */
+
+final public class SealedClassTigerErrorDeno4 extends SealedClassBirdDemo4{ 
+	
+	
+}

@@ -1,0 +1,21 @@
+package com.classlevel.access.modifier.learn;
+
+
+/*ERROR: public class SealedClassParrotDemo4 extends SealedClassBirdDemo4 {}   ERROR: Compiler:
+ * The class SealedClassParrotDemo4 with a sealed direct supertype SealedClassBirdDemo4 
+ * should be declared either final, sealed, or non-sealed
+ * */
+
+/*The class which is ingeriting from sealed class it must have either final,sealed ,non-sealed 
+ *Sealed class must have atleast one Sub Class  
+ * 
+ * 
+ * */
+
+
+
+//Parrot Class can be extende By any class there is no restriction. 
+non-sealed public class NonSealedClassParrotDemo4 extends SealedClassBirdDemo4 
+{	
+	
+}		

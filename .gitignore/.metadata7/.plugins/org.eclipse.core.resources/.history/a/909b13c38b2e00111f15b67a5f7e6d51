@@ -1,0 +1,21 @@
+package com.objectclass.methods.learn;
+
+import java.util.Scanner;
+
+public class EqualsMethod {
+ //Used to compare 2 Objects based on the memory reference OR address because Internally it uses == operator.  
+	public static void main(String []args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int id= sc.nextInt();
+		String name = sc.next();
+		
+		EqualsMethodCustomer C1 = new EqualsMethodCustomer(id , name);
+		EqualsMethodCustomer C2 = new EqualsMethodCustomer(123 , "Sourav");
+		
+		System.out.println(C1 == C2);
+		
+		
+	}
+}

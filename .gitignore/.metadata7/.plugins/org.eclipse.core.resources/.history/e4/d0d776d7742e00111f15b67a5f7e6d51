@@ -1,0 +1,21 @@
+package com.classlevel.access.modifier.learn;
+
+public class FinalMethodClassADemo5 {
+
+	protected int a =10;
+	protected int b=20; 
+	
+	
+	//final method -> WHY -> If the method has some core buissness logic and you dont want sub class to change the method body implementation then we declare that method as final method
+	
+	public final void calculate() 
+	{
+		int sum = a+b; 
+		System.out.println(sum);
+	
+	}
+		
+}
+
+
+

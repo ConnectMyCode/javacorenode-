@@ -1,0 +1,26 @@
+package com.abstraction.learn;
+
+public class AbstractMethodAsABuisnessRuleDemo3 {
+	
+	
+	public static void main(String []args) 
+	{
+		
+		AbstractMethodAsABuisnessRuleAnimalDemo3 animal[] = new  
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	public static void healthCheckupCamp() 
+	{
+		
+	}
+	
+	
+}

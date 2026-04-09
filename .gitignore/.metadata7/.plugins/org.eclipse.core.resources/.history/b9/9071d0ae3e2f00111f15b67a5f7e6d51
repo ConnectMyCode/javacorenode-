@@ -1,0 +1,26 @@
+package com.classlevel.access.modifier.learn;
+
+public class FinalMethodClassBDemo5 extends FinalMethodClassADemo5 
+{ 
+	
+	
+	num =300; 
+	stnum = 400; 
+	
+	
+	//ERROR IMP
+	@Override
+	public void calculate()  //Method-->"calculate()" in the Super class is final. So it cannot be overrirden.: No changes can be made by the sub class method by overriding 
+	{
+		System.out.println("We have t0 improve in silence"); 
+	}
+	
+	
+	public void multiply()   //Re-declaration of method multiply() 
+	{
+		int mul = a*b; 
+		System.out.println("Inside Class B: "+mul);
+	}
+   
+}
+

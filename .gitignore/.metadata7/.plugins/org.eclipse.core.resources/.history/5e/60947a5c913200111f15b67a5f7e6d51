@@ -1,0 +1,5 @@
+package com.interFace.learn;
+
+public interface PrintFactoryMethodDemo2 {
+	
+}

@@ -1,0 +1,39 @@
+package com.abstraction.learn;
+
+import java.util.Scanner;
+
+public class AbstractMethodUsingArrayFruitShopDemo4 {
+
+	
+	public static void main(String []args) 
+	{
+		Scanner sc= new Scanner(System.in);
+		
+		
+		System.out.println("Welcome to fruit SHOP!! Give your Choice-->  1.Apple \n 2.Orange ");
+		
+		
+		String choice = sc.nextLine();
+		
+		AbstractMethodUsingArrayFruitShopTicketCounterDemo4 ticket = new AbstractMethodUsingArrayFruitShopTicketCounterDemo4(choice);
+		
+		AbstractMethodUsingArrayFruitDemo4 coupon  = ticket.generateCoupon();    //Holds the Object of Apple/Orange class which is return by the Method>>>>>"generateCoupon()" of Class (FruitTicketCounter) 		
+		
+		AbstractMethodUsingArrayCustomerDemo4 customer = new AbstractMethodUsingArrayCustomerDemo4();
+		customer.receiveCoupon(coupon);    //Customer Recives the coupon using receiveCoupon method and saves it as coupon \\\\\  then later to give it to the Kitchen Counter using "returnCoupon()" method Where the actual processing happens --> Clean() and Cut(); 
+		
+		AbstractMethodUsingArrayFruitShopKitchenCounterDemo4 kitchen = new AbstractMethodUsingArrayFruitShopKitchenCounterDemo4();
+		String orderServed = kitchen.fruitJuiceOrders(coupon);   //Saved the Order  
+		
+		customer.recieveOrder(orderServed);   //Customer recieves the order;     
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,11 @@
+package com.classlevel.access.modifier.learn;
+
+public class FinalMethodDemo5 {
+
+	
+	FinalMethodClassADemo5 a = new FinalMethodClassBDemo5();
+	
+	
+	
+}
+

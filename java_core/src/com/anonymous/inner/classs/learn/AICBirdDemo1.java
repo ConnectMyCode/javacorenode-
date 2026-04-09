@@ -1,0 +1,12 @@
+package com.anonymous.inner.classs.learn;
+
+public class AICBirdDemo1 {
+		
+	public void fly()
+	{
+		System.out.println("Generic Bird is Flying!! ");
+	}
+	
+	
+	
+}

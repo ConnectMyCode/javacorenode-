@@ -1,0 +1,90 @@
+package com.anonymous.inner.classs.learn;
+
+public class AICDemo1 
+{
+	public static void main(String []args) 
+	{
+		
+		
+		//public class Bird
+	/*	{
+			public void fly()
+			{	
+				ssystem.out.println("Generic Bird is Flying");
+			}
+		}
+	*/
+		
+		
+/*		What is the purpose of a Anonymous Inner Class ????  
+				>>>> Extends a Class [ 1. Normal Class  2. Abstract Class]   
+				>>>> Implements Interface;
+*/		
+//		When we create a anonymous inner class then we need to compulsory give name of the class that is being extended  OR being Implemented if Interface 
+//		BElow class does not have any name the JVM will create a .class file for it as well ex: -> &1.2
+
+		
+		
+		
+		
+		// Anonymous class extends Bird class (AICBirdDemo1)
+		   //(Has No name)
+		
+		AICBirdDemo1 parrot = new AICBirdDemo1() 
+		{
+			public void fly() 
+			{
+				System.out.println("Parrot Bird is Flying!!!");
+			}
+		};
+		
+		parrot.fly();
+		
+		
+		AICBirdDemo1 eagle = new AICBirdDemo1()
+		{
+			//This is not a Overriden Method 
+			public void shit()   
+			{
+				System.out.println("While Flying Eagle bird Shit on a person head!!!");
+			}
+			
+			protected void shit2()    
+			{
+				System.out.println("While Flying Eagle bird Shit on a person head!!!");
+			}
+			
+			public static String name()  
+			{
+				return  "Rahul";
+			}
+			
+			public int y= 90;   
+			protected int z =50;  
+			private int x = 10;  
+		    int e =60;			
+			
+			@Override
+			public void fly()
+			{
+				System.out.println("Eagel Bird is shitting");
+			}
+		};		
+		
+		//I can create new Methods but they are not accessible only the overriden are accessible that is why this class is used for only Implementation of the inner class and Extends Class .
+		//WHy they are not accessible >> Reason: Because of the Dynamic Polyorphism 
+										
+//	eagle.shit2();    // Instance  Method Calling-->  Dynamic Polymorphism --> Compiler Based on Reference Type (AICBirdDemo1 ) will search for shit2() method in that  class and its no able to find it so it gives error: The method shit2() is undefined for the type AICBirdDemo1 
+		
+//  eagle.name();    // Instance  Method Calling-->  Dynamic Polymorphism --> Compiler Based on Reference Type (AICBirdDemo1 ) will search for s) method in that  class and its no able to find it so it gives error: The method shit2() is undefined for the type AICBirdDemo1
+		
+//	eagle.shit();	//Same 
+		
+  eagle.fly();  //Here Based on Reference Type compiler Searches for the fly() method in Bird Class it finds it and JVM based on Current Object anonymous Inner class object it decides and executes from there fly() method
+		
+  eagle.y;  //Error:y cannot be resolved or is not a field
+  //Compiler searches based on the reference Type of "eagle" >> "Bird"class Compiler searches based on exact Matcch rule then Compiler decides the field to be executed and JVM only executes ; 
+  
+  
+	}
+}

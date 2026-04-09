@@ -1,0 +1,24 @@
+package com.abstraction.learn;
+
+public class ClassAbstractDemo1 
+{
+	
+	public static void main(String []args)
+	{
+		//Shape = new Square
+		ClassAbstractShapeDemo1 square = new ClassAbstractSquareDemo1();
+		
+		System.out.println(square.ch);
+		
+		System.out.println(square.x);
+
+		System.out.println(square.isjoy);
+		
+		System.out.println(square.j);
+		
+	
+	}
+	
+	
+	
+}

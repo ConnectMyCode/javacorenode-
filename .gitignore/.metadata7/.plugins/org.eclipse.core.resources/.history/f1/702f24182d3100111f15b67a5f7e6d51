@@ -1,0 +1,12 @@
+package com.abstraction.learn;
+
+public class AbstractMethodsMustBeOverridenBetaDemo2 extends AbstractMethodsMustBeOverridenAlphaDemo2
+{
+	
+	public void show() 
+	{
+		System.out.println("Show method is overriden in Beta class");
+	}
+	
+
+}

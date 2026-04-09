@@ -1,0 +1,13 @@
+package com.interFace.learn;
+
+public interface PrintFactoryMethodDemo2 
+{
+	
+	public PrintFactoryMethodDemo2 print();
+	
+	//In .class file it converted to >>>>> [abstract public void print();]
+	
+	//Method Overriding means What ?--> WHy I am asking this question -> Reason:  
+	
+	
+}

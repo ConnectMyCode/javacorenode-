@@ -1,0 +1,35 @@
+package com.classlevel.access.modifier.learn;
+
+public class ImmutableObjectStudentDemo6 {
+	
+	
+	private final int rollNumber; 
+	private final String studentName; 
+	
+	
+ public ImmutableObjectStudentDemo6(int rollNumber , String studentName){
+	 this.rollNumber = rollNumber;
+	 this.studentName = studentName;
+ }
+
+
+ public int getRollNumber() {
+	return rollNumber;
+}
+
+
+ public String getStudentName() {
+	return studentName;
+ }
+
+
+ @Override
+ public String toString() {
+	return "ImmutableObjectStudentDemo6 [rollNumber=" + rollNumber + ", studentName=" + studentName + "]";
+ }
+ 
+ 
+ 
+ 
+ 
+}

@@ -1,0 +1,22 @@
+package com.objectclass.methods.learn;
+
+public class IntToHexadecimalFormatDemo4 {
+
+	//"Integer" class has provided a predefined static method called toHexString(int value) which converts Integer value to Hexadecimal String Format.
+	
+	public static void main(String []args) 
+	{
+		int x = 0xadd;
+		System.out.println(x);
+		
+		int val = 2781;
+		String hexString = Integer.toHexString(val);
+		
+		System.out.println(hexString);
+		
+		int val2 = 111; 
+		String hexString1 = Integer.toOctalString(val2);
+		System.out.println(hexString);
+		
+	}
+}

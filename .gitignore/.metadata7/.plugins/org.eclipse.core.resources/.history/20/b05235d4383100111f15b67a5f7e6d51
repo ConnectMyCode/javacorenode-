@@ -1,0 +1,34 @@
+package com.abstraction.learn;
+
+public class AbstractMethodAsABuisnessRuleDemo3 {
+	
+	
+	public static void main(String []args) 
+	{
+		
+		//Anonymous Initialization of Array.
+		AbstractMethodAsABuisnessRuleAnimalDemo3 animals[] = {new AbstractMethodAsABuisnessRuleLionDemo3("Sara"), new AbstractMethodAsABuisnessRuleLionDemo3("popstart"), new AbstractMethodAsABuisnessRuleLionDemo3("Raghu")};   
+		
+		healthCheckupCamp(animals);
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+									//	(Animal ...animals)
+	public static void healthCheckupCamp(AbstractMethodAsABuisnessRuleAnimalDemo3 ...animals)  //Var args:  (var ...variable/argument) --> Internally its an array only  
+	//Also  use>>>> AbstractMethodAsABuisnessRuleLionDemo3[] animal
+	{
+		for(AbstractMethodAsABuisnessRuleLionDemo3 animmal :animals) 
+		{
+			animal.regularHealthCheckup();
+		}
+		
+	}
+	
+	
+}

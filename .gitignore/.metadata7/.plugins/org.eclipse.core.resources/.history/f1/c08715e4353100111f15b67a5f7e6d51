@@ -1,0 +1,12 @@
+package com.abstraction.learn;
+
+public class AbstractMethodAsABuisnessRuleDemo3 {
+	
+	
+	public static void healthCheckupCamp() 
+	{
+		
+	}
+	
+	
+}

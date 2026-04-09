@@ -1,0 +1,24 @@
+package com.objectclass.methods.learn;
+
+public class HashCodeMethodDDemo1 {
+
+	public static void main(String []args) 
+	{
+		HashCodeMethodDDemo1 t1 = new HashCodeMethodDDemo1();
+		System.out.println(t1.hashCode());
+		
+		
+		String str = "India";
+		System.out.println(str.hashCode());
+		
+		
+	//2 objects having same hashcode may be 2 Different Objects :
+		
+	//NOTE: Hash code is not used for Object Comparison.	 Equals method is used for comparing 2 diferent objects. 
+		String str1 = "A";   //String -> Object only. 
+		Integer i = 65;
+													  //If it was "int" primitive type then it will give error . Only on Objects or reference fields  .hascode() method is applicable 
+		System.out.println(str1.hashCode()+": str1\n"+ i.hashCode()+": A" );
+		
+	}
+}

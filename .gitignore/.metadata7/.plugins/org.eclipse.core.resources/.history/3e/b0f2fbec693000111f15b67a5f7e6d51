@@ -1,0 +1,33 @@
+package com.method.chaining;
+
+import java.util.Scanner;
+
+public class MethodChainingDemo1 {
+								
+	public static void main(String []args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		String str = "India";
+		char ch = str.concat("Is Growing").toUpperCase().charAt(0);
+		System.out.println(ch);
+		
+		
+		
+		String str2 = "Java";
+		int length = str2.concat("Making a Valid Statement.").toLowerCase().length();
+		System.out.println(length);
+		
+		
+		
+		System.out.println("Enter a Colour Name :");
+		char color =sc.next().toLowerCase().charAt(0);
+		
+		switch(color) 
+		{
+		case 'r'-> System.out.println("Red Color");
+		case 'b'-> System.out.println("Blue Color");
+		case 'w'-> System.out.println("White Color");
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package com.record.keyword.learn;
+
+public record RecordEmployeeClassDemo2(int id , String name) //Components are private and final
+{
+	
+	
+	
+	
+	
+	
+	
+	
+}

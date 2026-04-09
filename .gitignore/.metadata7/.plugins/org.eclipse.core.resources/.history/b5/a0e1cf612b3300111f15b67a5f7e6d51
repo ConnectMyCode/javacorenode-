@@ -1,0 +1,11 @@
+package com.abstraction.learn;
+
+public class AbstractClassAndAbstractMethodUsingArrayDemo6 {
+
+	public static void main(String []args) 
+	{
+		AbstractClassAndAbstractMethodUsingArrayShapeDemo6
+	}
+	
+	
+}

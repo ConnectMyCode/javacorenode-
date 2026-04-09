@@ -1,0 +1,21 @@
+package com.abstraction.learn;
+
+import java.util.Scanner;
+
+public class AbstractMethodUsingArrayFruitShopDemo4 {
+
+	
+	public static void main(String []args) 
+	{
+		Scanner sc= new Scanner(System.in);
+		
+		
+		System.out.println("Welcome to fruit SHOP!! Give your Choice-->  1.Apple \n 2.Orange ");
+		
+		AbstractMethodUsingArrayCustomerDemo4 customer = new AbstractMethodUsingArrayCustomerDemo4();  	
+		
+		AbstractMethodUsingArrayFruitShopTicketCounterDemo4 ticket = new AbstractMethodUsingArrayFruitShopTicketCounterDemo4();
+		
+	}
+	
+}

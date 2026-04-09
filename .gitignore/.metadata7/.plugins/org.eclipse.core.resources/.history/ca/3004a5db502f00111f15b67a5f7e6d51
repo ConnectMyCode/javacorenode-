@@ -1,0 +1,15 @@
+package com.record.keyword.learn;
+
+public class RecordDemo2 
+{
+	public static void main(String []args) 
+	{
+		RecordEmployeeClassDemo2 emp1 = new RecordEmployeeClassDemo2(123 , "Radhe Maa"); 
+		RecordEmployeeClassDemo2 emp2 = new RecordEmployeeClassDemo2(456,"Krushna"); 
+		
+		System.out.println(emp1); 
+		System.out.println(emp1.equals(emp1)); 
+	
+	}
+
+}

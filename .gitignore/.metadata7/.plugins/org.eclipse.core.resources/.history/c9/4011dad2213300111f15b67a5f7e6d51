@@ -1,0 +1,12 @@
+package com.abstraction.learn;
+
+public class AbstractMethodUsingArrayFruitShopKitchenCounterDemo4 {
+	
+														//Loose Coupling :Apple and Orange Object any one can be accepted by the parameter of Fruit Type
+	public AbstractMethodUsingArrayFruitDemo4 fruitJuiceOrders(AbstractMethodUsingArrayFruitDemo4 ...coupon) 
+	{
+		return null;
+	}
+	
+
+}

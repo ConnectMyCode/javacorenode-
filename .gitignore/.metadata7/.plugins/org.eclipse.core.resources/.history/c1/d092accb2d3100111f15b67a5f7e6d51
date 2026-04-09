@@ -1,0 +1,11 @@
+package com.abstraction.learn;
+
+public class AbstractMethodsMustBeOverridenDemo2 {
+
+	public static void main(String []args)
+	{
+		
+	}	
+	
+
+}

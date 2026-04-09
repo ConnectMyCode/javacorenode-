@@ -1,0 +1,5 @@
+package com.abstraction.learn;
+
+abstract public class ClassAbstractShapeDemo1 {
+
+}

@@ -1,0 +1,16 @@
+package com.classlevel.access.modifier.learn;
+
+public class ImmutableObjectStudentDemo6 {
+	
+	
+	private final int rollNumber; 
+	private final String studentName; 
+	
+	
+ public ImmutableObjectStudentDemo6(int rollNumber , String studentName){
+	 this.rollNumber = rolllNummber;
+ }
+	
+	
+	
+}

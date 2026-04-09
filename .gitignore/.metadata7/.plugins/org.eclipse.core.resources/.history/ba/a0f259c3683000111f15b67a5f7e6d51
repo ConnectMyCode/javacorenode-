@@ -1,0 +1,13 @@
+package com.method.chaining;
+
+public class MethodChainingDemo1 {
+								
+	public static void main(String []args) 
+	{
+		String str = "India";
+		char ch = str.concat("Is Growing").toUpperCase().charAt(0);
+		System.out.println(ch);
+	}
+	
+	
+}

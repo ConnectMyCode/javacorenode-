@@ -1,0 +1,9 @@
+package com.objectclass.methods.learn;
+
+public class EqualsMethodCustomer {
+			
+	private int id; 
+	private String name; 
+	
+	
+}

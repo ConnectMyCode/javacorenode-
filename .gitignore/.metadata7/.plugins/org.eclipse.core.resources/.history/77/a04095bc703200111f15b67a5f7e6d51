@@ -1,0 +1,9 @@
+package com.interFace.learn;
+
+public class CreditCardPaymentDemo1 implements PaymentDemo1 {
+	
+	public void processPayment() 
+	{
+		
+	}
+}

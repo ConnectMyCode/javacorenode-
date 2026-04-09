@@ -1,0 +1,10 @@
+package com.classlevel.access.modifier.learn;
+
+public class FinalMethodClassBDemo5 extends FinalMethodClassADemo5{
+	
+	
+	public void calculate() 
+	{
+		
+	}
+}

@@ -1,0 +1,18 @@
+package com.abstraction.learn;
+
+public class AbstractMethodAsABuisnessRuleBirdDemo3 extends  AbstractMethodAsABuisnessRuleAnimalDemo3{
+	
+	public  AbstractMethodAsABuisnessRuleBirdDemo3(String name) 
+	{
+		super();
+	}
+
+	@Override
+	public void regularHealthCheckup() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+}

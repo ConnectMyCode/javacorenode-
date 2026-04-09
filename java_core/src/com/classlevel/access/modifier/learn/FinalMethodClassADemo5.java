@@ -1,0 +1,30 @@
+package com.classlevel.access.modifier.learn;
+
+public class FinalMethodClassADemo5 {
+
+	protected int a =10;
+	protected int b=20; 
+	
+	final int num = 100;   ///NSF final field   --> If it was blank/not initialized here --> Blank Final Field --> Should BE initialized with a value from developer In--> 1.Non static Block 2.Constructor  --> If not initialized--> Gives Error; -->
+	static final int stnum = 999;  //Static Final field --> If it is Blank/not initialized here --> Static Blank final field --> should be initialized with the valueIn --> 1.Static Block   2.Static Method --> If not initialized--> Gives Error; -->If it is Initialized --> Compile time Constant--> Where the Compiler embed the hard code value at Compile time so when a .class file is created it has hard coded value so no class is loaded as only value is visible at the time of loading and execution     
+	
+	//These Static and NOnstaic Final fields values cannot be changed or reinitialized . 
+	
+	//final method -> WHY -> If the method has some core buissness logic and you don't want sub class  method to change the method body implementation then we declare that method as final method. 
+	//Cannot change the behaviour of the Final Method in sub class 
+	public final void calculate()  //Cannot be overriden 
+	{
+		int sum = a+b; 
+		System.out.println(sum);
+	}
+		
+	
+	private final void multiply()  //Private : Only accessible in this class "ClassA" and it is Final:Cannot be inherited by the Sub Class:Cannot change the behaviour of this method in  sub class() -->Cannot Override method . 
+	{
+		int mul = a*b; 
+		System.out.println("Inside class A"+mul);
+	}
+}	
+	
+	
+		

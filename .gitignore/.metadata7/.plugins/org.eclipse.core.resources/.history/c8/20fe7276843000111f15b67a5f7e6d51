@@ -1,0 +1,17 @@
+package com.objectclass.methods.learn;
+
+public class ToStringMethodDemo5 {
+	
+	public static void main(String []args) 
+	{
+		//This is logic inside the Object LCass of toString() method:
+		
+		
+	}
+	
+	public String toString() 
+	{
+		return getClass().getName()+"@"+Integer.toHexString(hashCode());
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.objectclass.methods.learn;
+
+public class HashCodeMethodDDemo1 {
+
+	public static void main(String []args) 
+	{
+		HashCodeMethodDDemo1 t1 = new HashCodeMethodDDemo1();
+		System.out.println(t1.hashCode());
+		
+		
+		String str = "India";
+		System.out.println(str.hashCode());
+		
+		
+	//2 objects having smae hashcode may be Different Objects :
+		
+	}
+}

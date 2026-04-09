@@ -1,0 +1,10 @@
+package com.objectclass.methods.learn;
+
+public class ToStringMethodDemo5 {
+	
+	public static void main(String []args) 
+	{
+		
+	}
+
+}

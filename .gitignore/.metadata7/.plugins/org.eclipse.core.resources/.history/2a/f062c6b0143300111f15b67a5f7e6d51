@@ -1,0 +1,17 @@
+package com.abstraction.learn;
+
+public class AbstractMethodUsingArrayOrangeDemo4 extends  AbstractMethodUsingArrayDemo4{ 
+
+	
+	public void cut() {}
+
+	
+	//  ()->IO.println();   //Lambda Only works with Interface ;
+	
+	public void clean() 
+	{
+		
+	}
+	
+	
+}

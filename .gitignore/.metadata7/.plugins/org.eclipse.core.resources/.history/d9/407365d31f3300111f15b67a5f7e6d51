@@ -1,0 +1,22 @@
+package com.abstraction.learn;
+
+import java.util.Scanner;
+
+public class AbstractMethodUsingArrayCustomerDemo4 {
+	
+	private AbstractMethodUsingArrayFruitDemo4 coupon;    //Cannot declare it static because it is different as per each customer object .
+	
+
+	
+	public AbstractMethodUsingArrayFruitDemo4 receiveCoupon(AbstractMethodUsingArrayFruitDemo4 coupon) 
+	{
+		
+		//This method is used to Receive from Ticket Counter and Return the coupon to the Kitchen Counter 
+		return coupon;
+	}
+	
+}
+
+
+
+

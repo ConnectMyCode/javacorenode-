@@ -1,0 +1,14 @@
+package com.classlevel.access.modifier.learn;
+
+public class ImmutableObjectDemo6 {
+
+	public static void main(String []args)
+	{
+		
+	}
+	
+	
+	ImmutableObjectStudentDemo6 student = new ImmutableObjectStudentDemo6(); 
+	 
+	
+}

@@ -1,0 +1,16 @@
+package com.interFace.learn;
+
+public class InterfaceImplementationByUsingAnonymousDemo2 {
+
+	public static void main(String []args) 
+	{
+		 PrinterDemo2 call = new  PrinterDemo2();
+		 call.getPrinter().print();   //USing MEthod chaining called the "print()" method whih is inside the anonymous class 
+		 
+	
+	
+	}
+	
+	
+	
+}

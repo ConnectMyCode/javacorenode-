@@ -1,0 +1,11 @@
+package com.abstraction.learn;
+
+public class AbstractMethodAsABuisnessRuleLionDemo3 extends AbstractMethodAsABuisnessRuleAnimalDemo3 {
+
+	public AbstractMethodAsABuisnessRuleLionDemo3 () 
+	{
+		
+	}
+	
+	
+}

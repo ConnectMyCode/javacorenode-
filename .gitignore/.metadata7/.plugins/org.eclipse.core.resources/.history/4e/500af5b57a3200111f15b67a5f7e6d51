@@ -1,0 +1,24 @@
+package com.interFace.learn;
+
+public class UPIPaymentDemo1 implements PaymentDemo1{
+	
+	@Override
+	public void applyDiscount()      
+	{
+		System.out.println("Applied 20% discount");
+	}
+
+	@Override
+	public void processPayment(double amount)  
+	{
+		amount =0.0;
+		System.out.println("UPI payment Processsed");
+	}
+
+	@Override
+	public void freeCoupon() 
+	{
+		System.out.println("Free Coupon : 100Rs Tiffin Box!!!");
+	}
+
+}

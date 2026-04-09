@@ -1,0 +1,26 @@
+package com.classlevel.access.modifier.learn;
+
+public class FinalMethodClassADemo5 {
+
+	protected int a =10;
+	protected int b=20; 
+	
+	
+	//final method -> WHY -> If the method has some core buissness logic and you dont want sub class to change the method body implementation then we declare that method as final method. 
+	//Cannot change the behaviour of the Final Method in sub class 
+	public final void calculate()  //Cannot be overriden 
+	{
+		int sum = a+b; 
+		System.out.println(sum);
+	}
+		
+	
+	private final void multipy()  //Private : Only accessible in this class "ClassA" and it is Final:Cannot be inherited by the Sub Class:Cannot change the behaviour of this method in  sub class() --> Overriden . 
+	{
+		int mul = a*b; 
+		System.out.println(mul);
+	}
+}
+
+
+

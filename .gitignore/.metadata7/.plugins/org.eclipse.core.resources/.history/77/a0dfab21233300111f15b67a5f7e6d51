@@ -1,0 +1,20 @@
+package com.abstraction.learn;
+
+public class AbstractMethodUsingArrayFruitShopKitchenCounterDemo4 {
+	
+														//Loose Coupling :Apple and Orange Object any one can be accepted by the parameter of Fruit Type
+	public String fruitJuiceOrders(AbstractMethodUsingArrayFruitDemo4 coupon) //Var args : Internally an Array that can Accept an array.      
+	{	
+		
+		coupon.clean();
+		
+		coupon.cut();
+		
+		coupon juice = coupon.grind();
+		
+		return juice;
+
+	}
+	
+
+}

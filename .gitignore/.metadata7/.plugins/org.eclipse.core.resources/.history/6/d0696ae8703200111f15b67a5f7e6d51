@@ -1,0 +1,12 @@
+package com.interFace.learn;
+
+public class UPIPaymentDemo1 implements PaymentDemo1{
+	
+	public void applyDiscount() 
+	{
+		
+	}
+
+	
+	public void processPayment();
+}

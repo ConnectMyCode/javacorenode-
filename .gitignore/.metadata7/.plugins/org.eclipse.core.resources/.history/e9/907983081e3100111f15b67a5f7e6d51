@@ -1,0 +1,8 @@
+package com.abstraction.learn;
+
+abstract public class ClassAbstractShapeDemo1 {
+
+
+	public void foo1();
+	
+}

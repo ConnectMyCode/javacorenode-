@@ -1,0 +1,26 @@
+package com.classlevel.access.modifier.learn;
+
+import java.util.Scanner;
+
+public class ImmutableObjectDemo6 {
+
+	public static void main(String []args)
+	{
+		Scanner sc= new Scanner(System.in);
+		
+		System.out.println("Enter roll no: ");
+		int roll_no = sc.nextInt(); 
+		
+		System.out.println("Enter student name: ");
+		String name = sc.next(); 
+			
+		ImmutableObjectStudentDemo6 student = new ImmutableObjectStudentDemo6(roll_no , name);
+		System.out.println(student);
+		
+		
+	}
+	
+	
+	 
+	
+}

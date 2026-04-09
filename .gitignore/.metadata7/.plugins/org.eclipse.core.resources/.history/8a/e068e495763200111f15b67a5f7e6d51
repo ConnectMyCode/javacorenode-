@@ -1,0 +1,34 @@
+package com.interFace.learn;
+
+import java.util.Scanner;
+
+public class PaymentGatewayDemo1 {
+	
+	
+	private String paymentMethod;
+	
+	public PaymentGatewayDemo1(final String paymentMethod) 
+	{
+		if(paymentMethod == null) 
+		{
+			System.err.println("Incorrect method Entered!");
+			System.exit(0);
+		}
+		else if(paymentMethod.equalsIgnoreCase("upi") || paymentMethod.equalsIgnoreCase("credit")){
+			this.paymentMethod = paymentMethod;			
+		}
+		
+	}
+	
+	
+	public  Object initiatePayment(String paymentChoice) 
+	{
+		switch(paymentChoice = paymentChoice.toLowerCase()) 
+		{
+		  case "upi"->{ return UPIPaymentDemo1 upi = new UPIPaymentDemo1();  }   
+		  case "credit"->{}  
+		}
+	}	
+	
+
+}
