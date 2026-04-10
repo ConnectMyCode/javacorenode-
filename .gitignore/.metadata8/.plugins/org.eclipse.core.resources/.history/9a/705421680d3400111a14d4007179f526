@@ -1,0 +1,13 @@
+package com.interFaceJDKone.seven.learn;
+
+public class LooseCouplingUSingINterfaceRestaurantDemo6 {    
+	
+	
+						//Loose Coupling --> Tea() , Coffee() , Horlicks() , Objects this Classes Implements HotDrink Interface .
+	public void getOrder(InterfaceHotDrinkDemo6 drink)   //Interface Type-->"HotDrink"   
+	{					//Upcasting ----> 
+		drink.prepare();
+	}
+	
+
+}

@@ -1,0 +1,346 @@
+package com.interFaceJDKone.seven.learn;
+
+
+//Using Extends keyword we can extend Interface B with A.
+public interface InterfaceBDemo10 extends InterfaceADemo10
+{
+	/*Allowed By default Compiler Adds >>>  Public +Abstract keywords to it 
+	 * Compulsory to override by the implementing classes*/
+	void m2();   //abstract public void m2(){}
+
+	/*Not allowed inside Interface*/
+//	public void m1()    //Error: Abstract Method Do not specify a Body 
+//	{	}				//Reason : We ccannot write an Instance method inside an Interface 
+						//What is allowed  -->   1.default Method     2. Public+static Methods
+						//Why these methods are only allowed --> Interface is used for what purpose --> Interface is used to implement methods Across Different Classes E
+						//EX:->TV Remote has Buttons now THese Buttons are Interface and the implementation is Hidden from the user of remote Interface buttons(Interface Methods). 
+						//If we want to add a new button to the remote because a new feature has been launched in the market then if we write the 
+						// public void m3();   Inside Interface A / B then Those Classes Implementing these Interface Will Break apart because a new feature got implemented. 
+						//If we want to Add A new Feature in Interface  also do Not want  Disturb the Implementing Classes of those Interface  Java 8  allowed 
+						//the use of Public Static and  Default(Not a access Modifier Its a Keyword) methods . 
+						// Public Static and default Methods >> USe >>> To Call the Internal Methods i.e, Private Methods In INterface : That Contains the Core Logic / Buisness Logic / Sensitive Data /   Without Showing the INternal Working/  of the New Feature Allowing Access to the user  
+						// Public static and default helps in  achieving this security and implementation of new Feature without disturbing the Implemeting Classes. 
+						// In Java 9 private methods inside Interface were introduced.  
+
+//NOTE:We have A choice If we want to Override this method default /  Cannot override static Methods. / Private cannot inherited thats why not override	n  	
+	/*Allowed Public Staic*/ //JAVA 8 Feature
+	public static void m3() 
+	{
+		sub();
+	}
+	
+	/*Allowed default */ //JAVA 8 Feature  //Optional to Override // 
+	default void m4() 
+	{
+		add();
+	}
+	
+	/*Implicitly it is Public*/ // Cannot be overriden its static in Method area //From static methods we cannot access Instance Methods like >> private int add(){} 
+	static void m6()  //Public static void m6(){}   
+	{
+		System.out.println("Static method with Default Keyword Cannot be Overriden by interface implementing classes --> It can be called ex: ");
+	}
+	
+	//  Private Methods >>> JAVA 9 FEATURE
+	private int add() 
+	{
+		return 10+20;
+	}
+
+	/*  Private Static Methods >>> JAVA 9 FEATURE*/
+	private static int sub()  
+	{
+		return 60;
+	}
+	
+}
+
+/*	
+	
+	---
+
+	# 🔹 1. Your Code Concept (Interface extends Interface)
+
+	```java
+	interface A {
+	    void m1();
+	}
+
+	interface B extends A {
+	    void m2();
+	}
+	```
+
+	## ✔ What is happening?
+
+	* `B` is **child interface**
+	* `A` is **parent interface**
+
+	👉 So `B` **inherits** method `m1()` from `A`
+
+	---
+
+	## 🔹 Key Rule
+
+	> If a class implements `B`, it must implement:
+
+	* `m2()` (from B)
+	* `m1()` (inherited from A)
+
+	---
+
+	## 🔹 Your class
+
+	```java
+	class Implementer implements B
+	```
+
+	So it must implement:
+
+	```java
+	public void m1() { }  // from A
+	public void m2() { }  // from B
+	```
+
+	✔ That’s why both methods are overridden
+
+	---
+
+	# 🔹 2. Now your main doubt (VERY IMPORTANT 🔥)
+
+	You asked:
+
+	> Why `public static`, `default`, and `private` methods are allowed in interface?
+	> When was this introduced?
+	> How do they work?
+
+	Let’s answer **precisely**.
+
+	---
+
+	# 🔹 3. Evolution of Interface (Java Versions)
+
+	### ✔ Before Java 8
+
+	* Only:
+
+	  ```
+	  public abstract methods
+	  ```
+	* No method body allowed
+
+	---
+
+	### ✔ Java 8 (Major Change 🔥)
+
+	Allowed:
+
+	* `default` methods (with body)
+	* `static` methods (with body)
+
+	---
+
+	### ✔ Java 9 (Important for your doubt 🔥)
+
+	Allowed:
+
+	* `private` methods inside interface
+
+	---
+
+	# 🔹 4. Why these were introduced?
+
+	## 🔸 Problem before Java 8
+
+	If you add a new method in interface:
+
+	```java
+	interface A {
+	    void m1();
+	    void m2();  // newly added
+	}
+	```
+
+	👉 All implementing classes break ❌
+
+	---
+
+	## 🔸 Solution
+
+	Java introduced:
+
+	### ✔ `default` method
+
+	```java
+	default void m2() {
+	    // implementation
+	}
+	```
+
+	👉 Now old classes don’t break
+
+	---
+
+	# 🔹 5. Role of Each Method Type
+
+	## ✔ 1. Default Method
+
+	```java
+	default void m2() {
+	    // logic
+	}
+	```
+
+	### ✔ Features:
+
+	* Has body
+	* Can be overridden
+	* Called using object
+
+	---
+
+	## ✔ 2. Static Method
+
+	```java
+	static void m3() {
+	    // logic
+	}
+	```
+
+	### ✔ Features:
+
+	* Has body
+	* Cannot be overridden
+	* Called using interface name:
+
+	  ```
+	  A.m3();
+	  ```
+
+	---
+
+	## ✔ 3. Private Method (Java 9+)
+
+	```java
+	private void helper() {
+	    // reusable logic
+	}
+	```
+
+	### ✔ Features:
+
+	* Used **inside interface only**
+	* Cannot be accessed outside
+	* Used to avoid code duplication
+
+	---
+
+	# 🔹 6. Your Core Doubt (MOST IMPORTANT PART)
+
+	> How do default/static methods access private methods?
+
+	---
+
+	## ✔ Answer
+
+	👉 Private methods are used as **helper methods**
+
+	Example:
+
+	```java
+	interface A {
+
+	    default void m1() {
+	        helper();   // calling private method
+	    }
+
+	    static void m2() {
+	        helperStatic();
+	    }
+
+	    private void helper() {
+	        System.out.println("Private instance method");
+	    }
+
+	    private static void helperStatic() {
+	        System.out.println("Private static method");
+	    }
+	}
+	```
+
+	---
+
+	## 🔹 Execution Logic
+
+	### ✔ For default method
+
+	```
+	Object → calls m1()
+	         → m1() calls helper()
+	```
+
+	---
+
+	### ✔ For static method
+
+	```
+	A.m2()
+	   → calls helperStatic()
+	```
+
+	---
+
+	# 🔹 7. Important Rules (Very Clear 💯)
+
+	### ✔ Private methods:
+
+	* Only callable inside interface
+	* Cannot be overridden
+	* Not inherited
+
+	---
+
+	### ✔ Default methods:
+
+	* Inherited by implementing class
+	* Can be overridden
+
+	---
+
+	### ✔ Static methods:
+
+	* Not inherited
+	* Accessed using interface name
+
+	---
+
+	# 🔹 8. Final Summary (Bullet Points 🔥)
+
+	* Interface can extend another interface
+	* Child interface inherits parent methods
+	* Implementing class must implement all methods
+	* Java 8 introduced:
+
+	  * `default`
+	  * `static`
+	* Java 9 introduced:
+
+	  * `private` methods
+	* Private methods:
+
+	  * Used for internal logic reuse
+	  * Called by default/static methods
+	* No object is created for interface
+	* Object is always of implementing class
+
+	---
+
+	# 🔹 One-line Concept
+
+	> “Private methods in interfaces (Java 9) are used to share internal logic between default and static methods without exposing it to implementing classes.”
+
+	---
+
+	If you want, next I can show **memory + call flow diagram for default/private methods execution** — that will lock this concept permanently 🔥
+
+}

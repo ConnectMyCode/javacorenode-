@@ -1,0 +1,14 @@
+package com.interFaceJDKone.seven.learn;
+
+public class FactoryDesginPatternHotDrinkPreparationDemo7 {
+	
+	
+	public void prepareHotDrink()
+	{
+		
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,12 @@
+package com.interFaceJDKone.seven.learn;
+
+public class FactoryDesignPAtternDemo8 {
+	
+	
+	public static void main(String []args) 
+	{
+		
+		//Accesing static method so Classname.methodName is sufficient
+		 FactoryDesignPatternMyPrinterDemo8.getPrint(); 
+	}
+}

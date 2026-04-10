@@ -1,0 +1,13 @@
+package com.interFaceJDKone.seven.learn;
+
+public class RestaurantDemo6 {    
+	
+	
+						//Loose Coupling --> Tea() , Cofee() , Horlicks()
+	public void getOrder(InterfaceHotDrinkDemo6 drink) 
+	{
+		
+	}
+	
+
+}

@@ -1,0 +1,16 @@
+package com.interFaceJDKone.seven.learn;
+
+public class FactoryDesginPatternDemo7 { 
+
+	public static void main(String []args)	
+	{
+		
+		/*One Way*/
+		FactoryDesginPatternHotDrinkPreparationDemo7 obj = new FactoryDesginPatternHotDrinkPreparationDemo7(); 
+		
+		obj.tea.prepare();
+		
+		
+	}   
+	
+}

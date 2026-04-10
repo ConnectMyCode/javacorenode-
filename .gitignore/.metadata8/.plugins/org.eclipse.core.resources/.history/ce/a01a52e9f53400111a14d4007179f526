@@ -1,0 +1,11 @@
+package com.interFaceJDKone.seven.learn;
+
+public class ExtendsInterfaceImplementerDemo10 implements InterfaceBDemo10{
+	
+	public void m1() {
+		System.out.println("M1 Method Overriden INside  IMplementer class");
+	}
+
+	
+	
+}

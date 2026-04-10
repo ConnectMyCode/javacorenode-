@@ -1,0 +1,48 @@
+package com.interFaceJDKone.seven.learn;
+
+import java.util.Scanner;
+
+public class InterfaceDemo5 {
+
+	public static void main(String []args) 
+	{
+		
+/*OLD WAY Of creating a class separately somewhere else and 
+Creating its object to access its Properties and Fields */
+		
+		Scanner sc= new Scanner(System.in);
+		
+		SBIATMDemo5 sbiAtm = new SBIATMDemo5();
+		
+		System.out.println("Select 1.Withdraw \n 2.Deposit \n 3.Get Balance");
+		 
+		int choice  = sc.nextInt();
+		
+		 switch(choice) 
+		{
+		case 1->
+		{
+			System.out.println("Enter amount to withdraw");
+			double amount = sc.nextDouble();
+			sbiAtm.withdraw(amount);
+			System.out.println("Amount Withdrwan Successfully");
+			
+		}
+		case 2-> 
+		{
+			
+		}
+		case 3->
+		{
+			
+		}
+		default ->
+		{
+			
+		}
+	}
+			
+		
+	}
+	
+}

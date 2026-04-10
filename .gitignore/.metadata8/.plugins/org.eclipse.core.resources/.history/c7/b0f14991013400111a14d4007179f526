@@ -1,0 +1,12 @@
+package com.interFaceJDKone.seven.learn;
+
+public class InterfaceDemo3 {
+
+	public static void main(String []args) 
+	{	
+		
+		//Cannot creat a Object of Interface  ERROR:Cannot instantiate the type SealedInterfaceMoveableDemo3
+//		SealedInterfaceMoveableDemo3 mv = new SealedInterfaceMoveableDemo3();  
+	}
+	
+}

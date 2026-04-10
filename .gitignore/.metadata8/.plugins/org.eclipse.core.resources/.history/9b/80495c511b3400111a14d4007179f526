@@ -1,0 +1,8 @@
+package com.interFaceJDKone.seven.learn;
+
+public interface FactoryDesginPatternHotDrinkDemo7  
+{
+	//*Inside class Creating Anonymous Inner Class :  Creating Class + Object Creation + Immplementing Interface */
+	
+	
+}

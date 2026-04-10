@@ -1,0 +1,10 @@
+package com.interFaceJDKone.seven.learn;
+
+public interface SealedInterfaceMoveableDemo3 {
+
+	
+	//Fields are by default public ,static , Final 
+	
+	
+	
+}

@@ -58,7 +58,7 @@ public class AICDemo1
 			
 			protected void shit2()    
 			{
-				System.out.println("While Flying Eagle bird Shit on a person head!!!");
+				System.out.println("While Flying Eagle bird Shit twice on a person head!!!");
 			}
 			
 			public static String name()  
@@ -87,14 +87,10 @@ public class AICDemo1
 		
 //	eagle.shit();	//Same 
 		
-  eagle.fly();  //Here Based on Reference Type compiler Searches for the fly() method in Bird Class it finds it and JVM based on Current Object anonymous Inner class object it decides and executes from there fly() method
+  eagle.fly();  //Here Based on Reference Type compiler Searches for the fly() method in Bird Class it finds it and JVM based on Current Object that is anonymous Inner class object from there it  decides  and executes fly() method
 		
-//  eagle.y;  //Error:y cannot be resolved or is not a field
-  //Compiler searches based on the reference Type of "eagle"vriable  >> "Bird"class Compiler searches based on exact Matcch rule inside Bird class then Compiler decides the field to be executed after finding the match and JVM only executes ; 
-  
-  
-  
-  
-  
+   //  eagle.y;  //Error:y cannot be resolved or is not a field
+  //Compiler searches based on the reference Type of "eagle"variable  >> "Bird"class Compiler searches based on exact Match rule inside Bird class then Compiler decides the field to be executed after finding the match and JVM only executes ; 
+
 	}
 }

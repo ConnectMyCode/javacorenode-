@@ -1,0 +1,6 @@
+package com.interFaceJDKone.seven.learn;
+
+//non-sealed: This class can be inherited by an class so restrcitions
+non-sealed public class SealedInterfaceCarDemo3 implements SealedInterfaceMoveableDemo3{
+
+}

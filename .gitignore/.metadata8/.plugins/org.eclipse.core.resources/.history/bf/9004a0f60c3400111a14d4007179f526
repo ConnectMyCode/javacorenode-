@@ -1,0 +1,15 @@
+package com.interFaceJDKone.seven.learn;
+
+public class LooseCouplingUsingInterfaceDDemo6 {
+
+	
+	
+	LooseCouplingUSingINterfaceRestaurantDemo6 order = new LooseCouplingUSingINterfaceRestaurantDemo6 ();
+	
+	order.getOrder();
+	
+	
+	
+	
+	
+}

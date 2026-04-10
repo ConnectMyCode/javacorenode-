@@ -1,0 +1,12 @@
+package com.interFaceJDKone.seven.learn;
+
+
+//This class Canno be inherited b another class.
+final public class SBIATMDemo5 
+{
+	
+	
+	
+	
+	
+}

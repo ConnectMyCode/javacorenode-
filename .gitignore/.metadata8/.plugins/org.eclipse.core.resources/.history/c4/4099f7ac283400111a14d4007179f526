@@ -1,0 +1,26 @@
+package com.interFaceJDKone.seven.learn;
+
+public class FactoryDesginPatternDemo7 { 
+
+	public static void main(String []args)	
+	{
+		
+		/*One Way*/
+		FactoryDesginPatternHotDrinkPreparationDemo7 obj = new FactoryDesginPatternHotDrinkPreparationDemo7(); 
+		
+		obj.tea.prepare();
+		
+		
+		
+		/*2nd Way*/
+		FactoryDesginPatternHotDrinkPreparationDemo7.getCofee();     //Static Method: ClassName.MethodName
+		
+		
+		//3rd Way
+		FactoryDesginPatternHotDrinkDemo7 sweetTea = obj.getSweetTea();   //Non static Method getSweetTea() >>  is returning a Object so need to store it and then able to display it  
+		sweetTea.prepare();
+		
+		
+	}   
+	
+}

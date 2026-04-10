@@ -1,0 +1,16 @@
+package com.interFaceJDKone.seven.learn;
+
+pubic sealed interface SealedInterfaceMoveableDemo3 {
+
+	
+	//Fields are by default public ,static , Final 
+	
+	//Methods are by default abstract and public , 
+					
+					
+	int SPEED =90;	
+	
+	void move();        
+					
+					
+}

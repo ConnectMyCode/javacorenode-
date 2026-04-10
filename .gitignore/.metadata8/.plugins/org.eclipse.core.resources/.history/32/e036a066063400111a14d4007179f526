@@ -1,0 +1,16 @@
+package com.interFaceJDKone.seven.learn;
+
+public class InterfaceDemo5 {
+
+	public static void main(String []args) 
+	{
+		
+/*OLD WAY Of creating a class separately somewhere else and 
+* Creating its object to access its Properties and Fields */
+		SBIATMDemo5 sbiAtm = new SBIATMDemo5();
+		 
+			
+		
+	}
+	
+}

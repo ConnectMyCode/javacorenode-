@@ -1,0 +1,10 @@
+package com.interFaceJDKone.seven.learn;
+
+public class ExtendsInterfaceDemo10 {
+
+	
+	public static void main(String []args) 
+	{
+		
+	}
+}

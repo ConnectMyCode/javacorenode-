@@ -1,0 +1,10 @@
+package com.interFaceJDKone.seven.learn;
+
+public class FactoryDesignPatternMyPrinterDemo8 implements InterfaceFactoryDesginPatternPrinterDemo8 {   
+	
+	
+	
+	
+	
+	
+}

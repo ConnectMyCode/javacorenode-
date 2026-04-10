@@ -1,0 +1,33 @@
+package com.interFaceJDKone.seven.learn;
+
+public class LooseCouplingUSingINterfaceRestaurantDemo6 {    
+	
+	
+						//Loose Coupling --> Tea() , Coffee() , Horlicks() , Objects this Classes Implements HotDrink Interface .
+	public void getOrder(InterfaceHotDrinkDemo6 drink)   //Interface Type-->"HotDrink"   
+	{					//Upcasting ---->    HotDrink<--tea      HotDrink<--coffee 
+		
+	/*	So internally:
+			InterfaceHotDrinkDemo6 drink = new TeaDemo6();
+	*/
+		drink.prepare();     //Dynamic Polymorphism >>>> Run time Polymorphism 
+	
+	/*
+	 * 
+	 * 
+Compiler checks:
+✔ Does prepare() exist in interface? → YES ✅
+So compilation passes
+4. At Runtime (MOST IMPORTANT 🔥)
+
+JVM checks:
+👉 "Which object is actually stored inside drink?"
+	 * 
+	 * 
+	 * */
+	
+	}
+	
+
+}
+

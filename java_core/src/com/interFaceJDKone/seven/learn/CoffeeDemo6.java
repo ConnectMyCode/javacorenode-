@@ -1,0 +1,9 @@
+package com.interFaceJDKone.seven.learn;
+
+public class CoffeeDemo6 implements InterfaceHotDrinkDemo6{
+	
+	public void prepare() {
+		System.out.println("Preparing Coffe!!!");   
+	}
+
+}

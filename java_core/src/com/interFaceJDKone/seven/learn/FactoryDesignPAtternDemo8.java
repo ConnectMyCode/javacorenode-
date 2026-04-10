@@ -1,0 +1,16 @@
+package com.interFaceJDKone.seven.learn;
+
+public class FactoryDesignPAtternDemo8 {
+	
+	
+	public static void main(String []args) 
+	{
+		
+		//Accesing static method so Classname.methodName is sufficient
+		InterfaceFactoryDesginPatternPrinterDemo8 pattern =   FactoryDesignPatternMyPrinterDemo8.getPrint();   //Returns a object of anonymmous class have to save it as it alos imoleents Interface Print , can save it in Print 
+		
+		pattern.print();
+	
+	
+	}
+}

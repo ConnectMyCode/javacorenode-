@@ -1,0 +1,5 @@
+package com.interFaceJDKone.seven.learn;
+
+public interface BankDemo5 {
+
+}
