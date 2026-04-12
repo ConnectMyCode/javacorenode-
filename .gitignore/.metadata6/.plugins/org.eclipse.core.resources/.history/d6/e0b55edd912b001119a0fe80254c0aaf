@@ -1,6 +1,0 @@
-package com.polymorphism.learn;
-
-public class VariableHidingSubDemo4 extends VariableHidingSuperDemo4 {
-	
-	int x =200;      //VARIABLE HIDING
-}

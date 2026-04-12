@@ -1,7 +1,0 @@
-package com.functional.interfaces.learn;
-
-public interface FunctionaLInterfaceDemo1 {
-
-	void execute();
-	
-}

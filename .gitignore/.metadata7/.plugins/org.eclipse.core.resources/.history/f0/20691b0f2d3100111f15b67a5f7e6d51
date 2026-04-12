@@ -1,7 +1,0 @@
-package com.abstraction.learn;
-
-public class AbstractMethodsMustBeOverridenBetaDemo2 extends AbstractMethodsMustBeOverridenAlphaDemo2
-{
-	
-
-}

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete element from project &apos;logical_coding&apos;&#x0D;&#x0A;- Original project: &apos;logical_coding&apos;&#x0D;&#x0A;- Original element: &apos;logical_coding/src/com.star.pattern.programming.ingle.aryan&apos;" description="Delete element" element1="/src&lt;com.star.pattern.programming.ingle.aryan" element2="/src&lt;com.star.pattern.programming.ingle" element3="/src&lt;com.star.pattern.programming" element4="/src&lt;com.star.pattern" element5="/src&lt;com.star" element6="/src&lt;com" elements="6" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1772708754433" subPackages="false" version="1.0"/>
-</session>

@@ -1,7 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public class FactoryDesginPatternDemo7 {
-
-	public static void main(String []args)	
-	{}   
-}

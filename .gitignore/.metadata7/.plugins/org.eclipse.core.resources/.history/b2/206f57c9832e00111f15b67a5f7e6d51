@@ -1,9 +1,0 @@
-package com.objectclass.methods.learn;
-
-public class HashCodeMethodDDemo1 {
-
-	public static void main(String []args) 
-	{
-		
-	}
-}

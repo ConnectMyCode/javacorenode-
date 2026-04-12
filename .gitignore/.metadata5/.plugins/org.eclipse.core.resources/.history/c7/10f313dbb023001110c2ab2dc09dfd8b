@@ -1,9 +1,0 @@
-package com.inheritance.learn;
-
-public class CallingNoArgumentConstructorSuperClassDemo8 {
-	
-	public CallingNoArgumentConstructorSuperClassDemo8(int y) 
-	{
-		
-	} 
-}

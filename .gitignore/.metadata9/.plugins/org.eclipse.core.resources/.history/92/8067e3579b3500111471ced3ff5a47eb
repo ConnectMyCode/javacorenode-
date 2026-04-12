@@ -1,9 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public interface InterfaceDefaultMethodsVehicleDemo11 {
-	
-	default void m1() 
-	{
-		 System.out.println("Default Method  m1() inside Interface Vehicle" );
-	}
-}

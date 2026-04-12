@@ -1,8 +1,0 @@
-package com.inheritance.learn;
-
-public class CallingNoArgumentConstructorDemo8 {
-	
-	
-	new CallingNoArgumentConstructorSubClassDemo8(15);
-	
-}

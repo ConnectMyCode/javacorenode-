@@ -1,7 +1,0 @@
-package com.abstraction.learn;
-
-public class ClassAbstractDemo1 
-{
-	ClassAbstractShapeDemo1 square = new ClassAbstractSquareDemo1()
-	
-}

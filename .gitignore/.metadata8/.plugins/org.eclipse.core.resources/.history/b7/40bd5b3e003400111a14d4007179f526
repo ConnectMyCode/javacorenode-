@@ -1,5 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public class SealedInterfaceCarDemo3 implements SealedInterfaceMoveableDemo3{
-
-}

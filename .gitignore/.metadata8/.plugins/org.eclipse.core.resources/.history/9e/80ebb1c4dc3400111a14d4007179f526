@@ -1,7 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public interface InterfaceMultipleInheritanceDemo9 {
-		
-	
-	public void m1();
-}

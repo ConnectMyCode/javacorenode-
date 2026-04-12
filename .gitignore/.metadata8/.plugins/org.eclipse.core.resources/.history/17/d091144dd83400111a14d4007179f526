@@ -1,7 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public interface InterfacePrinterDemo8 {
-
-	public void print();
-	
-}

@@ -1,8 +1,0 @@
-package com.functional.interfaces.learn;
-
-public interface InterfaceLambdaExpressionDemo2 {
-
-	
-	void display();
-	
-}

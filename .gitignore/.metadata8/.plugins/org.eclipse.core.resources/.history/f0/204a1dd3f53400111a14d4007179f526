@@ -1,7 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public class ExtendsInterfaceImplementerDemo10 implements InterfaceBDemo10{
-
-	
-	
-}

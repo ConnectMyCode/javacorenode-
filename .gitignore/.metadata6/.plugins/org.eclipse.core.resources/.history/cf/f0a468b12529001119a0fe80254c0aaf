@@ -1,7 +1,0 @@
-package com.inheritance.learn;
-
-public class UpcastingAndMethodOverridingDogDemo13 {
-		
-	
-	public UpcastingAndMethodOverridingDogDemo13 extends UpcastingAndMethodOverridingAnimalDemo13
-}

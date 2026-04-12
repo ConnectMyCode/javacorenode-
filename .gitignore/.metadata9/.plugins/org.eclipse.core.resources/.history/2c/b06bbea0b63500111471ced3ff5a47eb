@@ -1,7 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public class StaticMethodsOfInterfaceOnlyAccessedByInterfaceImplementerDemo13 implements StaticMethodsOfInterfaceOnlyAccessedByInterfaceDemo13{
-		
-	
-	
-}

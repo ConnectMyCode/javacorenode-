@@ -1,9 +1,0 @@
-package com.inheritance.learn;
-
-public class ConstructorChainingBetaDemo6 {
-	
-	public Beta() 
-	{
-		System.out.println("Beta class Constructor");
-	}
-}

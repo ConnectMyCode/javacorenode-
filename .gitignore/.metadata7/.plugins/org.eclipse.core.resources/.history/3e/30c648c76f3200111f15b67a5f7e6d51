@@ -1,7 +1,0 @@
-package com.interFace.learn;
-
-public interface PaymentDemo1 { 
-	
-	
-
-}

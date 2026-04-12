@@ -1,5 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public class InterfaceDefaultMethodsBikeDemo11 implements InterfaceDefaultMethodsVehicleDemo11{
-		
-}

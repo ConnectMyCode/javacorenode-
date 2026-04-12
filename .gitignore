@@ -1,0 +1,11 @@
+.env
+target/
+.metadata*/
+JavaProjects/
+.classpath
+.project
+.settings/
+*.launch
+.DS_Store
+Thumbs.db
+*.log

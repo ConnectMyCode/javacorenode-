@@ -1,9 +1,0 @@
-package com.inheritance.learn;
-
-public class ParameterizedConstructorDemo7 {
-	
-	public static void main(String []args) 
-	{
-		
-	}
-}

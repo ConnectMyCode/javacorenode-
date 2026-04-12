@@ -1,9 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public class ClassCDemo9 implements InterfaceADemo9,InterfaceBDemo9
-{	
-	public void m1() 
-	{
-		
-	}
-}	

@@ -1,5 +1,0 @@
-package com.record.keyword.learn;
-
-public record RecordDemo1() {
-
-}

@@ -1,7 +1,0 @@
-package com.abstraction.learn;
-
-abstract public class AbstractMethodUsingArrayFruitDemo4 {
-	
-	public void clean();
-	public void cut();
-}

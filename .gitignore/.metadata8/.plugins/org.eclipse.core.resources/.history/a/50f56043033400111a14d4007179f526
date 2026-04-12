@@ -1,8 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public interface BankDemo5 {
-
-	void deposit(double amount);
-	void withdraw(double amount);
-	double getBalance();
-}

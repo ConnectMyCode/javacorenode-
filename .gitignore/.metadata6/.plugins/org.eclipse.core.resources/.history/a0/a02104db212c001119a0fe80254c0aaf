@@ -1,9 +1,0 @@
-package com.polymorphism.learn;
-
-public class DownCastingDemo9 {
-
-	public static void main(String []args) 
-	{
-		
-	}
-}

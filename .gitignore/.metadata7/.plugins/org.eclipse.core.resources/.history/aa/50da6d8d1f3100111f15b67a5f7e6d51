@@ -1,5 +1,0 @@
-package com.abstraction.learn;
-
-public class ClassAbstractSquareDemo1 extends ClassAbstractShapeDemo1{
-
-}

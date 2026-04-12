@@ -1,7 +1,0 @@
-package com.interFaceJDKone.seven.learn;
-
-public interface InterfaceADemo10 {
-
-	void m1();
-	
-}
