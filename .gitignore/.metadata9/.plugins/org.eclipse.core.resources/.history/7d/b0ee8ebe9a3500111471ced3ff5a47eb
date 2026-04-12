@@ -1,0 +1,13 @@
+package com.interFaceJDKone.seven.learn;
+
+public class InterfaceDefaultMethodsBikeDemo11 implements InterfaceDefaultMethodsVehicleDemo11{
+		
+	//Default = Choice If want to override or use as it  is . 
+	
+	
+	//default :ERROR: Cannot decarease the visibility of the Inherited Method From Interface Vehicle
+	public void m1() 
+	{
+		
+	}
+}

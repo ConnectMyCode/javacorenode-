@@ -1,0 +1,29 @@
+package com.interFaceJDKone.seven.learn;
+
+public interface InterfaceDefaultMethodsVehicle01Demo11 {
+	
+	
+	void run();   //public Abstract void run()
+	
+	void horn(); // Public abstract void horn()
+	
+	
+	default void digitalMeter() 
+	{
+		System.out.println("Digital Meter");
+	}
+	
+	default void m1() 
+	{
+		 System.out.println("Default Method  m1() inside Interface Vehicle" );
+	}
+	
+	
+	//If In both interface there is default method having same signature and parameters + return type 
+	default void defaultmethod02() 
+	{
+		System.out.println("Default Method of 1st Vehicle");
+	}
+	
+	
+}

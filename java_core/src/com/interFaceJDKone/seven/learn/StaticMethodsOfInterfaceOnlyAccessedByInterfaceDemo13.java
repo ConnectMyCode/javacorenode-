@@ -1,0 +1,38 @@
+package com.interFaceJDKone.seven.learn;
+
+public class StaticMethodsOfInterfaceOnlyAccessedByInterfaceDemo13 {
+
+	public static void main(String []args) 
+	{
+		
+		
+		/*ERROR   Undefined method fly() for type Implementer*/
+	  // Static Method of Interface can only be accessed via using ---> Interface.StaticMethod() 
+	
+//		StaticMethodsOfInterfaceOnlyAccessedByInterfaceImplementerDemo13.fly();
+		
+		StaticMethodsOfInterfaceOnlyAccessedByInterfaceImplementerDemo13 implement = new StaticMethodsOfInterfaceOnlyAccessedByInterfaceImplementerDemo13();
+//		implement.fly();
+		
+		
+		StaticMethodsOfInterfaceDemo13.fly();     //Interface.Static() ;
+		
+		/*
+		 * 
+| Feature                      | Interface Static Method          | Class Static Method                                |
+| ---------------------------- | -------------------------------- | -------------------------------------------------- |
+| **Access तरीका**             | Interface name se access          | Class name, subclass name, ya object se access     |
+| **Inheritance**              | ❌ Inherited nahi hota           | ✅ Subclass ko available hota                       |
+| **Overriding / Hiding**      | ❌ Hide ya override nahi ho sakta| ✅ Hide ho sakta hai (override nahi, only hiding)   |
+| **Call karne ka rule**       | Sirf interface name se call      | Class / subclass / object se call                   |
+| **Polymorphism**             | ❌ Not applicable                | ❌ Runtime polymorphism nahi (compile-time binding) |
+| **Availability in subclass** | ❌ Direct use nahi kar sakte     | ✅ By default available                             |
+
+		 * 
+		 * 
+		 * */
+		
+		
+	}
+	
+}

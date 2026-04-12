@@ -1,0 +1,31 @@
+package com.functional.interfaces.learn;
+
+public class LambdaExpressionDemo2 implements InterfaceLambdaExpression01Demo2 , InterfaceLambdaExpression02Demo2 , InterfaceLambdaExpression03Demo2{
+
+	/*Lambda Expression only works eith Functional Interface */
+	
+	/*
+	public void doSum() {
+		System.out.println("do sum Method");
+	}*/   
+	
+	
+	
+	
+	
+	public void findLength() 
+	{
+		System.out.println("find Length Method");
+		
+	}
+
+	public void display()
+	{
+		
+		System.out.println("display Method");
+	}
+	
+	
+	
+	
+}

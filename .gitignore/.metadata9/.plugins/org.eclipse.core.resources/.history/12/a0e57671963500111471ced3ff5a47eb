@@ -1,0 +1,510 @@
+package com.interFaceJDKone.seven.learn;
+
+public class InterfaceeMultipleInheritanceDemo9 {
+
+	public static void main(String []args) 
+	{
+		//Multiple Inheritance is possible through Interface.
+		
+		ClassCDemo9 demo9 = new ClassCDemo9();
+		demo9.m1();
+		
+		
+		
+		/*
+		 * Let’s stay **strictly within your given code** and clear everything step by step.
+	
+---	
+	
+# 🔹 Which interface method is overridden?
+
+Both interfaces have the same method:
+
+```java
+interface A {
+    void m1();
+}
+
+interface B {
+    void m1();
+}
+```
+
+👉 So:
+
+* `A.m1()`
+* `B.m1()`
+
+are **identical method declarations**.
+
+---
+
+## 🔹 In class `C`
+
+```java
+class C implements A, B {
+    @Override
+    public void m1() {
+        System.out.println("MI is possible through interface");
+    }
+}
+```
+
+👉 This **single method**:
+
+✔ Overrides **A.m1()**
+✔ Overrides **B.m1()**
+
+---
+
+## 🔹 Why only one method is enough?
+
+Because:
+
+* Both interfaces have **same method signature**
+
+  ```
+  void m1();
+  ```
+* Java treats them as **one common contract**
+
+👉 So class `C` provides **one implementation** that satisfies both.
+
+---
+
+# 🔹 Important Concept (Core Reason)
+
+👉 There is **no ambiguity** here because:
+
+* Interfaces **do not have method bodies** (in this context)
+* Only declaration exists
+* So JVM does not get confused
+
+---
+
+# 🔹 Constructor point (your note explanation)
+
+> "super keyword will directly move to Object class constructor"
+
+✔ Correct
+
+Why?
+
+* Interfaces **don’t have constructors**
+* So when `new C()` is executed:
+
+### Flow:
+
+```
+C() constructor
+   ↓
+super() → Object()
+```
+
+👉 It directly calls **Object class constructor**
+
+---
+
+# 🔹 Execution Flow of your program
+
+```java
+C c1 = new C();
+c1.m1();
+```
+
+### Step-by-step:
+
+1. `new C()` → object of class `C` is created
+2. Constructor chain:
+
+   ```
+   C() → Object()
+   ```
+3. `c1.m1()` is called
+4. JVM executes **C’s implementation**
+
+---
+
+# 🔹 Key Points (Bullet Notes 💯)
+
+### ✔ Multiple Inheritance using Interface
+
+* A class can implement **multiple interfaces**
+
+  ```java
+  class C implements A, B
+  ```
+
+---
+
+### ✔ Method Overriding Rule
+
+* If multiple interfaces have:
+
+  * Same method name
+  * Same parameters
+
+👉 Then:
+
+* Only **one implementation is required**
+
+---
+
+### ✔ No Ambiguity (Important 🔥)
+
+* Interfaces (without default methods) only have declarations
+* No method body → no conflict
+* So **no diamond problem**
+
+---
+
+### ✔ Constructor Behavior
+
+* Interfaces **do not have constructors**
+* So:
+
+  ```
+  super() → Object class
+  ```
+
+---
+
+### ✔ Object Creation
+
+* Object is always of:
+
+  ```
+  Class C
+  ```
+* Not of interface
+
+---
+
+### ✔ Contract Satisfaction
+
+* Class `C` must implement all methods of:
+
+  * Interface `A`
+  * Interface `B`
+
+✔ Here both need `m1()`
+✔ One method satisfies both
+
+---
+
+# 🔹 One-line interview answer
+
+> “Since both interfaces have identical method signatures, a single implementation in class C overrides both A.m1() and B.m1(), removing any ambiguity.”
+
+---
+
+If you want next level clarity, I can show you **what happens if method signatures are different or default methods are used (where ambiguity actually occurs)**.
+
+		 * 
+		 * */
+
+/*
+ * 
+ * Good — this is the **exact right doubt** to ask 👍
+
+## 🔹 Short Answer
+
+👉 **No priority is given to any interface**
+👉 Neither `A` nor `B` is preferred
+
+---
+
+## 🔹 Why no priority?
+
+Because both interfaces have:
+
+```java
+void m1();
+```
+
+✔ Same method name
+✔ Same parameters
+✔ Same return type
+
+👉 So they are **identical contracts**
+
+---
+
+## 🔹 What Java actually does
+
+When class `C` implements both:
+
+```java
+class C implements A, B
+```
+
+Java says:
+
+> “I don’t care whether this came from A or B — just give me one implementation.”
+
+So:
+
+```java
+public void m1()
+```
+
+✔ Satisfies **A.m1()**
+✔ Satisfies **B.m1()**
+
+👉 No conflict → No priority needed
+
+---
+
+## 🔹 Think of it like this
+
+Both interfaces are saying:
+
+```
+A → "Give me m1()"
+B → "Give me m1()"
+```
+
+Class `C` says:
+
+```
+"Here is m1()"
+```
+
+👉 Both are satisfied → End of story
+
+---
+
+## 🔹 When does priority matter? (Important 🔥)
+
+Priority **only comes into picture** when:
+
+👉 Interfaces have **default methods with body**
+
+Example (not your case, just concept):
+
+```java
+interface A {
+    default void m1() { }
+}
+
+interface B {
+    default void m1() { }
+}
+```
+
+Now ambiguity occurs ❗
+Then you must explicitly choose:
+
+```java
+A.super.m1();  // or B.super.m1();
+```
+
+---
+
+## 🔹 Final Concept (Very Important)
+
+| Situation                         | Priority Needed? | Reason                   |
+| --------------------------------- | ---------------- | ------------------------ |
+| Same abstract methods (your case) | ❌ No            | Only one contract        |
+| Default methods with body         | ✅ Yes           | Multiple implementations |
+
+---
+
+## 🔹 One-line answer 💯
+
+> “No priority is given because both interfaces provide the same abstract method signature, so a single implementation satisfies both.”
+
+---				
+
+
+ * 
+ * 
+ * Great question — you're digging into the **exact edge cases of multiple inheritance in interfaces**, which is where most confusion happens. Let’s stay strictly in your context and break it cleanly.
+
+---
+
+# ✅ Case 1: Same method signature, **different return types**
+
+### Example:
+
+```java
+interface A {
+    int m1();
+}
+
+interface B {
+    String m1();
+}
+```
+
+### Now:
+
+```java
+class Test implements A, B {
+    // ??
+}
+```
+
+👉 This will cause a **compile-time error** ❌
+
+### Why?
+
+Because:
+
+* Method signature = name + parameters → same (`m1()`)
+* Return type is **NOT part of method signature**
+* But return types must be **compatible**
+
+Here:
+
+* `int` and `String` are unrelated ❌
+
+👉 So:
+
+> You **CANNOT implement both** → compilation fails
+
+### ✔ Rule:
+
+* If return types are:
+
+  * Same → ✅ one implementation
+  * Covariant (e.g., Object & String) → ✅ allowed
+  * Different & unrelated → ❌ NOT allowed
+
+---
+
+# ✅ Case 2: Interfaces with **NO default methods**
+
+You already said:
+
+> No method body → no conflict → no diamond problem
+
+✔ Absolutely correct.
+
+👉 Multiple inheritance works perfectly because:
+
+* Only declarations exist
+* Class provides implementation
+
+---
+
+# 🔥 Case 3: Interfaces with **default methods (VERY IMPORTANT)**
+
+Now things change.
+
+---
+
+## ❗ Problem: Same default method in multiple interfaces
+
+### Example:
+
+```java
+interface A {
+    default void m1() {
+        System.out.println("A");
+    }
+}
+
+interface B {
+    default void m1() {
+        System.out.println("B");
+    }
+}
+```
+
+```java
+class Test implements A, B {
+    // ??
+}
+```
+
+👉 This causes **ambiguity** ❌
+
+---
+
+## 💥 Why?
+
+Because now:
+
+* Both interfaces provide **method body**
+* JVM doesn't know which one to use
+
+👉 This is the **diamond problem**
+
+---
+
+## ✅ Solution (MANDATORY OVERRIDE)
+
+You **must override** the method:
+
+```java
+class Test implements A, B {
+    public void m1() {
+        System.out.println("Resolved");
+    }
+}
+```
+
+✔ Now ambiguity is resolved
+
+---
+
+## ✅ Access specific interface method (optional)
+
+You can still call specific ones:
+
+```java
+class Test implements A, B {
+    public void m1() {
+        A.super.m1(); // calls A's version
+        B.super.m1(); // calls B's version
+    }
+}
+```
+
+---
+
+# 🎯 Final Answer to Your Questions
+
+## ❓1. If return types are different, should we override both?
+
+👉 ❌ No — you **cannot override both**
+
+* It becomes a **compile-time error**
+* Class cannot implement both interfaces
+
+---
+
+## ❓2. With default methods, is multiple inheritance still possible?
+
+👉 ✅ YES — but with a condition:
+
+### ✔ Rule:
+
+* If **no conflict** → works normally
+* If **conflict (same method)** → you MUST override
+
+---
+
+# 🧠 Final Summary
+
+| Situation                           | Result               |
+| ----------------------------------- | -------------------- |
+| Same method, same return type       | ✅ One implementation |
+| Same method, different return type  | ❌ Compile-time error |
+| No default methods                  | ✅ No ambiguity       |
+| Default methods (same method)       | ⚠ Must override      |
+| Default methods (different methods) | ✅ No issue           |
+
+---
+
+If you want, I can give you **tricky interview-level MCQs** or a **memory diagram** for this — this topic is very commonly asked 🔥
+
+ * 
+ * 
+ * 
+ * */	
+	
+	}
+	
+}

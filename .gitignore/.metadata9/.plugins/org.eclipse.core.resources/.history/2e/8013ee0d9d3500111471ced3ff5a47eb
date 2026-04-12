@@ -1,0 +1,23 @@
+package com.interFaceJDKone.seven.learn;
+
+public class InterfaceDefaultMethodsDemo11 {
+
+		public static void main(String []args) 
+		{	
+			
+			InterfaceDefaultMethodsVehicleDemo11 vehicle = null;
+			
+			vehicle = new InterfaceDefaultMethodsCarDemo11();  vehicle.m1();   vehicle.digitalMeter(); vehicle.horn();  vehicle.run();  
+			
+			vehicle = new InterfaceDefaultMethodsBikeDemo11();   vehicle.digitalMeter();     vehicle.horn();   vehicle.m1();  vehicle.run(); 			
+																// o/p:   Digital Meter
+
+																//not overriden diggitalMeter() Method inside BIKE class then how I am accessing it
+																//Run Time Polymorphism : Compiler Based on Return Type of Reference Var : Vehicle Interface It is searching inside : Vehicle Interface find it : N ERROR
+																					//	  JVM based on Current Object Creation bike  Searches in bike class and decides and executes if not found it gores in Interface and finds and executes. 
+	
+			
+		}
+	
+	
+}

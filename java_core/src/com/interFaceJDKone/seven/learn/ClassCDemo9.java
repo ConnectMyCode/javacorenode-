@@ -7,4 +7,17 @@ public class ClassCDemo9 implements InterfaceADemo9,InterfaceBDemo9
 	{
 		System.out.println("MI is possible through Interface!!!");
 	}
+	
+	
+	@Override
+	public void fly() {
+	System.out.println("Overriden fly() method from Interface A");
+	}
+	
+	
+	@Override
+	public void swim() 
+	{
+		System.out.println("Overriden Swim() method from Interface B");
+	}
 }	

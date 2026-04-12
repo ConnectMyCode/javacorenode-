@@ -1,0 +1,8 @@
+package com.functional.interfaces.learn;
+
+public class LambdaExpressionDemo2 {
+
+	/*Lambbbda Exp[ression only works eith Functional Interface */
+	
+	
+}

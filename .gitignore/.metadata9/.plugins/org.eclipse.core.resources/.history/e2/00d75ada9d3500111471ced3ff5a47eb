@@ -1,0 +1,7 @@
+package com.interFaceJDKone.seven.learn;
+
+public interface InterfaceDefaultMethodsVehicle02Demo11 {
+
+		void m1();
+
+}

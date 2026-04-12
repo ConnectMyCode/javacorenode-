@@ -9,13 +9,18 @@ public class InterfaceeMultipleInheritanceDemo9 {
 		ClassCDemo9 demo9 = new ClassCDemo9();
 		demo9.m1();
 		
+		demo9.fly();
+		demo9.swim();
+		
+		
+		
 		
 		
 		/*
 		 * Let’s stay **strictly within your given code** and clear everything step by step.
-
----
-
+	
+---	
+	
 # 🔹 Which interface method is overridden?
 
 Both interfaces have the same method:
@@ -317,6 +322,190 @@ A.super.m1();  // or B.super.m1();
 ---				
 
 
+ * 
+ * 
+ * Great question — you're digging into the **exact edge cases of multiple inheritance in interfaces**, which is where most confusion happens. Let’s stay strictly in your context and break it cleanly.
+
+---
+
+# ✅ Case 1: Same method signature, **different return types**
+
+### Example:
+
+```java
+interface A {
+    int m1();
+}
+
+interface B {
+    String m1();
+}
+```
+
+### Now:
+
+```java
+class Test implements A, B {
+    // ??
+}
+```
+
+👉 This will cause a **compile-time error** ❌
+
+### Why?
+
+Because:
+
+* Method signature = name + parameters → same (`m1()`)
+* Return type is **NOT part of method signature**
+* But return types must be **compatible**
+
+Here:
+
+* `int` and `String` are unrelated ❌
+
+👉 So:
+
+> You **CANNOT implement both** → compilation fails
+
+### ✔ Rule:
+
+* If return types are:
+
+  * Same → ✅ one implementation
+  * Covariant (e.g., Object & String) → ✅ allowed
+  * Different & unrelated → ❌ NOT allowed
+
+---
+
+# ✅ Case 2: Interfaces with **NO default methods**
+
+You already said:
+
+> No method body → no conflict → no diamond problem
+
+✔ Absolutely correct.
+
+👉 Multiple inheritance works perfectly because:
+
+* Only declarations exist
+* Class provides implementation
+
+---
+
+# 🔥 Case 3: Interfaces with **default methods (VERY IMPORTANT)**
+
+Now things change.
+
+---
+
+## ❗ Problem: Same default method in multiple interfaces
+
+### Example:
+
+```java
+interface A {
+    default void m1() {
+        System.out.println("A");
+    }
+}
+
+interface B {
+    default void m1() {
+        System.out.println("B");
+    }
+}
+```
+
+```java
+class Test implements A, B {
+    // ??
+}
+```
+
+👉 This causes **ambiguity** ❌
+
+---
+
+## 💥 Why?
+
+Because now:
+
+* Both interfaces provide **method body**
+* JVM doesn't know which one to use
+
+👉 This is the **diamond problem**
+
+---
+
+## ✅ Solution (MANDATORY OVERRIDE)
+
+You **must override** the method:
+
+```java
+class Test implements A, B {
+    public void m1() {
+        System.out.println("Resolved");
+    }
+}
+```
+
+✔ Now ambiguity is resolved
+
+---
+
+## ✅ Access specific interface method (optional)
+
+You can still call specific ones:
+
+```java
+class Test implements A, B {
+    public void m1() {
+        A.super.m1(); // calls A's version
+        B.super.m1(); // calls B's version
+    }
+}
+```
+
+---
+
+# 🎯 Final Answer to Your Questions
+
+## ❓1. If return types are different, should we override both?
+
+👉 ❌ No — you **cannot override both**
+
+* It becomes a **compile-time error**
+* Class cannot implement both interfaces
+
+---
+
+## ❓2. With default methods, is multiple inheritance still possible?
+
+👉 ✅ YES — but with a condition:
+
+### ✔ Rule:
+
+* If **no conflict** → works normally
+* If **conflict (same method)** → you MUST override
+
+---
+
+# 🧠 Final Summary
+
+| Situation                           | Result               |
+| ----------------------------------- | -------------------- |
+| Same method, same return type       | ✅ One implementation |
+| Same method, different return type  | ❌ Compile-time error |
+| No default methods                  | ✅ No ambiguity       |
+| Default methods (same method)       | ⚠ Must override      |
+| Default methods (different methods) | ✅ No issue           |
+
+---
+
+If you want, I can give you **tricky interview-level MCQs** or a **memory diagram** for this — this topic is very commonly asked 🔥
+
+ * 
  * 
  * 
  * */	

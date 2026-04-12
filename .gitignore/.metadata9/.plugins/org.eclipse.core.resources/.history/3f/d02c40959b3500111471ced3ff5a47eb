@@ -1,0 +1,11 @@
+package com.interFaceJDKone.seven.learn;
+
+public class InterfaceDefaultMethodsCarDemo11 implements InterfaceDefaultMethodsVehicleDemo11{
+	
+	
+	@Override
+	public void m1() 
+	{
+		System.out.println("Overidien Default MEthod of Interdace Vehicle inside Implementing Class Car");
+	}
+}

@@ -1,0 +1,13 @@
+package com.functional.interfaces.learn;
+
+public interface FunctionaLInterfaceDemo1 {
+
+	void execute();
+	
+	
+	default void  play() 
+	{
+		System.out.println("Playing is cool");
+	}
+	
+}

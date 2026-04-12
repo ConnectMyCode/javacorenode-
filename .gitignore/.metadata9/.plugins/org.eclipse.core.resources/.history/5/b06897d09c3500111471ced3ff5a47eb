@@ -1,0 +1,18 @@
+package com.interFaceJDKone.seven.learn;
+
+public class InterfaceDefaultMethodsDemo11 {
+
+		public static void main(String []args) 
+		{	
+			
+			InterfaceDefaultMethodsVehicleDemo11 vehicle = null;
+			
+			vehicle = new InterfaceDefaultMethodsCarDemo11();  vehicle.m1();   vehicle.digitalMeter(); vehicle.horn();  vehicle.run();  
+			
+			vehicle = new InterfaceDefaultMethodsBikeDemo11();   vehicle.digitalMeter();     vehicle.horn();   vehicle.m1();  vehicle.run();
+																//not overriden diggitalMeter() Method inside BIKE class then how I am accessing it
+											
+		}
+	
+	
+}

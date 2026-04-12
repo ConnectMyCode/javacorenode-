@@ -1,0 +1,13 @@
+package com.interFaceJDKone.seven.learn;
+
+public class InterfaceDefaultMethodsDemo11 {
+
+		public static void main(String []args) 
+		{	
+			
+			InterfaceDefaultMethodsVehicleDemo11 vehicle = null;
+			
+		}
+	
+	
+}

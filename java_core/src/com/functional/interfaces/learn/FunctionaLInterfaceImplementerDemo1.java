@@ -1,0 +1,198 @@
+package com.functional.interfaces.learn;
+
+public class FunctionaLInterfaceImplementerDemo1 {
+
+	public static void main(String []args) 
+	{
+		//Anonymous Inner Class : 
+		
+		FunctionaLInterfaceDemo1 intern = new FunctionaLInterfaceDemo1()    //In one line  Class is  Created +Object Creation is ready when MAin method executes + Reference Variable is assigned to the object + Class Body is implemented simultaneously +Implementing Interface 
+		{
+			@Override            
+			public void execute() 
+			{
+				System.out.println("Exected Overridden Method inside Anonymous Inner class!!!");
+			}
+		};
+
+		intern.execute();  //Object created when the static main method is executed
+		
+		intern.play(); 
+		
+		FunctionaLInterfaceDemo1.ground();   //Interface static method 
+		
+		//using reference Variable cannot access the interface static method
+		
+	}
+}
+	
+
+	/*
+	
+	Here are **precise, interview-focused notes** on **Lambda Expressions** and **Functional Interfaces in Java** 👇
+
+	---
+
+	# ✅ 1. Functional Interface (Core Concept)
+
+	### ✔ Definition
+
+	A **Functional Interface** is an interface that contains **exactly ONE abstract method**.
+
+	---
+
+	### ✔ Key Points
+
+	* Can have:
+
+	  * ✅ One abstract method
+	  * ✅ Multiple `default` methods
+	  * ✅ Multiple `static` methods
+
+	* Annotated with:
+
+	```java
+	@FunctionalInterface
+	```
+
+	👉 (Optional but recommended for compile-time safety)
+
+	---
+
+	### ✔ Example
+
+	```java
+	@FunctionalInterface
+	interface A {
+	    void m1(); // only one abstract method
+	}
+	```
+
+	---
+
+	### ❌ Invalid
+
+	```java
+	interface B {
+	    void m1();
+	    void m2(); // ❌ more than one abstract method
+	}
+	```
+
+	### ✔ Syntax
+
+	```java
+	(parameters) -> { body }
+	```
+
+	---
+
+	### ✔ Example (Normal way)
+
+	```java
+	A obj = new A() {
+	    public void m1() {
+	        System.out.println("Hello");
+	    }
+	};
+	```
+
+	---
+
+	### ✔ Lambda way
+
+	```java
+	A obj = () -> System.out.println("Hello");
+	```
+
+	---
+
+	# 🔥 Key Rules of Lambda
+
+	### 1. Works ONLY with Functional Interface
+
+	👉 If interface is not functional → ❌ Lambda not allowed
+
+	---
+
+	### 2. No need to write:
+
+	* Method name
+	* Return type (if obvious)
+	* Access modifier
+
+	---
+
+	### 3. Parameter rules
+
+	```java
+	(int a, int b) -> a + b   // with type
+	(a, b) -> a + b           // type inferred ✅
+	```
+
+	---
+
+	### 4. Single parameter shortcut
+
+	```java
+	a -> a * a
+	```
+
+	---
+
+	### 5. Multiple statements
+
+	```java
+	(a, b) -> {
+	    int sum = a + b;
+	    return sum;
+	}
+	```
+
+	---
+
+	# ✅ Functional Interface + Lambda Together
+
+	```java
+	@FunctionalInterface
+	interface Add {
+	    int sum(int a, int b);
+	}
+
+	public class Test {
+	    public static void main(String[] args) {
+	        Add obj = (a, b) -> a + b;
+	        System.out.println(obj.sum(10, 20));
+	    }
+	}
+	```
+
+	---
+
+	# ⚠ Important Interview Points
+
+	* Lambda = **implementation of functional interface**
+	* Reduces **boilerplate code**
+	* Used heavily in:
+
+	  * Streams API
+	  * Collections (sorting, filtering)
+
+	---
+
+	# 🧠 Final Summary
+
+	| Concept              | Meaning                    |
+	| -------------------- | -------------------------- |
+	| Functional Interface | One abstract method        |
+	| Lambda Expression    | Short implementation of FI |
+	| Requirement          | FI is mandatory            |
+	| Benefit              | Cleaner, concise code      |
+
+	---
+
+	If you want, I can give **tricky MCQs + output-based questions** (very common in exams/interviews).
+
+	
+}
+*/

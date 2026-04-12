@@ -1,0 +1,23 @@
+package com.interFaceJDKone.seven.learn;
+
+public class StaticMethodsOfInterfaceOnlyAccessedByInterfaceDemo13 {
+
+	public static void main(String []args) 
+	{
+		
+		
+		/*ERROR   Undefined method fly() for type Implementer*/
+	  // Static Method of Interface can only be accessed via using ---> Interface.StaticMethod() 
+	
+//		StaticMethodsOfInterfaceOnlyAccessedByInterfaceImplementerDemo13.fly();
+		
+		StaticMethodsOfInterfaceOnlyAccessedByInterfaceImplementerDemo13 implement = new StaticMethodsOfInterfaceOnlyAccessedByInterfaceImplementerDemo13();
+//		implement.fly();
+		
+		
+		StaticMethodsOfInterfaceDemo13.fly();
+		
+		
+	}
+	
+}

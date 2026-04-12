@@ -1,0 +1,13 @@
+package com.interFaceJDKone.seven.learn;
+
+public class StaticMethodsOfInterfaceOnlyAccessedByInterfaceDemo13 {
+
+	public static void main(String []args) 
+	{
+		
+		StaticMethodsOfInterfaceOnlyAccessedByInterfaceImplementerDemo13 implement = new StaticMethodsOfInterfaceOnlyAccessedByInterfaceImplementerDemo13();
+		
+		
+	}
+	
+}

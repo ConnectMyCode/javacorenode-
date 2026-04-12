@@ -1,0 +1,10 @@
+package com.interFaceJDKone.seven.learn;
+
+public interface MainMethodInInterfaceDemo14 {
+
+static void fly() 
+{
+	System.out.println("Fly");}	
+	
+}
+}

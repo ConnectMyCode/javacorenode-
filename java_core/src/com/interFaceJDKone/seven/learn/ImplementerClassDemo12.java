@@ -1,0 +1,10 @@
+package com.interFaceJDKone.seven.learn;
+
+public class ImplementerClassDemo12 extends ClassBetaDemo12 implements InterfaceAplhaDemo12 
+{  
+
+	
+}
+
+
+

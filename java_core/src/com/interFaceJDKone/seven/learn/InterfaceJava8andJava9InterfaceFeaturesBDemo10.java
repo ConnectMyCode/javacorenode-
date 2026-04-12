@@ -4,39 +4,42 @@ package com.interFaceJDKone.seven.learn;
 /*In an interface:
 
 All methods are public by default (except private ones)  
-*/ 
+*/ 	
 
+			    
 //Using Extends keyword we can extend Interface B with A.
 public interface InterfaceJava8andJava9InterfaceFeaturesBDemo10 extends InterfaceJava8andJava9InterfaceFeaturesADemo10
 {
-	/*Allowed By default Compiler Adds >>>  Public +Abstract keywords to it 
+	/*Allowed  default Compiler Adds >>>  Public +Abstract keywords to it 
 	 * Compulsory to override by the implementing classes*/
 	void m2();   //abstract public void m2(){}
 
 	/*Not allowed inside Interface*/
 //	public void m1()    //Error: Abstract Method Do not specify a Body 
-//	{	}				//Reason : We ccannot write an Instance method inside an Interface 
-						//What is allowed  -->   1.default Method     2. Public+static Methods
-						//Why these methods are only allowed --> Interface is used for what purpose --> Interface is used to implement methods Across Different Classes E
+//	{	}				//Reason : We ccannot write an Instance method with a boddy inside an Interface 
+						//What is allowed  -->   1.default Method     2. Public+static Methods  3.Private static/Instance methods
+						//Why these methods are only allowed --> Interface is used for what purpose --> Interface is used to implement methods Across Different Classes 
 						//EX:->TV Remote has Buttons now THese Buttons are Interface and the implementation is Hidden from the user of remote Interface buttons(Interface Methods). 
 						//If we want to add a new button to the remote because a new feature has been launched in the market then if we write the 
-						// public void m3();   Inside Interface A / B then Those Classes Implementing these Interface Will Break apart because a new feature got implemented. 
-						//If we want to Add A new Feature in Interface  also do Not want  Disturb the Implementing Classes of those Interface  Java 8  allowed 
+						// public void m3();   Inside Interface A / B then Those Classes Implementing these Interface Will Break apart because a new feature got implemented. And in each class the old fetature are only  implemented so this will give error. 
+						//If we want to Add A new Feature in Interface  also do Not want to Disturb the Implementing Classes of those Interface  Java 8  allowed 
 						//the use of Public Static and  Default(Not a access Modifier Its a Keyword) methods . 
-						// Public Static and default Methods >> USe >>> To Call the Internal Methods i.e, Private Methods In INterface : That Contains the Core Logic / Buisness Logic / Sensitive Data /   Without Showing the INternal Working/  of the New Feature Allowing Access to the user  
-						// Public static and default helps in  achieving this security and implementation of new Feature without disturbing the Implemeting Classes. 
-						// In Java 9 private methods inside Interface were introduced.  
+						// Public Static and default Methods >> USe >>> To Call the Internal Methods i.e, Private Methods In INterface : That Contains the Core Logic / Buisness Logic / Sensitive Data /Reusable  Logic/   Without Showing the INternal Working/  of the New Feature Allowing Access to the user  via public methods.
+						// Public static and default helps in  achieving this security and implementation of new Feature without disturbing the Implementing Classes. 
+						// In Java 9 private methods inside Interface were introduced.     
 
 //NOTE:We have A choice If we want to Override this method default >>default method can be overriden /  Cannot override static Methods. because they belong to INterface and not Object ; In method Area not Heap Area / Private cannot be inherited thats why cannot overriden and the purpose of this method is to reuse the logic within Interface.    	
-	/*Allowed Public Staic*/ //JAVA 8 Feature
+	/*Allowed Public Static*/ //JAVA 8 Feature
+	/*Static methods are available only through interface and cannot be called by using implementing classes */
+	/*Static methods Of Interface cannot be Hidden by IMplementing classes */ /*   In class Static Methods can be hidden by the sub class Look at Demo13*/
 	public static void m3() 
 	{
 		sub();
 	}
 	
 	/*Allowed default */ //JAVA 8 Feature  //Optional to Override // 
-	default void m4() //Default method can call Public Static Method ; Cannot call Private Static Methods //Can call INstance Methods.
-	{//public ddefault void m4(){}
+	default void m4() //Default method can call Public Static Method ; Cannot call Private Static Methods WHY?--> It breaks the purpose of Security for which private Modifiers are made. //Can call INstance Methods.
+	{//public default void m4(){}     /*Accessed even if the implementiing class has not overriden or used it as it is there is no implementation in class then also using ImplementerClassName.defaultMethod();   we can call the method */
 		add();
 	}
 	
@@ -46,7 +49,7 @@ public interface InterfaceJava8andJava9InterfaceFeaturesBDemo10 extends Interfac
 		System.out.println("Static method with Implicitly added  Public Keyword Cannot be Overriden by interface implementing classes --> Because it is static and belongs to Interface , Not object    -> It can be called ex: ");
 	}
 	
-	//  Private Methods >>> JAVA 9 FEATURE
+	//  Private instance Methods >>> JAVA 9 FEATURE
 	private int add() 
 	{
 		return 10+20;
@@ -57,6 +60,23 @@ public interface InterfaceJava8andJava9InterfaceFeaturesBDemo10 extends Interfac
 	{
 		return 60;
 	}
+	
+	
+	/* public static void main(String []args)
+	 * {
+	 *   ✅ Use of writing main() method inside an Interface (Java)
+
+		Yes, you can write a main() method inside an interface (Java 8+).
+
+	🎯 Why is it used?
+		Testing interface methods
+		You can directly run the interface to test static or default methods.
+		Utility / Helper execution
+		Interfaces can contain static methods, and main() helps execute them.
+		No need for separate class
+		Saves time when you just want to quickly test logic.
+	 *   
+	 *   }*/
 	
 }
 
@@ -469,7 +489,7 @@ If you want next, I can give you **tricky MCQs + real interview scenarios** on t
 
 ✔ Correct Rule
 
-👉 A default method CAN call static method
+👉 A default method CAN call static method  WY? >>> it is a layer-2 data it can access layer-1 Data Static 
 
 Example:
 interface A {

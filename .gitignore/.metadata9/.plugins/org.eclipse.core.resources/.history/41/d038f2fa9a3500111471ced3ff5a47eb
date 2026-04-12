@@ -1,0 +1,6 @@
+package com.interFaceJDKone.seven.learn;
+
+public class InterfaceDefaultMethodsCarDemo11 implements InterfaceDefaultMethodsVehicleDemo11{
+	
+	
+}

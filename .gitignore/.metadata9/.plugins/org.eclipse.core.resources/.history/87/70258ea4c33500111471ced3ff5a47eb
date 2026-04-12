@@ -1,0 +1,29 @@
+package com.functional.interfaces.learn;
+
+public class FunctionaLInterfaceImplementerDemo1 {
+
+	public static void main(String []args) 
+	{
+		//Anonymous Inner Class : 
+		
+		FunctionaLInterfaceDemo1 intern = new FunctionaLInterfaceDemo1()    //In one line  Class is  Created +Object Creation is ready when MAin method executes + Reference Variable is assigned to the object + Class Body is implemented simultaneously +Implementing Interface 
+		{
+			@Override            
+			public void execute() 
+			{
+				System.out.println("Exected Overridden Method inside Anonymous Inner class!!!");
+			}
+		};
+
+		intern.execute();  //Object created when the static main method is executed
+		
+		intern.play(); 
+		
+		FunctionaLInterfaceDemo1.ground();   //Interface static method 
+		
+		//using refernce Variable cannot access the interface static method
+		
+	}
+	
+	
+}

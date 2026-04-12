@@ -1,0 +1,21 @@
+package com.functional.interfaces.learn;
+
+public class FunctionaLInterfaceImplementerDemo1 {
+
+	public static void main(String []args) 
+	{
+		//Anonymous Inner Class : 
+		
+		FunctionaLInterfaceDemo1 intern = new FunctionaLInterfaceDemo1() 
+		{
+			public void execute() 
+			{
+				System.out.println("Exected Overridden Method inside Anonymous Inner class!!!");
+			}
+		};
+		
+		intern.execute();  
+	}
+	
+	
+}

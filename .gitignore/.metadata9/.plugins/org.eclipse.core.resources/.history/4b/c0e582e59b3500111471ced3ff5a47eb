@@ -1,0 +1,27 @@
+package com.interFaceJDKone.seven.learn;
+
+public class InterfaceDefaultMethodsCarDemo11 implements InterfaceDefaultMethodsVehicleDemo11{
+	
+	
+	
+	
+	
+	@Override
+	public void run() 
+	{
+			System.out.println("Car is Running in CAR Lane Implementing Vehicle Rules ");
+	}
+	
+	@Override
+	public void horn() 
+	{
+		System.out.println("Car is giveing hornn in CAR Lane Implementing Vehicle Rules ");		
+	}
+	
+	@Override
+	public void m1() 
+	{
+		System.out.println("Overidien Default MEthod of Interdace Vehicle inside Implementing Class Car");
+	}
+	
+}

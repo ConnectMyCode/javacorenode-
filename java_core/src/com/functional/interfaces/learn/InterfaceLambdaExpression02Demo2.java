@@ -1,0 +1,7 @@
+package com.functional.interfaces.learn;
+
+public interface InterfaceLambdaExpression02Demo2 {
+	
+	void findLength();
+	
+}
