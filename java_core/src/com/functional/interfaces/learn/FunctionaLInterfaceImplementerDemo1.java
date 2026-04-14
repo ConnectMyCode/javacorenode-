@@ -5,7 +5,7 @@ public class FunctionaLInterfaceImplementerDemo1 {
 	public static void main(String []args) 
 	{
 		//Anonymous Inner Class : 
-		
+										 /*From here after  "=" all the the code is boiler plate code so Lambda expression used to directly write the bastract method using the lambda rules provided. This reduce the code and increase readability of code.*/
 		FunctionaLInterfaceDemo1 intern = new FunctionaLInterfaceDemo1()    //In one line  Class is  Created +Object Creation is ready when MAin method executes + Reference Variable is assigned to the object + Class Body is implemented simultaneously +Implementing Interface 
 		{
 			@Override            
@@ -27,7 +27,7 @@ public class FunctionaLInterfaceImplementerDemo1 {
 }
 	
 
-	/*
+	/*Demo10 in package "com.interFaceJDKone.seven.learn"  in more details about static ,default,private, methods;
 	
 	Here are **precise, interview-focused notes** on **Lambda Expressions** and **Functional Interfaces in Java** 👇
 

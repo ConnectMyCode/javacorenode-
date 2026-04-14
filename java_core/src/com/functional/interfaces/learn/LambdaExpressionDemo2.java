@@ -3,7 +3,7 @@ package com.functional.interfaces.learn;
 public class LambdaExpressionDemo2 implements InterfaceLambdaExpression01Demo2 , InterfaceLambdaExpression02Demo2 , InterfaceLambdaExpression03Demo2 
 {			 						
 
-//	Error: the type LambdaExpressionDemo2 must implement the inherited abstract method InterfaceLambdaExpression03Demo2.doSum()
+//	Error: the type LambdaExpressionDemo2 must implement the inherited abstract method InterfaceLambdaExpression03Demo2.doSum()		
 //WHY ERROR:Functional Interface abstract Methods are not yet overriden   	
 	
 	public void findLength() 
@@ -32,7 +32,7 @@ public class LambdaExpressionDemo2 implements InterfaceLambdaExpression01Demo2 ,
 		/*Anonymous Function*/   /*But it will create a class and insde that class we have to override the Abstract method so that will not statisfy the Outter Anonymous class implementing Functional Interface and will still give error */ 
 		//Possible to write
 
-		/*This Overriding the INterface Abstract method satisfies only the Anonymous Inner class i.e, express1*/
+		/*This Overriding the INterface Abstract method satisfies only the Anonymous Inner class i.e, express1 and  ot the outter class*/
 		public void doSum()
 		{
 			System.out.println("Display Method inside Anonymous Class. ");
