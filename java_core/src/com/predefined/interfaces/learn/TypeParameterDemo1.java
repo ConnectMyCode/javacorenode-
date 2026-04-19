@@ -5,6 +5,8 @@ public class TypeParameterDemo1 {
 	
 	public static void main(String []args) 
 	{
+	//Class We are creating an object of class Box<T> and then accessing its methods and fields;
+
 		BoxDemo1<Integer> intType = new BoxDemo1<>(15); 
 		System.out.println("Integer Type is: "+intType.getData() );   //Getters method   Instance Method   
 		System.out.println("Static Field Value is: "+intType.aura ); 		// Static Field accessed using ReferencVataibleName.fieldName  
@@ -43,8 +45,8 @@ Student object:
 		 * 
 		 * */
 		
-		student.getData();
-		
+		student.getData();//Return object StudentDemo1 
+						
 		StudentDemo1 s =  student.getData();     // return this.data;    data>> contains Student Record Object>>  id ,name fields
 		
 		System.out.println("Access data value Student Object containing field name and id "+ s.name()+"\n"+s.id());  

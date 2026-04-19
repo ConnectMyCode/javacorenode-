@@ -66,7 +66,7 @@ public class LambdaExpressionDemo2 implements InterfaceLambdaExpression01Demo2 ,
 			
 			/*This anonymous Function does not satisfy the class "LambdaExpressionDemo2" as it is implementing deom01, Demo02 , Demo03 Interfaces so each Functional Interface abstract method has to be overriden Here Anonymous  Function  creates internal Class and Object of their own. */
 			
-			
+			/*How does this Anonymous Function creates a class and bject of its own? >>> */
 			
 			InterfaceLambdaExpression01Demo2 one = () -> System.out.println("Do Sum Method");
 			
