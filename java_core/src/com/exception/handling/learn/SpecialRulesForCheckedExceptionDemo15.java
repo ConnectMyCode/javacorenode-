@@ -31,7 +31,7 @@ public class SpecialRulesForCheckedExceptionDemo15 {
 	{
 		
 	}
-	catch(Throwable e)      //We can write THROWABLE and EXCEPTION in catch block though  try{} block is not throwing any exception >>WHY?? >> because They represent both Cheked and Uncheked Exceptions so its allowed.
+	catch(Throwable e)      //We can write THROWABLE and EXCEPTION in catch block though  try{} block is not throwing any exception >>WHY?? >> because They represent both Checked and Unchecked Exceptions so its allowed.
 	{
 		e.printStackTrace();
 		e.getMessage();

@@ -29,7 +29,7 @@ null + operation → NullPointerException 💥
 		 * */
 		
 /* Umcommnet this code:*/ 		
-		try {
+	/*	try {
 				//NullPointerException object created
 				int arr[] = null; 
 				arr[0] = 1;
@@ -41,7 +41,7 @@ null + operation → NullPointerException 💥
 		{
 				System.out.println("Final Block is used only for handling Resources and not Exception and This Block exceutes everytime try block is excuted it doesn matter if any exception occured or  not."); 
 		}
-		
+		*/
 	
 		/*JVM searches for NUllPointerException but main method is not handling the exception so it directly goes to  Default Exception Handler exception is handled their  : Results in Code getting Terminated Abnormally so "Main Method ended" does not prints..*/
 	
@@ -55,11 +55,11 @@ null + operation → NullPointerException 💥
 		Scanner sc = new Scanner(System.in);
 		try {
 			sc.nextInt();
-/*Uncomment*/ // sc.close(); //Sc Resource is closed still trying to access it gives Exception error /IllegalState Exception object is created.   
+/*Uncomment*/ // sc.close(); //Sc Resource is closed even after closing sc resource I am  trying to access sc resource it  gives Exception erro beacuse no such data is available :  /IllegalState Exception object is created.   
 			sc.next();  //Sc is a resource which Type >> InputStream so it needs to be closed after its use else Memory lEakage happens .    
 		//	sc.close(); // Instead of Closing Resource here we should Close resource in finally block Industry best Practice. 
 		}
-		catch(IllegalStateException e)    // NOTe: RuntimeException : Can Wrote insd a catch block even if no error in try block occur because it is a Unchecked Exxcpetion |||   Checked Exception : Can only be written when there is 100% sure  of  a checked exception object being created occuring and if  not then cannot write/ handle this excception. 
+		catch(IllegalStateException e)    // NOTe: RuntimeException : Can Wrote inside a catch block even if no error in try block occur because it is a Unchecked Exception |||   Checked Exception : Can only be written when there is 100% sure  of  a checked exception object being created occuring and if  not then cannot write/ inside catch block to handle this checked exception. 
 		{
 			System.out.println("Input Resource  closed too early Illegal State Exception");   
 		}
@@ -80,7 +80,7 @@ null + operation → NullPointerException 💥
 		try 
 		{
 			System.out.println("Final Block will not be exceuted System Exits with 0");
-			System.exit(0);
+/*Uncomment*/		//	System.exit(0);
 		}
 		finally
 		{
