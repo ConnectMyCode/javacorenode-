@@ -30,7 +30,18 @@ public class SpecialRulesForCheckedExceptionDemo17 {
  public static void main(String []args)						
  {	
 	  
+	 /*RI+ULLE 6:  If a method called throws a Checked Exception then the caller method must Throw that Excption using throws Keyword OR
+	  * handle it using try-catch block , else the compiler throws a try-catch block */
+	 
+	 m1();   //Unhandled exception type ClassNotFoundException.
+	 
  }	
+ 
+ static void m1() throws ClassNotFoundException {
+	 
+	 Class.forName("SpecialRulesForCheckedExceptionDemo1");    
+	 System.out.println();
+ }
  
 }
 
