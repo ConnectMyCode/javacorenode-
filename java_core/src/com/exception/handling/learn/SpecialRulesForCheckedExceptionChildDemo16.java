@@ -12,7 +12,7 @@ public class SpecialRulesForCheckedExceptionChildDemo16 extends SpecialRulesForC
 	}
 	
 	
-	@Override					//UCHEKED EXCEPTION
+	@Override					//UNCHEKED EXCEPTION
 	public void build() throws ArithmeticException       
 	{
 		System.out.println("Overriden method build() from subclass can throw an exception even though super class Method is not throwing any Exception because it is an uncheked exception. ");
