@@ -31,9 +31,9 @@ public class CloneMethodDemo6 {
 			
 		}
 		catch(CloneNotSupportedException e) 
-		{
+		{	
 			e.printStackTrace();
-		}
+		}	
 		
 		
 		

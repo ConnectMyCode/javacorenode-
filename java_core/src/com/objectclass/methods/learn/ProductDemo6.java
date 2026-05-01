@@ -19,8 +19,4 @@ public record ProductDemo6(Integer id ,  String name) implements Cloneable{
 		return super.clone();
 	}
 	
-
-
-
-	
 }
