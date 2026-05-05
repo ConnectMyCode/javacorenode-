@@ -7,7 +7,7 @@ public class IsAliveMethodDemo3 {
 	
 	public static void main(String []args) 
 	{
-		System.out.println("Main thread start of the story");
+		System.out.println( "Main thread start of the story");
 		
 		TestDemo3 tnt = new TestDemo3();
 		

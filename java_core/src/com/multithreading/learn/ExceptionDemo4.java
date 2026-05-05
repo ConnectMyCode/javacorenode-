@@ -18,7 +18,7 @@ public class ExceptionDemo4 {
 		
 		
 		//Now i am adding join() method to see changes in execution of these threads : 
-		join();   //Waits for this thread to terminate. Throws InterrupteException 
+	//	join();   //join(): current thread waits for other thread to Complete its execution after completion only main thread executes.  Throws InterrupteException 
 	
 		
 		FooDemo4 f1 = new FooDemo4();

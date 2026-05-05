@@ -7,7 +7,7 @@ public class ThreadCreationUsingExtendsThreadDemo1 {
 	{
 		System.out.println("Main Thread is running ");
 	
-		TestDemo1 test = new TestDemo1();   //Created  thread  >> ?How can you say that thread is created ?ANS >> Class whose object is created Extends Thread Class which means creation of a Custom thread is possible 100% assurred 
+		TestDemo1 test = new TestDemo1();   
 
 		test.start();
 		

@@ -1,0 +1,240 @@
+Here are your **clean, corrected, exam-ready notes** based strictly on your provided content (with **precision fixes applied where needed**) 👇
+
+---
+
+# 🧵 Java Thread Life Cycle — Revision Notes
+
+---
+
+## 🔹 1. NEW State (Born State)
+
+* Thread object is created using:
+
+  ```java
+  Thread t1 = new Thread();
+  ```
+* Thread is in **NEW state**
+* ❗ Important:
+
+  * Thread is **not started yet**
+  * Only object is created (no execution)
+
+---
+
+## 🔹 2. RUNNABLE State (Ready to Run)
+
+* Achieved after calling:
+
+  ```java
+  t1.start();
+  ```
+* Thread becomes **eligible for execution**
+* Thread Scheduler:
+
+  * Picks one thread from Runnable pool
+  * Moves it to **RUNNING state**
+
+✅ Key Point:
+
+* Runnable ≠ Running
+* It means **waiting for CPU**
+
+---
+
+## 🔹 3. RUNNING State
+
+* Thread is **actively executing `run()` method**
+* Each thread has:
+
+  * Separate **runtime stack**
+* Execution happens independently
+
+### 🔁 Possible Transitions from RUNNING:
+
+| Action                                       | Next State    |
+| -------------------------------------------- | ------------- |
+| CPU taken by another thread (context switch) | RUNNABLE      |
+| `Thread.yield()`                             | RUNNABLE      |
+| `sleep(ms)`                                  | TIMED_WAITING |
+| `wait()`                                     | WAITING       |
+| `join()`                                     | WAITING       |
+| `run()` completes                            | DEAD          |
+
+---
+
+## 🔹 4. WAITING / TIMED_WAITING State
+
+### 📌 Types:
+
+| Method      | State         |
+| ----------- | ------------- |
+| `wait()`    | WAITING       |
+| `join()`    | WAITING       |
+| `sleep(ms)` | TIMED_WAITING |
+
+---
+
+### ✅ Behavior:
+
+* Thread is **not eligible for CPU**
+* It is:
+
+  * Waiting for time (`sleep`)
+  * Waiting for lock (`wait`)
+  * Waiting for another thread (`join`)
+
+---
+
+### 🔁 Return Flow:
+
+```
+WAITING / TIMED_WAITING → RUNNABLE → RUNNING (by scheduler)
+```
+
+❗ Important Correction:
+
+* Thread **does NOT go directly to RUNNING**
+* It first goes to **RUNNABLE**
+
+---
+
+## 🔹 5. DEAD / EXIT State
+
+* When `run()` method finishes:
+
+  ```java
+  public void run() {
+      // execution complete
+  }
+  ```
+* Thread enters **DEAD state**
+
+❗ Important:
+
+* Thread **cannot be restarted**
+
+  ```java
+  t1.start(); // ❌ Illegal if already executed
+  ```
+
+---
+
+# ⚠️ Important Concept Fixes (From Your Notes)
+
+---
+
+## 🔴 1. Sleep Misconception
+
+❌ Wrong:
+
+> After sleep, thread goes directly to RUNNING
+
+✅ Correct:
+
+```
+sleep() → TIMED_WAITING → RUNNABLE → RUNNING (scheduler decides)
+```
+
+---
+
+## 🔴 2. Waiting Definition Correction
+
+❌ Your line:
+
+> Waiting means waiting for time OR lock OR thread
+
+✅ Correct split:
+
+* **WAITING**
+
+  * wait()
+  * join()
+
+* **TIMED_WAITING**
+
+  * sleep()
+
+---
+
+## 🔴 3. Context Switching
+
+* Can happen:
+
+  * Anytime during RUNNING
+* Causes:
+
+  * Time slice over
+  * Higher priority thread
+  * OS scheduling
+
+---
+
+## 🔴 4. yield() Clarification
+
+```java
+Thread.yield();
+```
+
+* Moves:
+
+  ```
+  RUNNING → RUNNABLE
+  ```
+* ❗ No guarantee another thread will run
+
+---
+
+# 🧠 IQ Question (Corrected)
+
+### ❓ If we write:
+
+```java
+Thread.sleep(1000);
+```
+
+### ❌ Wrong assumption:
+
+* Thread will run exactly after 1 sec
+
+### ✅ Correct Answer:
+
+* Thread sleeps for **at least 1 second**
+* After that:
+
+  ```
+  TIMED_WAITING → RUNNABLE
+  ```
+* Scheduler decides:
+
+  * When it actually runs
+
+---
+
+# 🔁 Full Lifecycle Flow
+
+```
+NEW
+ ↓ (start())
+RUNNABLE
+ ↓ (scheduler)
+RUNNING
+ ↓ ↓ ↓
+WAITING / TIMED_WAITING / RUNNABLE
+ ↓
+RUNNING
+ ↓
+DEAD
+```
+
+---
+
+# 📌 Final One-Line Summary
+
+👉
+**Thread execution is controlled by the scheduler — not by your code timing expectations.**
+
+---
+
+If you want next:
+✅ I can convert this into **1-page printable PDF format**
+✅ Or give **MCQs + tricky interview questions from this exact topic**
