@@ -25,7 +25,7 @@ public class SpinWheelDemo14 implements Runnable{
 			for(int k = 1 ; k<=10 ; k++)
 			{
 				try {
-					Thread.sleep(500);                 //Even though player goes in sleep he does not release the lock and so the other player2 has to wait till player 1 has finished playing
+					Thread.sleep(2000);                 //Even though player goes in sleep he does not release the lock and so the other player2 has to wait till player 1 has finished playing
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -49,6 +49,12 @@ public class SpinWheelDemo14 implements Runnable{
 		for(int j =1 ; j<=10 ; j++ ) 
 		{
 			System.out.println(Thread.currentThread().getName() +  "Took " + j + " try" );
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	
 		System.out.println(Thread.currentThread().getName() + " Ended the pin the ballon game mode ..... has released lock ...... Object Level ........");
@@ -96,7 +102,7 @@ public class SpinWheelDemo14 implements Runnable{
 	
 }
 
-
+//----------------------------------------------------------------OBJECT LEVEL SYNCHRONIZATION--------------------------------------------------------
 
 // once entered inside the synchronized area till the execution of that block is  not finished the other threads wait even if the Thread inside block goes to sleep  others will wait for it to finish its execution.
 
@@ -111,6 +117,20 @@ public class SpinWheelDemo14 implements Runnable{
 //when the thread finishes its execution inside the Synchronized area it releases the lock  >>>lock goes back to the corresponding Object() >>> Next Thread Acquires lock from Object >> Submits lock to Synchronized Method, Block.   
 	
 //   Poor Synchronization  >> lead to DEADLOCK. 
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------CLASS LEVEL SYNCHRONIZATION-------------------------------------------------------------*/
+//Read the LIMITiation OF the OBJECT LEVEL SYNCHRONIZATION >> from the Other Demo14.java file 
+/*
+	Static Synchronization is Introduced >>> WHY?? What is the purpose of it ???? >>>> 
+	1. When there are 2 Object created and there is Non static Synchronized block and 2 thread t1 and t2 execute the t1 -->obj1 and t2--->obj2 .....
+	At the same time there are 2 thread that are accessing the Synchronized area it pbreaks the purpose of having tthe SYnchronized area if We want a Area inside the code 
+	where the Area is globally accessible by only one thread at a time. Then USE 
+	
+	Static Synchronization 1.Method    >>>--->>>   public static synchronized void shootTheBall(){} 
+						   2.Block    >>>>--->>>   synchronized(ClassName.class); >>>  
+	
+ * */
 
 
 
@@ -216,4 +236,131 @@ If you want next:
  
  * */
 
+
+/*
+ Here are **precise short notes** on **static synchronization in Java** with clear examples 👇
+
+---
+
+## 🔹 Static Synchronization (Concept)
+
+👉 **Static synchronization = Class-level lock**
+
+* Lock is applied on the **Class object**, not on instance (object)
+* All threads (even from different objects) share **ONE lock**
+* Ensures **only one thread executes static synchronized code at a time**
+
+---
+
+## 🔹 1. Static Synchronized Method
+
+### ✅ Rule
+
+```java
+public static synchronized void methodName() { }
+```
+
+👉 Locks on: `ClassName.class`
+
+---
+
+### 📌 Example
+
+```java
+class Demo {
+    public static synchronized void print() {
+        System.out.println(Thread.currentThread().getName() + " entered");
+        try { Thread.sleep(1000); } catch(Exception e){}
+        System.out.println(Thread.currentThread().getName() + " exited");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Runnable r = () -> Demo.print();
+
+        new Thread(r, "T1").start();
+        new Thread(r, "T2").start();
+    }
+}
+```
+
+### 🔍 Output Behavior
+
+* T1 enters → T2 waits
+* T1 exits → T2 enters
+
+👉 **Only one thread at a time (global control)**
+
+---
+
+## 🔹 2. Static Synchronized Block
+
+### ✅ Rule
+
+```java
+synchronized(ClassName.class) { }
+```
+
+👉 Locks on: `ClassName.class`
+
+---
+
+### 📌 Example
+
+```java
+class Demo {
+    public static void print() {
+        synchronized(Demo.class) {
+            System.out.println(Thread.currentThread().getName() + " entered");
+            try { Thread.sleep(1000); } catch(Exception e){}
+            System.out.println(Thread.currentThread().getName() + " exited");
+        }
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Runnable r = () -> Demo.print();
+
+        new Thread(r, "T1").start();
+        new Thread(r, "T2").start();
+    }
+}
+```
+
+---
+
+## 🔥 Key Difference
+
+| Feature     | Static Method         | Static Block                    |
+| ----------- | --------------------- | ------------------------------- |
+| Syntax      | `static synchronized` | `synchronized(ClassName.class)` |
+| Lock        | Class-level           | Class-level                     |
+| Flexibility | Entire method locked  | Only specific block locked      |
+
+---
+
+## ⚠️ Important Points
+
+* Applies to **all objects** of the class
+* Ensures **global mutual exclusion**
+* `sleep()` does **NOT release lock**
+* Better control using block (fine-grained locking)
+
+---
+
+## 🧠 One-line Summary
+
+👉 **Static synchronization = one thread across entire class at a time**
+
+---
+
+If you want, I can also show:
+👉 Difference vs object-level sync (very important for interviews)
+
+  
+  
+  
+ * */
 

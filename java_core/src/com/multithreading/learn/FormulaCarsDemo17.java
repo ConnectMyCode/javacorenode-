@@ -7,8 +7,7 @@ public class FormulaCarsDemo17 extends Thread{
 	
 	public FormulaCarsDemo17( String formulaNum)
 	{
-		this.formulaNum = formulaNum;
-		
+		this.formulaNum = formulaNum;	
 	}
 	
 	
@@ -17,7 +16,7 @@ public class FormulaCarsDemo17 extends Thread{
 	{
 		//For next car to wait for 3 sec so there is a distance on between the 2 cars to avoid any accidents at the start.
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
